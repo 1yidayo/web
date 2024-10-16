@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>輔仁大學教室預借系統</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="123.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/zh/thumb/d/da/Fu_Jen_Catholic_University_logo.svg/1200px-Fu_Jen_Catholic_University_logo.svg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@550&display=swap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.css"/>
+    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
+</head>
+<body>
+    <header>
+        <div class="headergrid">
+            <div style="margin-top: 20px; margin-left: 30px;">
+                <h1 style="color: black;">輔仁大學貴重儀器預約系統</h1>
+                <!-- Nav Item - User Information -->
+            </div>
+            <div style="margin-top: 20px;">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false" style="text-align: right;">
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small" style="font-size: 16px;">使用者登入/註冊</span>
+                    <i class="fa-regular fa-user"></i>
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                    <div id="login-block" style="text-align: center;">
+                        <button type="button" class="custom-button" onclick="window.location.href='登入.html'">登入</button><br>
+                        <button type="button" class="custom-button" onclick="window.location.href='註冊.html'" style="margin-top: 10px;">註冊</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="nav">
+            <div class="sidebar">
+                <ul><a href="首頁.html"><img class="img" src="https://cdn3.iconfinder.com/data/icons/fluent-regular-24px-vol-4/24/ic_fluent_home_24_regular-64.png"> 首頁</img></a></ul>
+                <ul><a href="儀器預約現況.html"><img class="img" src="https://cdn2.iconfinder.com/data/icons/school-set-5/512/6-64.png"> 儀器預約現況</img></a></ul>
+                <ul><a href="#"><img class="img" src="https://cdn4.iconfinder.com/data/icons/user-interface-937/24/20.clock_time_watch_date_ui-64.png"> 預約儀器使用</img></a></ul>
+                <ul><a href="繳費系統.html"><img class="img" src="https://cdn0.iconfinder.com/data/icons/finance-business-02/32/Payment-64.png"></img> 繳費系統</a></ul>
+                <ul><a href="使用規則與管理辦法.html"><img class="img" src="https://cdn2.iconfinder.com/data/icons/legal-services-icostory-black-and-white/64/button-legal_document-list-goals-checklist-64.png"> 使用規則與管理辦法</img></a></ul>
+                <ul><a href="校內資源.html"><img class="img" src="https://cdn0.iconfinder.com/data/icons/miscellaneous-4-bold/64/atomizing_nuclear_atomic_core_connect-64.png"> 校內資源</img></a></ul>
+                <ul><a href="#"><img class="img" src="https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-3/32/cloud--service-management-64.png"></img> 後台管理</a></ul>
+                <ul><a href="#"><img class="img" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/mail-64.png"> 聯絡我們</img></a></ul>
+                <ul><a href="#"><img class="img" src="https://cdn3.iconfinder.com/data/icons/fluent-regular-24px-vol-5/24/ic_fluent_people_community_24_regular-64.png"> 單位成員</img></a></ul>
+                <ul><a href="#"><img class="img" src="https://cdn1.iconfinder.com/data/icons/ionicons-sharp-vol-1/512/list-sharp-64.png"> 中心介紹</img></a></ul>
+                <ul><a href="#"><img class="img" src="https://cdn2.iconfinder.com/data/icons/science-13/24/Microscope-64.png"> 中心儀器與研究室簡介</img></a></ul>
+                <ul><a href="#"><img class="img" src="https://cdn3.iconfinder.com/data/icons/user-inteface-17/24/edit_pencil_write_paper_file_document_study_copywriting_writing-64.png"> 儀器線上學習</img></a></ul>
+                <ul><a href="#"><img class="img" src="https://cdn4.iconfinder.com/data/icons/business-solid-the-capitalism/64/Efficacy_researching-64.png"> 檢驗委託程序</img></a></ul>
+                <ul><a href="#"><img class="img" src="https://cdn4.iconfinder.com/data/icons/e-commerce-line-8-1/1024/sale8-64.png"> 研究資源組儀器使用率月統計</img></a></ul>
+                <ul><a href="#"><img class="img" src="https://cdn3.iconfinder.com/data/icons/material-line-thin/1024/map-64.png">【聯合技術服務宣傳手冊】</img></a></ul>
+                <ul><a href="#"><img class="img" src="https://cdn1.iconfinder.com/data/icons/bootstrap-vol-3/16/newspaper-64.png"> 研究資源組-電子報</img></a></ul>
+                <ul><a href="#"><img class="img" src="https://cdn4.iconfinder.com/data/icons/standard-free-icons/139/Setting01-64.png"> 建置中</img></a></ul>
+                <ul><a href="#"><img class="img" src=""></img></a></ul>
+            </div>
+        </div>
+        <div class="main">
+            <h2 style="margin-top: 20px; margin-left: 60px;">使用規則與管理辦法</h2>
+            <div class="tag-container">
+                <div class="tag" onclick="showDetails('details1')">。貴重儀器中心-超導核磁共振儀 N.M.R</div>
+                <div class="tag" onclick="showDetails('details2')">。氣相 / 液相質譜儀 & X-Ray 單晶繞射儀</div>
+                <div class="tag" onclick="showDetails('details3')">。小動物活體電腦斷層 & 全自動乾式生化儀</div>
+                <div class="tag" onclick="showDetails('details4')">。蛋白質體核心實驗室：OpenSPR / ECM2001 / GentleMACS / DS3000 / TepaStation / Lminux200 / Digital PCR / QS5</div>
+                <div class="tag" onclick="showDetails('details5')">。蛋白質體核心實驗室-高階質譜儀：LC-Q-TOF / LC-Triple-Q / MALDI-TOF / LTQ-Obitrap / ICP-MS / AA800</div>
+                <div class="tag" onclick="showDetails('details6')">。超高內涵組蛋白掃描暨分析系統 CODEX</div>
+                <div class="tag" onclick="showDetails('details7')">。細胞分子生物影像核心實驗室：Lyric / Melody / LSRII / TissueFAXS / NTA</div>
+                <div class="tag" onclick="showDetails('details8')">。細胞分子生物影像核心實驗室：Olympus FV1000 / Zeisse LSM700 / CellR / IXM</div>
+                <div class="tag" onclick="showDetails('details9')">。BSL-2 實驗室申請表 & Optima XPN 超高速離心機</div>
+                <div class="tag" onclick="showDetails('details10')">。研究資源組申請表下載：儀器配合教學使用申請表 / 中心預約系統操作教學手冊 / 獲頒優點及致謝撰寫原則</div>
+                <div class="tag" onclick="showDetails('details11')">。研究資源組各項管理辦法：貴重儀器設備代管管理辦法 / 公共儀器設備使用管理辦法 / BSL-2 實驗室管理使用辦法</div>
+            </div>
+            <div id="details-container" class="details-container">
+                <div id="details-title" style="font-size: 18px; color: slategray;"></div>
+                <div id="details-content"></div>
+            </div>
+            <script>
+                function showDetails(detailsId) {
+                    var detailsContainer = document.getElementById('details-container');
+                    var detailsTitle = document.getElementById('details-title');
+                    var detailsContent = document.getElementById('details-content');
+        
+                    var details = {
+                        'details1': {
+                            title: '貴重儀器中心-超導核磁共振儀 N.M.R',
+                            content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>文件名稱</th>
+                                        <th>下載</th>
+                                        <th>備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>NMR 異常狀況處理</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/NMR%E7%95%B0%E5%B8%B8%E7%8B%80%E6%B3%81%E8%99%95%E7%90%86-0425.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>JEOL JNM-ECS400 NMR 簡易操作講義</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/JEOL_JNM-ECS400_NMR%E7%B0%A1%E6%98%93%E6%93%8D%E4%BD%9C%E8%AC%9B%E7%BE%A9DeltaV5_operation-0425.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gemini2000-200 NMR 簡易操作</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/Gemini2000-200_NMR%E7%B0%A1%E6%98%93%E6%93%8D%E4%BD%9C-0425.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mercury plus-400 NMR 簡易操作</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/Mercury_plus-400_NMR%E7%B0%A1%E6%98%93%E6%93%8D%E4%BD%9C-0425.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>超導核磁共振儀 (NMR 200、400、600)-申請表</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/NMR%E4%BD%BF%E7%94%A8%E7%94%B3%E8%AB%8B%E8%A1%A8%E4%BF%AE%E6%94%B9%E7%89%88-110.1.4.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>超導核磁共振儀 (NMR 200、400、600)-繳費單 (有科技部計畫)</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/NMR%E4%BD%BF%E7%94%A8%E7%B9%B3%E8%B2%BB%E5%96%AE111%E5%B9%B4%E4%BF%AE%E6%94%B9%E7%89%88-111.1.17.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>超導核磁共振儀 (NMR 200、400、600)-繳費單 (無科技部計畫)</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/NMR%E4%BD%BF%E7%94%A8%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%B2%92%E7%A7%91%E6%8A%80%E9%83%A8%E8%A8%88%E7%95%AB%E5%B0%88%E7%94%A8-111.1.17-2.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>超導核磁共振儀 (NMR 200、400、600)-NMR 200 上網預約規則</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E8%B6%85%E5%B0%8E%E6%A0%B8%E7%A3%81%E5%85%B1%E6%8C%AF%E5%84%80_NMR200400600___NMR200%E4%B8%8A%E7%B6%B2%E9%A0%90%E7%B4%84%E8%A6%8F%E5%89%87.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>超導核磁共振儀 (NMR 200、400、600)-分析作業流程</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/forms/NMR/NMR-process.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>`
+                        },
+                        'details2': {
+                            title: '氮相 / 液相質譜儀 & X-Ray 單晶繞射儀',
+                            content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>文件名稱</th>
+                                        <th>下載</th>
+                                        <th>備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>氣相層析質譜儀 (GC-MS)-申請表</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/GC-MS%E7%94%B3%E8%AB%8B%E8%A1%A8109.03.01%E4%BF%AE%E8%A8%82%E7%89%88.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>氣相層析質譜儀 (GC-MS)-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/IXM%E7%B9%B3%E8%B2%BB%E5%96%AE_11101.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>氣相層析質譜儀 (GC-MS)-分析流程</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/forms/GC-MS/GC-MS-process.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>液相層析質譜儀 (LC-MS)-申請表</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/LC-MS%E7%94%B3%E8%AB%8B%E8%A1%A8109.03.01%E6%96%B0%E4%BF%AE%E8%A8%82%E7%89%88.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>液相層析質譜儀 (LC-MS)-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/%E8%B2%B4%E9%87%8D%E5%84%80%E5%99%A8LC-MSGC-MS%E7%B9%B3%E8%B2%BB%E5%96%AE111.01.18%E6%96%B0%E4%BF%AE%E8%A8%82%E7%89%88.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>液相層析質譜儀 (LC-MS)-分析流程</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/forms/LC-MS/LC-MS-process.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>低溫 X-Ray 單晶繞射儀-申請表</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/X-ray%E5%96%AE%E6%99%B6%E7%B9%9E%E5%B0%84%E5%84%80%E7%94%B3%E8%AB%8B%E8%A1%A8.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>低溫 X-Ray 單晶繞射儀-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/X-ray%E5%96%AE%E6%99%B6%E7%B9%9E%E5%B0%84%E5%84%80%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%96%B0%E7%89%88-110.02.02.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>`
+                        },
+                        'details3': {
+                            title: '小動物活體電腦斷層 & 全自動乾式生化儀',
+                            content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>文件名稱</th>
+                                        <th>下載</th>
+                                        <th>備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>小動物活體電腦斷層儀-繳費單	</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/2020_%E4%B9%BE%E5%BC%8F%E7%94%9F%E5%8C%96%E5%88%86%E6%9E%90%E5%84%80%E5%92%8CmicroCT_%E7%B9%B3%E8%B2%BB%E5%96%AE.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>富士全自動乾式生化儀-繳費單	</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/2020_%E4%B9%BE%E5%BC%8F%E7%94%9F%E5%8C%96%E5%88%86%E6%9E%90%E5%84%80%E5%92%8CmicroCT_%E7%B9%B3%E8%B2%BB%E5%96%AE.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>`
+                        },
+                        'details4': {
+                            title: '蛋白質體核心實驗室：OpenSPR / ECM2001 / GentleMACS / DS3000 / TepaStation / Lminux200 / Digital PCR / QS5',
+                            content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>文件名稱</th>
+                                        <th>下載</th>
+                                        <th>備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>蛋白質體實驗室-二維電泳系統-申請表</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/109%E9%9B%BB%E6%B3%B3%E7%94%B3%E8%AB%8B%E8%A1%A8.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>蛋白質體實驗室-二維電泳系統-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/PROTEIN%E6%94%B6%E8%B2%BB%E6%A8%99%E6%BA%96%E8%A1%A8.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>蛋白質體實驗室-二維電泳系統-分析流程</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/forms/2-DE/2-DE-process.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>局部表面電漿共振技術- Open SPR -繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/2022.1.17_OPEN_SPR--%E7%B9%B3%E8%B2%BB%E5%96%AE.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>自動化單細胞分子標記系統 10X -繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/%E8%87%AA%E5%8B%95%E5%8C%96%E5%96%AE%E7%B4%B0%E8%83%9E%E5%88%86%E5%AD%90%E6%A8%99%E8%A8%98%E7%B3%BB%E7%B5%B1%E6%A0%B8%E9%85%B8%E8%87%AA%E5%8B%95%E5%88%86%E6%9E%90%E7%B3%BB%E7%B5%B1_%E7%B9%B3%E8%B2%BB%E5%96%AE_.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>細胞融合儀 ECM-2001 -繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/%E7%B4%B0%E8%83%9E%E8%9E%8D%E5%90%88%E5%84%80_%E7%B9%B3%E8%B2%BB%E5%96%AE_.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>QS5 即時螢光核酸定量處李分析系統-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/112.08.02_%E5%8D%B3%E6%99%82%E5%AE%9A%E9%87%8FQS5_%E7%B9%B3%E8%B2%BB%E5%96%AE_.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>溫和組織處理器 GentleMACS -繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/%E6%BA%AB%E5%92%8C%E7%B5%84%E7%B9%94%E5%8A%A0%E7%86%B1%E8%99%95%E7%90%86%E5%99%A8_%E7%B9%B3%E8%B2%BB%E5%96%AE_.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DS3000 毛細管 DNA 電泳定序儀-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/%E6%AF%9B%E7%B4%B0%E7%AE%A1%E9%9B%BB%E6%B3%B3%E5%AE%9A%E5%BA%8F%E5%84%80_%E7%B9%B3%E8%B2%BB%E5%96%AE_.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>DS3000 -人類細胞株基因型鑑定分析平台收費標準</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/DS3000/%E4%BA%BA%E9%A1%9E%E7%B4%B0%E8%83%9E%E6%A0%AA%E5%9F%BA%E5%9B%A0%E5%9E%8B%E9%91%91%E5%AE%9A%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0%E6%94%B6%E8%B2%BB%E6%A8%99%E6%BA%96.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>數位化聚合酶反應分析系統 DIGITAL PCR -繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/DG_PCR_%E7%B9%B3%E8%B2%BB%E5%96%AE_.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>精準醫學核酸品質鑑定專用儀 4150</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/112.08.02_%E7%B2%BE%E6%BA%96%E9%86%AB%E5%AD%B8%E6%A0%B8%E9%85%B8%E5%93%81%E8%B3%AA%E9%91%91%E5%AE%9A%E5%84%80_%E7%B9%B3%E8%B2%BB%E5%96%AE.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>多重因子檢測分析平台</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E5%A4%9A%E9%87%8D%E5%9B%A0%E5%AD%90%E6%AA%A2%E6%B8%AC%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0/%E5%A4%9A%E9%87%8D%E5%9B%A0%E5%AD%90%E6%AA%A2%E6%B8%AC%E5%B9%B3%E5%8F%B0_%E7%B9%B3%E8%B2%BB%E5%96%AE.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>`
+                        },
+                        'details5': {
+                            title: '蛋白質體核心實驗室-高階質譜儀：LC-Q-TOF / LC-Triple-Q / MALDI-TOF / LTQ-Obitrap / ICP-MS / AA800',
+                            content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>文件名稱</th>
+                                        <th>下載</th>
+                                        <th>備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>液相層析串聯四極桿飛行時間式質譜儀 (LC-Q-TOF)-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/2024_%E6%B6%B2%E7%9B%B8%E5%B1%A4%E6%9E%90%E5%9B%9B%E6%A5%B5%E6%A1%BF%E9%A3%9B%E8%A1%8C%E6%99%82%E9%96%93%E4%B8%B2%E8%81%AF%E5%BC%8F%E8%B3%AA%E8%AD%9C%E5%84%80_%E7%B9%B3%E8%B2%BB%E5%96%AE.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>液相層析串聯四極桿飛行時間式質譜儀 (LC-Q-TOF)-分析流程</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/forms/LC-MS-MS/LC-MS-MS-process.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>液相層析定量三重四極桿質譜儀 (LC-Triple-Q)_塑化劑代謝物-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/2022_%E6%B6%B2%E7%9B%B8%E5%B1%A4%E6%9E%90%E4%B8%89%E9%87%8D%E5%9B%9B%E6%A5%B5%E6%A1%BF%E4%B8%B2%E8%81%AF%E5%BC%8F%E8%B3%AA%E8%AD%9C%E5%84%80_%E5%A1%91%E5%8C%96%E5%8A%91%E4%BB%A3%E8%AC%9D%E7%89%A9_%E7%B9%B3%E8%B2%BB%E5%96%AE.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>液相層析定量三重四極桿質譜儀 (LC-Triple-Q)_Short-chain fatty acids (SCFAs)-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/2022_%E6%B6%B2%E7%9B%B8%E5%B1%A4%E6%9E%90%E4%B8%89%E9%87%8D%E5%9B%9B%E6%A5%B5%E6%A1%BF%E4%B8%B2%E8%81%AF%E5%BC%8F%E8%B3%AA%E8%AD%9C%E5%84%80_Short-chain_fatty_acids_SCFAs_%E7%B9%B3%E8%B2%BB%E5%96%AE.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>基質輔助雷射脫附游離飛行時間式質譜儀 (MALDI-TOF)-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/2022_MALDI-TOF_%E7%B9%B3%E8%B2%BB%E5%96%AE.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>傅立葉轉換電場軌道阱室質譜分析系統 (LTQ-Orbitrap)-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/LTQ-Orbitrap.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>感應耦合電漿質譜儀 (ICP-MS)-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E6%84%9F%E6%87%89%E8%80%A6%E5%90%88%E9%9B%BB%E6%BC%BF%E8%B3%AA%E8%AD%9C%E5%84%80.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>AA800 -原子吸收光譜儀-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/AA800%E5%8E%9F%E5%AD%90%E5%90%B8%E6%94%B6%E5%85%89%E8%AD%9C%E5%84%80.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>`
+                        },
+                        'details6': {
+                            title: '超高內涵組蛋白掃描暨分析系統 CODEX',
+                            content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>文件名稱</th>
+                                        <th>下載</th>
+                                        <th>備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>超高內涵組織掃描暨分析系統 CODEX -繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/CODEX/CODEX-%E7%B9%B3%E8%B2%BB%E5%96%AE%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A0%85_-20230719.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>超高內涵組織掃描暨分析系統 CODEX -抗體試劑手冊</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/CODEX/PhenoCycler_%E6%8A%97%E9%AB%94%E8%A9%A6%E5%8A%91%E6%89%8B%E5%86%8A202305.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>超高內涵組織掃描暨分析系統 CODEX -各單位抗體清單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/CODEX/112.09.20-%E8%B6%85%E9%AB%98%E5%85%A7%E6%B6%B5%E7%B5%84%E7%B9%94%E6%8E%83%E6%8F%8F%E6%9A%A8%E5%88%86%E6%9E%90%E7%B3%BB%E7%B5%B1%E5%90%84%E5%96%AE%E4%BD%8D%E6%8A%97%E9%AB%94%E6%B8%85%E5%96%AE.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>`
+                        },
+                        'details7': {
+                            title: '細胞分子生物影像核心實驗室：Lyric / Melody / LSRII / TissueFAXS / NTA',
+                            content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>文件名稱</th>
+                                        <th>下載</th>
+                                        <th>備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>多色流式細胞分析儀 FACSLyric</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E6%B5%81%E5%BC%8F%E7%B4%B0%E8%83%9E%E5%88%86%E6%9E%90%E5%88%86%E9%81%B8%E5%84%80/Lyric%E7%B9%B3%E8%B2%BB%E5%96%AE.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>多色流式細胞分選儀 FACSMelody</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E6%B5%81%E5%BC%8F%E7%B4%B0%E8%83%9E%E5%88%86%E6%9E%90%E5%88%86%E9%81%B8%E5%84%80/Melody%E7%B9%B3%E8%B2%BB%E5%96%AE111.10.04.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>LSR II 高階流式細胞儀-委託程序說明書</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/%20images/LSRII_%E5%A7%94%E8%A8%97%E7%A8%8B%E5%BA%8F%E8%AA%AA%E6%98%8E%E6%9B%B8_2020.03.01.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>LSR II 高階流式細胞儀-繳費單- NEW</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E6%B5%81%E5%BC%8F%E7%B4%B0%E8%83%9E%E5%88%86%E6%9E%90%E5%88%86%E9%81%B8%E5%84%80/LSRII-income.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>LSR II 高階流式細胞儀- Payment - NEW</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E6%B5%81%E5%BC%8F%E7%B4%B0%E8%83%9E%E5%88%86%E6%9E%90%E5%88%86%E9%81%B8%E5%84%80/LSRII-income_for_English.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>LSR II 高階流式細胞儀-細胞染色步驟說明</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/LSR_II_%E9%AB%98%E9%9A%8E%E6%B5%81%E5%BC%8F%E7%B4%B0%E8%83%9E%E5%84%80__%E7%B4%B0%E8%83%9E%E6%9F%93%E8%89%B2%E6%AD%A5%E9%A9%9F%E8%AA%AA%E6%98%8E.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>LSR II 高階流式細胞儀-螢光配色參考</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/LSR_II_%E9%AB%98%E9%9A%8E%E6%B5%81%E5%BC%8F%E7%B4%B0%E8%83%9E%E5%84%80__%E8%9E%A2%E5%85%89%E9%85%8D%E8%89%B2%E5%8F%83%E8%80%83.xls" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>LSR II 高階流式細胞儀-分析作業流程</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/forms/LSRII-BSL2/LSRII-process.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TissueFAXS 類流式影像自動擷取定量系統-使用規則</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/TissueFAXS-%E4%BD%BF%E7%94%A8%E8%A6%8F%E5%89%87-2020.02.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TissueFAXS 類流式影像自動擷取定量系統-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/112.08.02_TissueFAXS-income.doc" download>Download</a></td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/112.08.02_TissueFAXS-income_for_English.doc" download>英語版</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>NTA 奈米粒子分析儀-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/NTA_%E7%B9%B3%E8%B2%BB%E5%96%AE_2021.01.21.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>`
+                        },
+                        'details8': {
+                            title: '細胞分子生物影像核心實驗室：Olympus FV1000 / Zeisse LSM700 / CellR / IXM',
+                            content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>文件名稱</th>
+                                        <th>下載</th>
+                                        <th>備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>雷射共軛焦顯微鏡 (Olympus FV1000) -申請及繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/Olympus_Confocal%E7%B9%B3%E8%B2%BB%E5%96%AE11101.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>雷射共軛焦顯微鏡 (Olympus FV1000) -使用規則</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/olympus_confocal%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%9510902%E6%94%B9.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>雷射共軛焦顯微鏡 (Zeiss LSM700) -申請及繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/Zeiss_Confocal%E7%B9%B3%E8%B2%BB%E5%96%AE11101.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>雷射共軛焦顯微鏡 (Zeiss LSM700) -使用規則</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E9%AB%98%E9%9B%84%E9%86%AB%E5%AD%B8%E5%A4%A7%E5%AD%B8%E8%94%A1%E5%8F%B8%E9%9B%B7%E5%B0%84%E6%8E%83%E6%8F%8F%E5%85%B1%E8%BB%9B%E7%84%A6%E9%A1%AF%E5%BE%AE%E9%8F%A1%E4%BD%BF%E7%94%A8%E8%A6%8F%E5%89%87100902%E4%BF%AE%E6%94%B9.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CELL R 細胞內離子偵測系統-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/cell_R%E7%B9%B3%E8%B2%BB%E5%96%AE11101.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>CELL R 細胞內離子偵測系統-使用規則</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/CellR%E7%AE%A1%E7%90%86%E8%A6%8F%E5%89%8710902.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>多層次螢光影像擷取與分析系統-繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/IXM%E7%B9%B3%E8%B2%BB%E5%96%AE_11101.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>多層次螢光影像擷取與分析系統-使用規則</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/IXM_%E4%BD%BF%E7%94%A8%E8%A6%8F%E5%89%8710902%E4%BF%AE.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>高階三維重建影像分析軟體 IMARIS -使用規則</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E9%AB%98%E9%9A%8E%E4%B8%89%E7%B6%AD%E9%87%8D%E5%BB%BA%E5%BD%B1%E5%83%8F%E5%88%86%E6%9E%90%E8%BB%9F%E9%AB%94%E4%BD%BF%E7%94%A8%E8%A6%8F%E5%AE%9A.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>`
+                        },
+                        'details9': {
+                            title: 'BSL-2 實驗室申請表 & Optima XPN 超高速離心機',
+                            content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>文件名稱</th>
+                                        <th>下載</th>
+                                        <th>備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>BSL-2 核心實驗室-申請表 (填寫範例參考)</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/BSL2_%E7%94%B3%E8%AB%8B%E6%9B%B8%E5%A1%AB%E5%AF%AB%E7%AF%84%E4%BE%8B.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>BSL-2 核心實驗室-申請表 (中英文)</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/BLS2Lab-apply-109.08.01.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>BSL-2 核心實驗室-申請表 (中英文)</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/BLS2Lab-apply-109.08.01.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研究資源組_【BSL-2 實驗室管理使用審查辦法】</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/BSL-2%E5%AF%A6%E9%A9%97%E5%AE%A4%E7%AE%A1%E7%90%86%E4%BD%BF%E7%94%A8%E7%94%B3%E8%AB%8B%E5%AF%A9%E6%9F%A5%E8%BE%A6%E6%B3%95.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研究資源組_【BSL-2 實驗室管理使用審查流程】</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/BSL-2%E5%AF%A6%E9%A9%97%E5%AE%A4%E4%BD%BF%E7%94%A8%E7%94%B3%E8%AB%8B%E5%8F%8A%E5%AF%A9%E6%9F%A5%E6%B5%81%E7%A8%8B.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>BSL-2 使用審查申請繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/BSL-2-%E4%BD%BF%E7%94%A8%E5%AF%A9%E6%9F%A5%E7%94%B3%E8%AB%8B%E7%B9%B3%E8%B2%BB%E5%96%AE_20200916.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>超高速離心機 Optima XPN -繳費單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/%E8%B6%85%E9%AB%98%E9%80%9F%E9%9B%A2%E5%BF%83%E6%A9%9F_%E7%B9%B3%E8%B2%BB%E5%96%AE_.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>`
+                        },
+                        'details10': {
+                            title: '研究資源組申請表下載：儀器配合教學使用申請表 / 中心預約系統操作教學手冊 / 獲頒優點及致謝撰寫原則',
+                            content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>文件名稱</th>
+                                        <th>下載</th>
+                                        <th>備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>研究資源組_【儀器配合教學使用申請表單】-NEW</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/2023.08.25-%E5%84%80%E5%99%A8%E9%85%8D%E5%90%88%E6%95%99%E5%AD%B8%E4%BD%BF%E7%94%A8%E7%94%B3%E8%AB%8B%E8%A1%A8.docx" download>Download</a></td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/2023.08.23-%E5%84%80%E5%99%A8%E9%85%8D%E5%90%88%E6%95%99%E5%AD%B8%E4%BD%BF%E7%94%A8%E7%94%B3%E8%AB%8B%E8%A1%A8.pdf">PDF</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>中心預約系統-新增儀器至預約系統操作教學手冊</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/forms/Others/Instrument-Booking.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>國科會 (舊科技部)-基礎研究核心設施【預約服務管理系統操作手冊】</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E5%9C%8B%E7%A7%91%E6%9C%83%E8%88%8A%E7%A7%91%E6%8A%80%E9%83%A8%E5%9F%BA%E7%A4%8E%E7%A0%94%E7%A9%B6%E6%A0%B8%E5%BF%83%E8%A8%AD%E6%96%BD%E9%A0%90%E7%B4%84%E6%9C%8D%E5%8B%99%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8A11109.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>中心預約系統-操作教學手冊 (預約使用者版)</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/ActivityNewsFile/Equip-Booking-User.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>中心預約系統-操作教學手冊 (儀器管理者版)</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/ActivityNewsFile/Equip-Booking-Admin.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>校園門禁 & 電梯使用-申請表</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/door-keeper.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>撰寫致謝本中心之 Acknowledgement 範例檔案</td>
+                                        <td><a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://crrd.kmu.edu.tw/images/Acknowledgement.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>本中心儀器或服務使用費-繳費匯款教學</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/forms/Others/Lab-remittance-Teaching.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>中心儀器動態公告-申請單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/CRRD-publicnews.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>中心儀器及服務-問卷調查表</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/forms/Others/%E8%B2%B4%E9%87%8D%E5%84%80%E5%99%A8%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8B%99%E5%95%8F%E5%8D%B7%E8%AA%BF%E6%9F%A5%E8%A1%A8.pdf" download>Download</a></td>
+                                        <td><a href="https://forms.gle/PZa8UQ3E1WPoFRQ67"> 線上問卷填寫</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>大型儀器彙編手冊</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/forms/Others/MajorEquipmentManual.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>高雄醫學大學_跨校 (院) 共同合作同意書</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E9%AB%98%E9%9B%84%E9%86%AB%E5%AD%B8%E5%A4%A7%E5%AD%B8_%E8%B7%A8%E6%A0%A1%E5%85%B1%E5%90%8C%E5%90%88%E4%BD%9C%E5%90%8C%E6%84%8F%E6%9B%B8.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>高雄醫學大學_研究資源組_貴重儀器使用之獎勵優惠及致謝撰寫原則</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E6%95%99%E8%82%B2%E8%A8%93%E7%B7%B4%E8%AA%B2%E7%A8%8B%E8%AC%9B%E7%BE%A9/2023.08.14-%E7%A0%94%E7%A9%B6%E8%B3%87%E6%BA%90%E7%B5%84-%E8%B2%B4%E9%87%8D%E5%84%80%E5%99%A8%E4%BD%BF%E7%94%A8%E4%B9%8B%E7%8D%8E%E5%8B%B5%E5%84%AA%E6%83%A0%E5%8F%8A%E8%87%B4%E8%AC%9D%E6%92%B0%E5%AF%AB%E5%8E%9F%E5%89%87-1205.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研究資源組_貴重儀器使用之獎勵優惠申請單</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E6%95%99%E8%82%B2%E8%A8%93%E7%B7%B4%E8%AA%B2%E7%A8%8B%E8%AC%9B%E7%BE%A9/%E8%B2%B4%E5%84%80%E4%BD%BF%E7%94%A8%E4%B9%8B%E8%87%B4%E8%AC%9D%E5%84%AA%E6%83%A0%E7%8D%8E%E5%8B%B5%E7%94%B3%E8%AB%8B%E8%A1%A8.doc" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>`
+                        },
+                        'details11': {
+                            title: '研究資源組各項管理辦法：貴重儀器設備代管管理辦法 / 公共儀器設備使用管理辦法 / BSL-2 實驗室管理使用辦法',
+                            content: `
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>文件名稱</th>
+                                        <th>下載</th>
+                                        <th>備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>研究發展處研究資源組_共同儀器設備收費標準制訂辦法 - NEW</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E6%95%99%E8%82%B2%E8%A8%93%E7%B7%B4%E8%AA%B2%E7%A8%8B%E8%AC%9B%E7%BE%A9/202400516_%E9%99%84%E4%BB%B61%E7%A0%94%E7%A9%B6%E7%99%BC%E5%B1%95%E8%99%95%E7%A0%94%E7%A9%B6%E8%B3%87%E6%BA%90%E7%B5%84_%E5%85%B1%E5%90%8C%E5%84%80%E5%99%A8%E8%A8%AD%E5%82%99%E6%94%B6%E8%B2%BB%E6%A8%99%E6%BA%96%E5%88%B6%E8%A8%82%E8%BE%A6%E6%B3%95-%E9%80%9A%E9%81%8E%E5%85%AC%E5%91%8A.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研究資源組_【儀器配合教學使用管理辦法】- NEW</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20220117-%E7%B9%B3%E8%B2%BB%E5%96%AE%E6%9B%B4%E6%96%B0/2023.08.03-%E7%A0%94%E7%A9%B6%E8%B3%87%E6%BA%90%E7%B5%84_%E5%84%80%E5%99%A8%E9%85%8D%E5%90%88%E6%95%99%E5%AD%B8%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研究資源組_【會議室空間借用管理辦法】</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20200620_%E7%A0%94%E7%A9%B6%E8%B3%87%E6%BA%90%E7%B5%84_%E6%9C%83%E8%AD%B0%E5%AE%A4%E7%A9%BA%E9%96%93%E5%80%9F%E7%94%A8%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研究資源組_【國際學術研究大樓八樓門禁管理辦法】</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E7%A0%94%E7%A9%B6%E8%B3%87%E6%BA%90%E7%B5%84_%E5%9C%8B%E9%9A%9B%E5%AD%B8%E8%A1%93%E7%A0%94%E7%A9%B6%E5%A4%A7%E6%A8%938%E6%A8%93%E9%96%80%E7%A6%81%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研究資源組_【IR810 實驗室借用申請單 / 借用規則】</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/IR810%E5%AF%A6%E9%A9%97%E5%AE%A4%E5%80%9F%E7%94%A8%E7%94%B3%E8%AB%8B%E5%96%AE.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研究資源組_【BSL-2 實驗室管理使用審查辦法】</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20210824_BSL-2%E5%AF%A6%E9%A9%97%E5%AE%A4%E7%AE%A1%E7%90%86%E4%BD%BF%E7%94%A8%E7%94%B3%E8%AB%8B%E5%AF%A9%E6%9F%A5%E8%BE%A6%E6%B3%95.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研究資源組_【BSL-2 實驗室使用申請審查流程】</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/BSL-2%E5%AF%A6%E9%A9%97%E5%AE%A4%E4%BD%BF%E7%94%A8%E7%94%B3%E8%AB%8B%E5%8F%8A%E5%AF%A9%E6%9F%A5%E6%B5%81%E7%A8%8B.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研究資源組_【貴重儀器設備代管管理辦法】</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/20210315_109%E5%AD%B8%E5%B9%B4%E5%BA%A6_%E7%AC%AC%E4%B8%83%E6%AC%A1-%E8%B2%B4%E9%87%8D%E5%84%80%E5%99%A8%E8%A8%AD%E5%82%99%E4%BB%A3%E7%AE%A1%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95_%E4%BF%AE%E4%B8%89-202102224-%E5%B7%B2%E5%AE%8C%E6%88%90%E9%99%B3%E7%A0%94%E7%99%BC%E8%99%95%E8%99%95%E5%8B%99%E6%9C%83%E8%AD%B0.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研究資源組_【實驗室空間使用管理辦法】</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E7%A0%94%E7%A9%B6%E8%B3%87%E6%BA%90%E7%B5%84_%E5%AF%A6%E9%A9%97%E5%AE%A4%E7%A9%BA%E9%96%93%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95-20210415.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研究資源組_【公共儀器設備使用管理辦法】</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E7%A0%94%E7%A9%B6%E7%99%BC%E5%B1%95%E8%99%95%E7%A0%94%E7%A9%B6%E8%B3%87%E6%BA%90%E7%B5%84_%E5%85%AC%E5%85%B1%E5%84%80%E5%99%A8%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95-20210415.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>研究資源組_【公共儀器進駐申請單】</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E7%A0%94%E7%A9%B6%E8%B3%87%E6%BA%90%E7%B5%84_%E5%85%AC%E5%85%B1%E5%84%80%E5%99%A8%E9%80%B2%E9%A7%90%E7%94%B3%E8%AB%8B%E5%96%AE_20210413.docx" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>高雄醫學大學_【共用儀器使用暨管理辦法】</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/108%E5%AD%B8%E5%B9%B4%E5%BA%A6%E7%AC%AC6%E6%AC%A1%E8%A1%8C%E6%94%BF%E6%9C%83%E8%AD%B0%E9%80%9A%E9%81%8E_%E5%85%B1%E7%94%A8%E5%84%80%E5%99%A8%E4%BD%BF%E7%94%A8%E6%9A%A8%E7%AE%A1%E7%90%86%E8%BE%A6%E6%B3%95.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>高雄醫學大學_【貴重儀器管理委員會設置辦法】</td>
+                                        <td><a href="https://crrd.kmu.edu.tw/images/%E8%B2%B4%E9%87%8D%E5%84%80%E5%99%A8%E7%AE%A1%E7%90%86%E5%A7%94%E5%93%A1%E6%9C%83%E8%A8%AD%E7%BD%AE%E8%BE%A6%E6%B3%9520200730.pdf" download>Download</a></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>`
+                        },
+                    };
+        
+                    detailsTitle.innerText = details[detailsId].title;
+                    detailsContent.innerHTML = details[detailsId].content;
+                    detailsContainer.style.display = 'block';
+
+                     // 移除所有標籤的 active 樣式
+                    var tags = document.querySelectorAll('.tag');
+                    tags.forEach(function(tag) {
+                        tag.classList.remove('active');
+                    });
+
+                    // 為當前標籤添加 active 樣式
+                    element.classList.add('active');
+                }
+            </script>
+        </div>
+    </div>
+
+    <footer>
+        <div class="copy-right">2024 © 輔仁大學 研究資源整合發展中心
+            <br>建議使用 Chrome / Safari / Firefox瀏覽
+        </div>
+        <div class="copy-right">
+            <i class="fa-solid fa-location-dot"></i> 地址：242062 新北市新莊區中正路 510 號 天主教輔仁大學
+            <br><i class="fa-solid fa-phone"></i>電話：(02) 29052000
+            <br><i class="fa-solid fa-envelope"></i>信箱：<a href="mailto:pubwww@mail.fju.edu.tw">pubwww@mail.fju.edu.tw</a>
+        </div>
+        <a href="#top" id="gototop"><span>返回頂端</span></a>
+    </footer>
+</body>
+</html>
