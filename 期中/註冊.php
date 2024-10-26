@@ -54,10 +54,10 @@
                 <ul><a href="首頁.html"><img class="img"
                             src="https://cdn3.iconfinder.com/data/icons/fluent-regular-24px-vol-4/24/ic_fluent_home_24_regular-64.png">
                         首頁</img></a></ul>
-                <ul><a href="儀器預約現況.html"><img class="img"
+                <ul><a href="教室預約現況.html"><img class="img"
                             src="https://cdn2.iconfinder.com/data/icons/school-set-5/512/6-64.png"> 儀器預約現況</img></a>
                 </ul>
-                <ul><a href="#"><img class="img"
+                <ul><a href="教室預約使用.html"><img class="img"
                             src="https://cdn4.iconfinder.com/data/icons/user-interface-937/24/20.clock_time_watch_date_ui-64.png">
                         預約儀器使用</img></a></ul>
                 <ul><a href="#"><img class="img"

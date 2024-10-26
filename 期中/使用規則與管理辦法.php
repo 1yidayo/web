@@ -45,22 +45,13 @@
         <div class="nav">
             <div class="sidebar">
                 <ul><a href="首頁.html"><img class="img" src="https://cdn3.iconfinder.com/data/icons/fluent-regular-24px-vol-4/24/ic_fluent_home_24_regular-64.png"> 首頁</img></a></ul>
-                <ul><a href="儀器預約現況.html"><img class="img" src="https://cdn2.iconfinder.com/data/icons/school-set-5/512/6-64.png"> 儀器預約現況</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn4.iconfinder.com/data/icons/user-interface-937/24/20.clock_time_watch_date_ui-64.png"> 預約儀器使用</img></a></ul>
+                <ul><a href="教室預約現況.html"><img class="img" src="https://cdn2.iconfinder.com/data/icons/school-set-5/512/6-64.png"> 教室預約現況</img></a></ul>
+                <ul><a href="教室預約使用.html"><img class="img" src="https://cdn4.iconfinder.com/data/icons/user-interface-937/24/20.clock_time_watch_date_ui-64.png"> 預約教室使用</img></a></ul>
                 <ul><a href="繳費系統.html"><img class="img" src="https://cdn0.iconfinder.com/data/icons/finance-business-02/32/Payment-64.png"></img> 繳費系統</a></ul>
                 <ul><a href="使用規則與管理辦法.html"><img class="img" src="https://cdn2.iconfinder.com/data/icons/legal-services-icostory-black-and-white/64/button-legal_document-list-goals-checklist-64.png"> 使用規則與管理辦法</img></a></ul>
                 <ul><a href="校內資源.html"><img class="img" src="https://cdn0.iconfinder.com/data/icons/miscellaneous-4-bold/64/atomizing_nuclear_atomic_core_connect-64.png"> 校內資源</img></a></ul>
                 <ul><a href="#"><img class="img" src="https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-3/32/cloud--service-management-64.png"></img> 後台管理</a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/mail-64.png"> 聯絡我們</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn3.iconfinder.com/data/icons/fluent-regular-24px-vol-5/24/ic_fluent_people_community_24_regular-64.png"> 單位成員</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn1.iconfinder.com/data/icons/ionicons-sharp-vol-1/512/list-sharp-64.png"> 中心介紹</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn2.iconfinder.com/data/icons/science-13/24/Microscope-64.png"> 中心儀器與研究室簡介</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn3.iconfinder.com/data/icons/user-inteface-17/24/edit_pencil_write_paper_file_document_study_copywriting_writing-64.png"> 儀器線上學習</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn4.iconfinder.com/data/icons/business-solid-the-capitalism/64/Efficacy_researching-64.png"> 檢驗委託程序</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn4.iconfinder.com/data/icons/e-commerce-line-8-1/1024/sale8-64.png"> 研究資源組儀器使用率月統計</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn3.iconfinder.com/data/icons/material-line-thin/1024/map-64.png">【聯合技術服務宣傳手冊】</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn1.iconfinder.com/data/icons/bootstrap-vol-3/16/newspaper-64.png"> 研究資源組-電子報</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn4.iconfinder.com/data/icons/standard-free-icons/139/Setting01-64.png"> 建置中</img></a></ul>
+                <ul><a href="評分反饋.html"><img class="img" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/mail-64.png"> 評分反饋</img></a></ul>
                 <ul><a href="#"><img class="img" src=""></img></a></ul>
             </div>
         </div>
