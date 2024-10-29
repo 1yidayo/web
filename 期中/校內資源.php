@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +16,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@550&display=swap">
 </head>
+
 <body>
-    <header>
+<header>
         <div class="headergrid">
             <div style="margin-top: 20px; margin-left: 30px;">
                 <h1 style="color: black;">輔仁大學教室預借系統</h1>
                 <!-- Nav Item - User Information -->
             </div>
-            <div style="margin-top: 20px;">
+            <div style="margin-top: 20px; margin-left: 30px;">
                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false" style="text-align: right;">
                     <span class="mr-2 d-none d-lg-inline text-gray-600 small" style="font-size: 16px;">使用者登入/註冊</span>
@@ -31,8 +33,8 @@
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                     <div id="login-block" style="text-align: center;">
-                        <button type="button" class="custom-button" onclick="window.location.href='登入.html'">登入</button><br>
-                        <button type="button" class="custom-button" onclick="window.location.href='註冊.html'" style="margin-top: 10px;">註冊</button>
+                        <button type="button" class="custom-button" onclick="window.location.href='登入.php'">登入</button><br>
+                        <button type="button" class="custom-button" onclick="window.location.href='註冊.php'" style="margin-top: 10px;">註冊</button>
                     </div>
                 </div>
             </div>
@@ -41,24 +43,13 @@
     <div class="wrapper">
         <div class="nav">
             <div class="sidebar">
-                <ul><a href="首頁.html"><img class="img" src="https://cdn3.iconfinder.com/data/icons/fluent-regular-24px-vol-4/24/ic_fluent_home_24_regular-64.png"> 首頁</img></a></ul>
-                <ul><a href="儀器預約現況.html"><img class="img" src="https://cdn2.iconfinder.com/data/icons/school-set-5/512/6-64.png"> 儀器預約現況</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn4.iconfinder.com/data/icons/user-interface-937/24/20.clock_time_watch_date_ui-64.png"> 預約儀器使用</img></a></ul>
-                <ul><a href="繳費系統.html"><img class="img" src="https://cdn0.iconfinder.com/data/icons/finance-business-02/32/Payment-64.png"></img> 繳費系統</a></ul>
-                <ul><a href="使用規則與管理辦法.html"><img class="img" src="https://cdn2.iconfinder.com/data/icons/legal-services-icostory-black-and-white/64/button-legal_document-list-goals-checklist-64.png"> 使用規則與管理辦法</img></a></ul>
-                <ul><a href="校內資源.html"><img class="img" src="https://cdn0.iconfinder.com/data/icons/miscellaneous-4-bold/64/atomizing_nuclear_atomic_core_connect-64.png"> 校內資源</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-3/32/cloud--service-management-64.png"></img> 後台管理</a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/mail-64.png"> 聯絡我們</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn3.iconfinder.com/data/icons/fluent-regular-24px-vol-5/24/ic_fluent_people_community_24_regular-64.png"> 單位成員</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn1.iconfinder.com/data/icons/ionicons-sharp-vol-1/512/list-sharp-64.png"> 中心介紹</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn2.iconfinder.com/data/icons/science-13/24/Microscope-64.png"> 中心儀器與研究室簡介</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn3.iconfinder.com/data/icons/user-inteface-17/24/edit_pencil_write_paper_file_document_study_copywriting_writing-64.png"> 儀器線上學習</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn4.iconfinder.com/data/icons/business-solid-the-capitalism/64/Efficacy_researching-64.png"> 檢驗委託程序</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn4.iconfinder.com/data/icons/e-commerce-line-8-1/1024/sale8-64.png"> 研究資源組儀器使用率月統計</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn3.iconfinder.com/data/icons/material-line-thin/1024/map-64.png">【聯合技術服務宣傳手冊】</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn1.iconfinder.com/data/icons/bootstrap-vol-3/16/newspaper-64.png"> 研究資源組-電子報</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn4.iconfinder.com/data/icons/standard-free-icons/139/Setting01-64.png"> 建置中</img></a></ul>
-                <ul><a href="#"><img class="img" src=""></img></a></ul>
+                <ul><a href="首頁.php"><img class="img" src="https://cdn3.iconfinder.com/data/icons/fluent-regular-24px-vol-4/24/ic_fluent_home_24_regular-64.png"> 首頁</img></a></ul>
+                <ul><a href="教室預約紀錄.php"><img class="img" src="https://cdn2.iconfinder.com/data/icons/school-set-5/512/6-64.png"> 教室預約紀錄</img></a></ul>
+                <ul><a href="教室預約使用.php"><img class="img" src="https://cdn4.iconfinder.com/data/icons/user-interface-937/24/20.clock_time_watch_date_ui-64.png"> 預約教室使用</img></a></ul>
+                <ul><a href="帳號管理.php"><img class="img" src="https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-3/32/cloud--service-management-64.png"></img> 帳號管理</a></ul>
+                <ul><a href="教室統計功能.php"><img class="img" src="https://cdn-icons-png.flaticon.com/128/6850/6850740.png"></img>教室統計</a></ul>
+                <ul><a href="校內資源.php"><img class="img" src="https://cdn0.iconfinder.com/data/icons/miscellaneous-4-bold/64/atomizing_nuclear_atomic_core_connect-64.png"> 校內資源</img></a></ul>
+                <ul><a href="評分反饋.php"><img class="img" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/mail-64.png"> 評分反饋</img></a></ul>
             </div>
         </div>
         <div class="main">
@@ -69,7 +60,7 @@
                     <ul><a href="https://portal.fju.edu.tw/student/">輔仁大學學生資訊網</a></ul>
                     <ul><a href="http://www.rdo.fju.edu.tw/">輔仁大學研究發展處</a></ul>
                 </div>
-            </div>   
+            </div>
         </div>
     </div>
 
@@ -85,4 +76,5 @@
         <a href="#top" id="gototop"><span>返回頂端</span></a>
     </footer>
 </body>
+
 </html>

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@550&display=swap">
 </head>
 <body>
-    <header>
+<header>
         <div class="headergrid">
             <div style="margin-top: 20px; margin-left: 30px;">
                 <h1 style="color: black;">輔仁大學教室預借系統</h1>
@@ -30,8 +30,8 @@
                 <!-- Dropdown - User Information -->
                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                     <div id="login-block" style="text-align: center;">
-                        <button type="button" class="custom-button" onclick="window.location.href='登入.html'">登入</button><br>
-                        <button type="button" class="custom-button" onclick="window.location.href='註冊.html'" style="margin-top: 10px;">註冊</button>
+                        <button type="button" class="custom-button" onclick="window.location.href='登入.php'">登入</button><br>
+                        <button type="button" class="custom-button" onclick="window.location.href='註冊.php'" style="margin-top: 10px;">註冊</button>
                     </div>
                 </div>
             </div>
@@ -39,15 +39,14 @@
     </header>
     <div class="wrapper">
         <div class="nav">
-            <div class="sidebar">
-                <ul><a href="首頁.html"><img class="img" src="https://cdn3.iconfinder.com/data/icons/fluent-regular-24px-vol-4/24/ic_fluent_home_24_regular-64.png"> 首頁</img></a></ul>
-                <ul><a href="儀器預約現況.html"><img class="img" src="https://cdn2.iconfinder.com/data/icons/school-set-5/512/6-64.png"> 教室預約現況</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn4.iconfinder.com/data/icons/user-interface-937/24/20.clock_time_watch_date_ui-64.png"> 預約教室使用</img></a></ul>
-                <ul><a href="繳費系統.html"><img class="img" src="https://cdn0.iconfinder.com/data/icons/finance-business-02/32/Payment-64.png"></img> 繳費系統</a></ul>
-                <ul><a href="使用規則與管理辦法.html"><img class="img" src="https://cdn2.iconfinder.com/data/icons/legal-services-icostory-black-and-white/64/button-legal_document-list-goals-checklist-64.png"> 使用規則與管理辦法</img></a></ul>
-                <ul><a href="校內資源.html"><img class="img" src="https://cdn0.iconfinder.com/data/icons/miscellaneous-4-bold/64/atomizing_nuclear_atomic_core_connect-64.png"> 校內資源</img></a></ul>
-                <ul><a href="#"><img class="img" src="https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-3/32/cloud--service-management-64.png"></img> 後台管理</a></ul>
-                <ul><a href="評分反饋.html"><img class="img" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/mail-64.png"> 評分反饋</img></a></ul>
+        <div class="sidebar">
+                <ul><a href="首頁.php"><img class="img" src="https://cdn3.iconfinder.com/data/icons/fluent-regular-24px-vol-4/24/ic_fluent_home_24_regular-64.png"> 首頁</img></a></ul>
+                <ul><a href="教室預約紀錄.php"><img class="img" src="https://cdn2.iconfinder.com/data/icons/school-set-5/512/6-64.png"> 教室預約紀錄</img></a></ul>
+                <ul><a href="教室預約使用.php"><img class="img" src="https://cdn4.iconfinder.com/data/icons/user-interface-937/24/20.clock_time_watch_date_ui-64.png"> 預約教室使用</img></a></ul>
+                <ul><a href="帳號管理.php"><img class="img" src="https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-3/32/cloud--service-management-64.png"></img> 帳號管理</a></ul>
+                <ul><a href="教室統計功能.php"><img class="img" src="https://cdn-icons-png.flaticon.com/128/6850/6850740.png"></img>教室統計</a></ul>
+                <ul><a href="校內資源.php"><img class="img" src="https://cdn0.iconfinder.com/data/icons/miscellaneous-4-bold/64/atomizing_nuclear_atomic_core_connect-64.png"> 校內資源</img></a></ul>
+                <ul><a href="評分反饋.php"><img class="img" src="https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/mail-64.png"> 評分反饋</img></a></ul>
             </div>
         </div>
         <div class="main">

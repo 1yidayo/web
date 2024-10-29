@@ -78,7 +78,7 @@ header {
     height: 500px;
     background-color: white;
     border-radius: 5px;
-    border-top: 30px solid #b4eb6d;
+    border-top: 30px solid #7da7c3;
     box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
     margin: auto;
     position: relative;
@@ -106,7 +106,7 @@ header {
 }
 
 .submit {
-    background: #b4eb6d;
+    background: #7da7c3;
     width: 230px;
     height: 40px;
     margin: 12px auto;
@@ -148,16 +148,14 @@ header {
 .button-style {
     padding: 5px 10px;
     border: none;
-    background-color: #b4eb6d;
+    background-color:#7da7c3;
     border-radius: 5px;
     cursor: pointer;
     margin: 10px auto;
     padding: 1px 10px;
 }
 
-.button-style:hover {
-    background-color: #b4eb6d;
-}
+
 
 /* 如果需要調整文字與按鈕邊界的距離，可以設置 padding 屬性 */
 .button-style a {
@@ -445,171 +443,6 @@ form button {
     font-size: 18px;
 }
 
-/*以下為後台管理系統*/
-.backstage {
-    background-color: white;
-    font-size: 12px;
-    margin: 60px;
-}
-
-.datetable {
-    font-size: 12px;
-}
-
-.btn-warning {
-    color: white;
-    background-color: #dc3545;
-    border-color: #dc3545;
-    font-size: 12px;
-    padding: 2px 8px;
-    line-height: 1.2;
-}
-
-.badge-success {
-    background-color: #28a745;
-    font-size: 12px;
-    padding: 2px 8px;
-    line-height: 1.5;
-    width: 100px;
-    color: black;
-    display: inline-flex;
-    align-items: center;
-}
-
-.badge-success .fas {
-    margin-right: 4px;
-    font-size: 12px;
-}
-
-.badge-warning {
-    background-color: #fd7e14;
-    font-size: 12px;
-    padding: 2px 8px;
-    line-height: 1.2;
-    width: 100px;
-    color: black;
-    display: inline-flex;
-    align-items: center;
-}
-
-.badge-warning .fas {
-    margin-right: 4px;
-    font-size: 12px;
-}
-
-.btn-remind {
-    font-size: 12px;
-    padding: 2px 8px;
-    line-height: 1.2;
-    margin-left: 4px;
-    color: black;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    top: calc(50% - 200px);
-    left: calc(50% - 200px);
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    width: 400px;
-    height: 400px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    animation: zoomIn 0.3s ease forwards;
-}
-
-.popup-content {
-    text-align: center;
-}
-
-@keyframes zoomIn {
-    from {
-        transform: scale(0);
-    }
-
-    to {
-        transform: scale(1);
-    }
-}
-
-
-.popup-content img {
-    margin-top: 40px;
-    width: 180px;
-    height: auto;
-    margin-bottom: 50px;
-}
-
-
-/*以下為使用規則與管理辦法*/
-.tag-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-    margin-left: 60px;
-}
-
-.tag {
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    padding: 5px 10px;
-    font-size: 14px;
-    cursor: pointer;
-    color: darkorchid;
-}
-
-.details-container {
-    background-color: ghostwhite;
-    border: 1px solid #bbb;
-    border-radius: 3px;
-    padding: 20px;
-    margin-top: 20px;
-    margin-left: 60px;
-    margin-bottom: 40px;
-    width: 1100px;
-    display: none;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-table,
-th,
-td {
-    border: 1px solid #ccc;
-}
-
-th,
-td {
-    padding: 8px;
-    text-align: left;
-}
-
-thead th {
-    text-align: center;
-    /* 使表格標題單元格內容置中 */
-}
-
-
-/*以下為footer*/
-footer div {
-    margin-bottom: 40px;
-}
-
-.copy-right {
-    margin-top: 50px;
-    margin-left: 180px;
-    display: inline-block;
-
-}
 
 
 /*以下為footer*/
@@ -636,5 +469,5 @@ footer div {
 
 /* 設置 span 與其他元素之間的間隔 */
 footer a {
-    margin-top: 20px;
+    margin-top: 50px;
 }
