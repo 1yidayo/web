@@ -57,8 +57,8 @@
             <a href="首頁.php" target="contentFrame" style="text-decoration: none;">首頁</a>
             <a href="預借教室.php" target="contentFrame" style="text-decoration: none;">預借教室</a>
             <a href="預借紀錄.php" target="contentFrame" style="text-decoration: none;">教室預借紀錄</a>
-            <a href="" target="contentFrame" style="text-decoration: none;">教室統計</a>
-            <a href="" target="contentFrame" style="text-decoration: none;">評分反饋</a>
+            <a href="教室統計.php" target="contentFrame" style="text-decoration: none;">教室統計</a>
+            <a href="評分反饋.php" target="contentFrame" style="text-decoration: none;">評分反饋</a>
             <a href="校內資源.php" target="contentFrame" style="text-decoration: none;">校內資源</a>
         </div>
         <a href="login.php" target="contentFrame"> <button type="button" class="btn btn-outline-success">帳號管理</button></a>
