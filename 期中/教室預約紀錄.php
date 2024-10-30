@@ -17,7 +17,7 @@
 </head>
 
 <body>
-<header>
+    <header>
         <div class="headergrid">
             <div style="margin-top: 20px; margin-left: 30px;">
                 <h1 style="color: black;">輔仁大學教室預借系統</h1>
@@ -52,201 +52,108 @@
             </div>
         </div>
         <div class="main">
-            <h1 style="margin-top: 20px;margin-left: 20px;">儀器預約裝況查詢</h1>
+            <h1 style="margin-top: 20px;margin-left: 20px;">教室預約紀錄</h1>
             <h3 style="margin-top: 20px;margin-left: 20px;">Reservation Schedule Search</h3>
             <div class="wrapper2">
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">高階13色流式細胞儀<br>LSR II Flow Cytometer</p>
+                        <div class="upper-text" style="background-color:#92b8d0;">
+                            <p class="card-title">SL200-1</p>
                         </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/BD-LSR2.png" class="card-img-top"
+                        <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器1(1).html">儀器預約狀況查詢</a></small>
+                        <div class="lower-text" style="background-color: #92b8d0;">
+                            <small class=" text-muted"><a href="./教室預約紀錄/SL200-1.php">預約紀錄</a></small>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">類流式影像自動擷取定量系統<br>TissueFAXS</p>
+                        <div class="upper-text" style="background-color:#92b8d0;">
+                            <p class="card-title">SL200-3</p>
                         </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/TissueFAXS.png" class="card-img-top"
+                        <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器2(2).html">儀器預約狀況查詢</a></small>
+                        <div class="lower-text" style="background-color: #92b8d0;">
+                            <small class=" text-muted"><a href="./教室預約紀錄/SL200-3.php">預約紀錄</a></small>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">TissueFAXS分析軟體</p>
+                        <div class="upper-text" style="background-color:#92b8d0;">
+                            <p class="card-title">SL201</p>
                         </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/TissueFAXS.png" class="card-img-top"
+                        <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器3(3).html">儀器預約狀況查詢</a></small>
+                        <div class="lower-text" style="background-color: #92b8d0;">
+                            <small class=" text-muted"><a href="./教室預約紀錄/SL201.php">預約紀錄</a></small>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">雷射共軛焦顯微鏡<br>FV 1000 Confocal Microscope</p>
+                        <div class="upper-text" style="background-color:#92b8d0;">
+                            <p class="card-title">SL245</p>
                         </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/Olympus-FV1000.png" class="card-img-top"
+                        <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器4(4).html">儀器預約狀況查詢</a></small>
+                        <div class="lower-text" style="background-color: #92b8d0;">
+                            <small class=" text-muted"><a href="./教室預約紀錄/SL245.php">預約紀錄</a></small>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">雷射共軛焦顯微鏡<br>LSM 700 Confocal Microscope</p>
+                        <div class="upper-text" style="background-color:#92b8d0;">
+                            <p class="card-title">SL246</p>
                         </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/LSM700-ZEISS-Final.png"
-                            class="card-img-top" alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器5(5).html">儀器預約狀況查詢</a></small>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">細胞內離子偵測系統<br>Cell^R Xecellence System</p>
-                        </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/CellR-Olympus-Final.png"
-                            class="card-img-top" alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器6(6).html">儀器預約狀況查詢</a></small>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">正立螢光顯微鏡<br>AxioPlan2 Upright</p>
-                        </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/AxioPlan2-final.png" class="card-img-top"
+                        <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器7(7).html">儀器預約狀況查詢</a></small>
+                        <div class="lower-text" style="background-color: #92b8d0;">
+                            <small class=" text-muted"><a href="./教室預約紀錄/SL246.php">預約紀錄</a></small>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">螢光共振能量轉移顯微系統<br>Leica M205FA Fluorescence</p>
+                        <div class="upper-text" style="background-color:#92b8d0;">
+                            <p class="card-title">SL471</p>
                         </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/Leica_M205FA.jpg" class="card-img-top"
+                        <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器8(8).html">儀器預約狀況查詢</a></small>
+                        <div class="lower-text" style="background-color: #92b8d0;">
+                            <small class=" text-muted"><a href="./教室預約紀錄/SL471.php">預約紀錄</a></small>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">多層次螢光影像擷取<br>與分析系統 - ImageXpress</p>
+                        <div class="upper-text" style="background-color:#92b8d0;">
+                            <p class="card-title">LM200</p>
                         </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/Imagexpess.jpg" class="card-img-top"
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/FJU_SSMG01.jpg/345px-FJU_SSMG01.jpg" class="card-img-top"
                             alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器9(9).html">儀器預約狀況查詢</a></small>
+                        <div class="lower-text" style="background-color: #92b8d0;">
+                            <small class=" text-muted"><a href="./教室預約紀錄/LM200.php">預約紀錄</a></small>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">多層次螢光影像擷取<br>與分析系統-離線分析系統</p>
+                        <div class="upper-text" style="background-color:#92b8d0;">
+                            <p class="card-title">LM202</p>
                         </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/Imagexpess.jpg" class="card-img-top"
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/FJU_SSMG01.jpg/345px-FJU_SSMG01.jpg" class="card-img-top"
                             alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器10(10).html">儀器預約狀況查詢</a></small>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">高階三維重建影像分析軟體<br>Imaris</p>
-                        </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/imaris.jpg" class="card-img-top" alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器11(11).html">儀器預約狀況查詢</a></small>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">核磁共振儀<br>Varian-NMR-600MHz</p>
-                        </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/NMR600-final.png" class="card-img-top"
-                            alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器12(12).html">儀器預約狀況查詢</a></small>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">核磁共振儀<br>Unity-NMR-400MHz</p>
-                        </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/NMR400-unity-final.png"
-                            class="card-img-top" alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器13(13).html">儀器預約狀況查詢</a></small>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">核磁共振儀<br>Mercury-NMR-400MHz</p>
-                        </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/NMR400-Mercury-final.png"
-                            class="card-img-top" alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器14(14).html">儀器預約狀況查詢</a></small>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">核磁共振儀<br>JEOL-NMR-400MHz</p>
-                        </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/JEOL400NMR-final.png" class="card-img-top"
-                            alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器15(15).html">儀器預約狀況查詢</a></small>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card" style="margin: 20px;">
-                        <div class="upper-text">
-                            <p class="card-title">快速多槽聚合酶連鎖反應儀<br>Block 1-ProFlex PCR System</p>
-                        </div>
-                        <img src="https://crrd.kmu.edu.tw/images/instruments/PCR.png" class="card-img-top" alt="...">
-                        <div class="lower-text">
-                            <small class="text-muted"><a href="./儀器使用狀況/儀器16(16).html">儀器預約狀況查詢</a></small>
+                        <div class="lower-text" style="background-color: #92b8d0;">
+                            <small class=" text-muted"><a href="./教室預約紀錄/LM202.php">預約紀錄</a></small>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 

@@ -87,13 +87,13 @@
                 <h2 style="text-align: center;">使用規則與管理辦法</h2>
                 <div><br>
 
-                    <p>&nbsp;一、輔仁大學（以下簡稱本校）國璽樓10~12樓教學場地（以下簡稱本場地）係提供優質教學環境而設立，為有效管理及<br>
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;合理使用，特訂立「輔仁大學國璽樓10~12樓教學場地使用管理要點」，以下簡稱本要點。</p>
+                    <p>&nbsp;一、輔仁大學（以下簡稱本校）提供優質教學環境而設立，為有效管理及合理使用，特訂立「輔仁大學教學場地使用管理要點」，<br>
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 以下簡稱本要點。</p>
                     <p>二、權責單位：本校總務處負責場地修繕與清潔；管理學院負責場地借用管理與儀器設備維護。</p>
                     <p>三、場地類別：<br>
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.郎世寧廳：大廳MD1102及貴賓休息室MD1104<br>
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2.階梯教室：MD1001<br>
-                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3.專業教室：MD1002、MD1003、MD1004、MD1101、MD1103、MD1201、MD1204</p>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.利瑪竇大樓：LM200、LM202<br>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2.聖言樓：SL200-1、SL200-3、SL201、SL245、SL246、SL471<br>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3.專業教室：</p>
                     <p>四、使用對象：本場地之使用對象及時間衝突時之優先順序如下：<br>
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1.管理學院辦公室。<br>
                         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2.管理學院各系、所、學程及研究中心。<br>
