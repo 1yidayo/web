@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@550&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/zh/thumb/d/da/Fu_Jen_Catholic_University_logo.svg/1200px-Fu_Jen_Catholic_University_logo.svg.png">
     <!-- <link rel="stylesheet" href="123.css"> -->
     <link rel="stylesheet" href="index.css">
 </head>
@@ -26,7 +27,7 @@
         <div class="nav">
             <a href="首頁.php" target="contentFrame" style="text-decoration: none;">首頁</a>
             <a href="預借教室.php" target="contentFrame" style="text-decoration: none;">預借教室</a>
-            <a href="" target="contentFrame" style="text-decoration: none;">教室預約紀錄</a>
+            <a href="預約紀錄.php" target="contentFrame" style="text-decoration: none;">教室預約紀錄</a>
             <a href="" target="contentFrame" style="text-decoration: none;">教室統計</a>
             <a href="" target="contentFrame" style="text-decoration: none;">評分反饋</a>
             <a href="" target="contentFrame" style="text-decoration: none;">校內資源</a>
@@ -38,6 +39,7 @@
     <div class="content">
         <iframe name="contentFrame" src="首頁.php" width="100%" height="1000" allowtransparency="true"></iframe>
     </div>
+    
 
 
 
