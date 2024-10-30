@@ -55,8 +55,8 @@
         <div class="nav">
             <div class="sidebar">
                 <ul><a href="首頁.php"><img class="img" src="https://cdn3.iconfinder.com/data/icons/fluent-regular-24px-vol-4/24/ic_fluent_home_24_regular-64.png"> 首頁</img></a></ul>
-                <ul><a href="教室預約紀錄.php"><img class="img" src="https://cdn2.iconfinder.com/data/icons/school-set-5/512/6-64.png"> 教室預約紀錄</img></a></ul>
                 <ul><a href="教室預約使用.php"><img class="img" src="https://cdn4.iconfinder.com/data/icons/user-interface-937/24/20.clock_time_watch_date_ui-64.png"> 預約教室使用</img></a></ul>
+                <ul><a href="教室預約紀錄.php"><img class="img" src="https://cdn2.iconfinder.com/data/icons/school-set-5/512/6-64.png"> 教室預約紀錄</img></a></ul>
                 <ul><a href="帳號管理.php"><img class="img" src="https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-3/32/cloud--service-management-64.png"></img> 帳號管理</a></ul>
                 <ul><a href="教室統計功能.php"><img class="img" src="https://cdn-icons-png.flaticon.com/128/6850/6850740.png"></img>教室統計</a></ul>
                 <ul><a href="校內資源.php"><img class="img" src="https://cdn0.iconfinder.com/data/icons/miscellaneous-4-bold/64/atomizing_nuclear_atomic_core_connect-64.png"> 校內資源</img></a></ul>
@@ -65,7 +65,6 @@
         </div>
         <style>
             body {
-                font-family: Arial, sans-serif;
                 margin: 0;
                 padding: 0;
             }
@@ -149,11 +148,11 @@
                         <li>當您點擊日曆中"已預約的名字"可以修改或刪除您的預約</li>
                     </ul>
                 </div>
-                <div><img src="pic.png" alt="驚嘆號" style="width: 130px; height: 130px; vertical-align: middle;"></div>
+                <div><img src="pic.png" alt="驚嘆號" style="width: 130px;height: 130px;vertical-align: middle;"></div>
             </div>
 
             <p style="text-align: center; margin-top: 40px;">
-                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button"
+                <a class="reserve-button" data-toggle="collapse" href="#collapseExample" role="button"
                     aria-expanded="false" aria-controls="collapseExample">
                     點此預約
                 </a>
@@ -285,6 +284,7 @@
                         const endDate = document.getElementById('end').value;
                         const endTime = document.getElementById('end-time').value;
 
+                        // 將日期時間轉換為 JavaScript 的 Date 物件
                         const startDateTime = new Date(startDate + 'T' + startTime);
                         const endDateTime = new Date(endDate + 'T' + endTime);
 
@@ -345,28 +345,28 @@
                     });
 
                     function loadEventsFromLocalStorage() {
-                        return JSON.parse(localStorage.getItem('events-instrument3')) || [];
+                        return JSON.parse(localStorage.getItem('events')) || [];
                     }
 
                     function saveEventToLocalStorage(event) {
                         const events = loadEventsFromLocalStorage();
                         events.push(event);
-                        localStorage.setItem('events-instrument3', JSON.stringify(events));
+                        localStorage.setItem('events', JSON.stringify(events));
                     }
 
                     function updateEventInLocalStorage(event) {
                         const events = loadEventsFromLocalStorage();
                         const index = events.findIndex(e => e.id === event.id);
                         if (index !== -1) {
-                            events[index] = event;
-                            localStorage.setItem('events-instrument3', JSON.stringify(events));
+                            events[index] = event.toPlainObject();
+                            localStorage.setItem('events', JSON.stringify(events));
                         }
                     }
 
                     function removeEventFromLocalStorage(eventId) {
                         const events = loadEventsFromLocalStorage();
                         const filteredEvents = events.filter(event => event.id !== eventId);
-                        localStorage.setItem('events-instrument3', JSON.stringify(filteredEvents));
+                        localStorage.setItem('events', JSON.stringify(filteredEvents));
                     }
 
                     function isSameDay(date1, date2) {

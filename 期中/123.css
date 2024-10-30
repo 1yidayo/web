@@ -40,13 +40,15 @@ header {
     grid-template-columns: 80% 20%;
 }
 
+
+
 /* 以下為登入頁面 */
 
 .custom-button {
-    background-color: burlywood;
+    background-color:#92b8d0;
     border: none;
     color: black;
-    padding: 10px 20px;
+    padding: 5px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -78,7 +80,6 @@ header {
     height: 500px;
     background-color: white;
     border-radius: 5px;
-    border-top: 30px solid #92b8d0;
     box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
     margin: auto;
     position: relative;
@@ -112,7 +113,7 @@ header {
     margin: 12px auto;
     padding: 5px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 16px;
     border: none;
     display: block;
 }
@@ -146,13 +147,13 @@ header {
 }
 
 .button-style {
-    padding: 5px 10px;
+    padding: 1px 10px;
     border: none;
     background-color:#92b8d0;
     border-radius: 5px;
     cursor: pointer;
     margin: 10px auto;
-    padding: 1px 10px;
+    font-size: 14px;
 }
 
 
@@ -260,6 +261,7 @@ header {
     height: auto;
     border: 1px solid black;
     margin: 10px;
+    min-height: 800px;
 }
 
 .sidebar {
@@ -280,6 +282,7 @@ header {
     border: 1px solid black;
     padding: 10px;
     margin: 10px;
+    min-height: 800px;
 }
 
 .wrapper1 {
@@ -425,19 +428,44 @@ form button {
     border: 1px solid #f5c6cb;
     border-radius: 5px;
     padding: 10px;
+    margin-top: 20px;
     margin-left: 100px;
     margin-right: 100px;
 }
 
+.reserve-button {
+    background-color: #92b8d0;
+    border: 1px solid #92b8d0;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 16px;
+}
+
 .alert1 h6 {
-    color: #721c24;
+    color: red;
     margin-top: 0;
     font-size: 20px;
 }
 
 .alert1 ul {
     list-style-type: disc;
-    font-size: 18px;
+    font-size: 16px;
+}
+
+.alert2 {
+    display: grid;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 20%;
+}
+
+.alert2 div {
+    color: red;
+    font-size: 16px;
 }
 
 

@@ -29,7 +29,7 @@
 </head>
 
 <body>
-<header>
+    <header>
         <div class="headergrid">
             <div style="margin-top: 20px; margin-left: 30px;">
                 <h1 style="color: black;">輔仁大學教室預借系統</h1>
@@ -52,11 +52,11 @@
         </div>
     </header>
     <div class="wrapper">
-    <div class="nav">
+        <div class="nav">
             <div class="sidebar">
                 <ul><a href="首頁.php"><img class="img" src="https://cdn3.iconfinder.com/data/icons/fluent-regular-24px-vol-4/24/ic_fluent_home_24_regular-64.png"> 首頁</img></a></ul>
-                <ul><a href="教室預約紀錄.php"><img class="img" src="https://cdn2.iconfinder.com/data/icons/school-set-5/512/6-64.png"> 教室預約紀錄</img></a></ul>
                 <ul><a href="教室預約使用.php"><img class="img" src="https://cdn4.iconfinder.com/data/icons/user-interface-937/24/20.clock_time_watch_date_ui-64.png"> 預約教室使用</img></a></ul>
+                <ul><a href="教室預約紀錄.php"><img class="img" src="https://cdn2.iconfinder.com/data/icons/school-set-5/512/6-64.png"> 教室預約紀錄</img></a></ul>
                 <ul><a href="帳號管理.php"><img class="img" src="https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-3/32/cloud--service-management-64.png"></img> 帳號管理</a></ul>
                 <ul><a href="教室統計功能.php"><img class="img" src="https://cdn-icons-png.flaticon.com/128/6850/6850740.png"></img>教室統計</a></ul>
                 <ul><a href="校內資源.php"><img class="img" src="https://cdn0.iconfinder.com/data/icons/miscellaneous-4-bold/64/atomizing_nuclear_atomic_core_connect-64.png"> 校內資源</img></a></ul>
@@ -217,17 +217,17 @@
             </div>
 
             <script>
-                document.addEventListener('DOMContentLoaded', function () {
+                document.addEventListener('DOMContentLoaded', function() {
                     var calendarEl = document.getElementById('calendar-container');
                     var calendar = new FullCalendar.Calendar(calendarEl, {
                         initialView: 'dayGridMonth',
                         events: loadEventsFromLocalStorage(),
-                        eventContent: function (arg) {
+                        eventContent: function(arg) {
                             return {
                                 html: `<div>${arg.event.extendedProps.name}</div>`
                             };
                         },
-                        eventClick: function (info) {
+                        eventClick: function(info) {
                             $('#editEventModal').modal('show');
                             window.selectedEvent = info.event;
                             document.getElementById('edit-start').value = info.event.start.toISOString().split('T')[0];
@@ -235,19 +235,31 @@
                             document.getElementById('edit-end').value = info.event.end.toISOString().split('T')[0];
                             document.getElementById('edit-end-time').value = info.event.end.toISOString().split('T')[1].substring(0, 5);
                         },
-                        dateClick: function (info) {
+                        dateClick: function(info) {
                             var clickedDate = info.date;
                             var events = calendar.getEvents();
                             var message = '';
                             var hasEvents = false;
 
-                            events.forEach(function (event) {
+                            events.forEach(function(event) {
                                 var eventStartDate = event.start;
                                 var eventEndDate = event.end;
 
                                 if (isSameDay(clickedDate, eventStartDate) || isSameDay(clickedDate, eventEndDate) || (clickedDate > eventStartDate && clickedDate < eventEndDate)) {
-                                    var startTime = eventStartDate.toLocaleString([], { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
-                                    var endTime = eventEndDate.toLocaleString([], { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+                                    var startTime = eventStartDate.toLocaleString([], {
+                                        year: 'numeric',
+                                        month: '2-digit',
+                                        day: '2-digit',
+                                        hour: '2-digit',
+                                        minute: '2-digit'
+                                    });
+                                    var endTime = eventEndDate.toLocaleString([], {
+                                        year: 'numeric',
+                                        month: '2-digit',
+                                        day: '2-digit',
+                                        hour: '2-digit',
+                                        minute: '2-digit'
+                                    });
 
                                     message += `${event.extendedProps.name}: ${startTime} ~ ${endTime}\n`;
                                     hasEvents = true;
@@ -264,7 +276,7 @@
 
                     calendar.render();
 
-                    document.getElementById('reservation-form').addEventListener('submit', function (event) {
+                    document.getElementById('reservation-form').addEventListener('submit', function(event) {
                         event.preventDefault();
 
                         const name = document.getElementById('name').value;
@@ -305,7 +317,7 @@
                         document.getElementById('reservation-form').reset();
                     });
 
-                    document.getElementById('save-changes').addEventListener('click', function () {
+                    document.getElementById('save-changes').addEventListener('click', function() {
                         const newStartDate = document.getElementById('edit-start').value;
                         const newStartTime = document.getElementById('edit-start-time').value;
                         const newEndDate = document.getElementById('edit-end').value;
@@ -322,7 +334,7 @@
                         $('#editEventModal').modal('hide');
                     });
 
-                    document.getElementById('cancel-reservation').addEventListener('click', function () {
+                    document.getElementById('cancel-reservation').addEventListener('click', function() {
                         if (confirm('確定要取消此預約嗎？')) {
                             var eventId = window.selectedEvent.id;
                             window.selectedEvent.remove();
@@ -356,6 +368,7 @@
                         const filteredEvents = events.filter(event => event.id !== eventId);
                         localStorage.setItem('events-instrument2', JSON.stringify(filteredEvents));
                     }
+
                     function isSameDay(date1, date2) {
                         return date1.getFullYear() === date2.getFullYear() &&
                             date1.getMonth() === date2.getMonth() &&

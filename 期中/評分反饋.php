@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +15,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@550&display=swap">
 </head>
+
 <body>
-<header>
+    <header>
         <div class="headergrid">
             <div style="margin-top: 20px; margin-left: 30px;">
                 <h1 style="color: black;">輔仁大學教室預借系統</h1>
@@ -39,10 +41,10 @@
     </header>
     <div class="wrapper">
         <div class="nav">
-        <div class="sidebar">
+            <div class="sidebar">
                 <ul><a href="首頁.php"><img class="img" src="https://cdn3.iconfinder.com/data/icons/fluent-regular-24px-vol-4/24/ic_fluent_home_24_regular-64.png"> 首頁</img></a></ul>
-                <ul><a href="教室預約紀錄.php"><img class="img" src="https://cdn2.iconfinder.com/data/icons/school-set-5/512/6-64.png"> 教室預約紀錄</img></a></ul>
                 <ul><a href="教室預約使用.php"><img class="img" src="https://cdn4.iconfinder.com/data/icons/user-interface-937/24/20.clock_time_watch_date_ui-64.png"> 預約教室使用</img></a></ul>
+                <ul><a href="教室預約紀錄.php"><img class="img" src="https://cdn2.iconfinder.com/data/icons/school-set-5/512/6-64.png"> 教室預約紀錄</img></a></ul>
                 <ul><a href="帳號管理.php"><img class="img" src="https://cdn1.iconfinder.com/data/icons/carbon-design-system-vol-3/32/cloud--service-management-64.png"></img> 帳號管理</a></ul>
                 <ul><a href="教室統計功能.php"><img class="img" src="https://cdn-icons-png.flaticon.com/128/6850/6850740.png"></img>教室統計</a></ul>
                 <ul><a href="校內資源.php"><img class="img" src="https://cdn0.iconfinder.com/data/icons/miscellaneous-4-bold/64/atomizing_nuclear_atomic_core_connect-64.png"> 校內資源</img></a></ul>
@@ -50,71 +52,71 @@
             </div>
         </div>
         <div class="main">
-                <div>
-                    <div style="margin-left:0%;">
-                            <form id="contactForm" style="width: 500px;">
-                                <div>
-                                    <label for="name"><b>姓名</b></label><input class="form-control" id="name" type="text" style="width:300px" placeholder="Enter your name..."
-                                        data-sb-validations="required" />
-                                    
-                                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                                </div>
-                                <div>
-                                    <label for="email"><b>電子郵件</b></label><input class="form-control" id="email" type="email" style="width:300px" placeholder="Enter your email..."
-                                        data-sb-validations="required,email" />
-                                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.
-                                    </div>
-                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                                </div>
-                                <div>
-                                    <label for="phone"><b>電話號碼</b></label><input class="form-control" id="phone" type="tel" style="width:300px" placeholder="Enter your phone number..."
-                                        data-sb-validations="required" />
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                                </div>
-                                <div>
-                                    <label for="" style="margin-left:20px ;"><b>使用感受</b></label><br>
-                                    <input type="radio" name="feeling" id="""><label for="">非常滿意</label>
-                                    <input type="radio" name="feeling" id=""><label for="">滿意</label>
-                                    <input type="radio" name="feeling" id=""><label for="">一般</label>
-                                    <input type="radio" name="feeling" id=""><label for="">不滿意</label>
-                                    <input type="radio" name="feeling" id=""><label for="">非常不滿意</label>
-                                </div>
-                                <div>
-                                    <label for="message"><b>待改進之處</b></label><textarea class="form-control" id="message" style="width:300px" placeholder="Enter your message here..."
-                                        style="height: 50rem" data-sb-validations="required"></textarea>
-                                    
-                                    <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                                </div>
-                                <br />
-                                <!-- Submit success message-->
-                                <!---->
-                                <!-- This is what your users will see when the form-->
-                                <!-- has successfully submitted-->
-                                <div class="d-none" id="submitSuccessMessage">
-                                    <div class="text-center mb-3">
-                                        <div class="fw-bolder">Form submission successful!</div>
-                                    </div>
-                                </div>
-                                <!-- Submit error message-->
-                                <!---->
-                                <!-- This is what your users will see when there is-->
-                                <!-- an error submitting the form-->
-                                <div class="d-none" id="submitErrorMessage">
-                                    <div class="text-center text-danger mb-3">Error sending message!</div>
-                                </div>
-                                <!-- Submit Button-->
-                                <button class="btn btn-primary text-uppercase disabled" id="submitButton"
-                                    type="submit">Send</button>
-                            </form>
+            <div>
+                <div style="margin-left:0%;">
+                    <form id="contactForm" style="width: 500px;">
+                        <div>
+                            <label for="name"><b>姓名</b></label><input class="form-control" id="name" type="text" style="width:300px" placeholder="Enter your name..."
+                                data-sb-validations="required" />
+
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                         </div>
-                    </div>
+                        <div>
+                            <label for="email"><b>電子郵件</b></label><input class="form-control" id="email" type="email" style="width:300px" placeholder="Enter your email..."
+                                data-sb-validations="required,email" />
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        </div>
+                        <div>
+                            <label for="phone"><b>電話號碼</b></label><input class="form-control" id="phone" type="tel" style="width:300px" placeholder="Enter your phone number..."
+                                data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                        </div>
+                        <div>
+                            <label for="" style="margin-left:20px ;"><b>使用感受</b></label><br>
+                            <input type="radio" name="feeling" id="""><label for="">非常滿意</label>
+                            <input type="radio" name="feeling" id=""><label for="">滿意</label>
+                            <input type="radio" name="feeling" id=""><label for="">一般</label>
+                            <input type="radio" name="feeling" id=""><label for="">不滿意</label>
+                            <input type="radio" name="feeling" id=""><label for="">非常不滿意</label>
+                        </div>
+                        <div>
+                            <label for="message"><b>待改進之處</b></label><textarea class="form-control" id="message" style="width:300px" placeholder="Enter your message here..."
+                                style="height: 50rem" data-sb-validations="required"></textarea>
+
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                        </div>
+                        <br/>
+                        <!-- Submit success message-->
+                        <!---->
+                        <!-- This is what your users will see when the form-->
+                        <!-- has successfully submitted-->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                            </div>
+                        </div>
+                        <!-- Submit error message-->
+                        <!---->
+                        <!-- This is what your users will see when there is-->
+                        <!-- an error submitting the form-->
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                        </div>
+                        <!-- Submit Button-->
+                        <button class="btn btn-primary text-uppercase disabled" id="submitButton"
+                            type="submit">Send</button>
+                    </form>
                 </div>
+            </div>
         </div>
-        <div class="wrapper1">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div></div>
+    </div>
+    <div class="wrapper1">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    </div>
     </div>
 
 
@@ -130,4 +132,5 @@
         <a href="#top" id="gototop"><span>返回頂端</span></a>
     </footer>
 </body>
+
 </html>
