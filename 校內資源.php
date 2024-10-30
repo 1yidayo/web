@@ -21,8 +21,8 @@
 
 <body> 
     <div class="main">
-        <h1 style="margin-top: 20px;margin-left: 20px; font-size: 30px">校內資源</h1>
-        <div style="margin-top: 40px; font-size: 18px;">
+        <h1 style="margin-top: 20px; margin-left: 20px; font-size: 30px">校內資源</h1>
+        <div style="margin-left: 20px; margin-top: 40px; font-size: 18px;">
             <ul><a href="https://www.fju.edu.tw/">輔仁大學全球資訊網</a></ul>
             <ul><a href="https://portal.fju.edu.tw/student/">輔仁大學學生資訊網</a></ul>
             <ul><a href="http://www.rdo.fju.edu.tw/">輔仁大學研究發展處</a></ul>
