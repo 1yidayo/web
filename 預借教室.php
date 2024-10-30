@@ -21,13 +21,8 @@
 
 <body>
         <div class="main">
-<<<<<<< HEAD
-            <h1 style="margin-top: 20px;margin-left: 20px;">教室預借</h1>
-            <h3 style="margin-top: 20px;margin-left: 20px;">Reservation Schedule</h3>
-=======
             <h1 style="margin-top: 20px;margin-left: 20px; font-size: 30px">教室預借</h1>
             <h4 style="margin-top: 20px;margin-left: 20px;">Reservation Schedule</h4>
->>>>>>> 6524e952a591b76af1211c535fa9a52391bbebce
             <div class="wrapper2">
                 <div class="item">
                     <div class="card" style="margin: 20px;">

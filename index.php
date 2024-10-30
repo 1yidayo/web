@@ -57,23 +57,17 @@
             <a href="首頁.php" target="contentFrame" style="text-decoration: none;">首頁</a>
             <a href="預借教室.php" target="contentFrame" style="text-decoration: none;">預借教室</a>
             <a href="預借紀錄.php" target="contentFrame" style="text-decoration: none;">教室預借紀錄</a>
-<<<<<<< HEAD
-            <a href="教室統計.php" target="contentFrame" style="text-decoration: none;">教室統計</a>
-            <a href="評分反饋.php" target="contentFrame" style="text-decoration: none;">評分反饋</a>
-=======
             <a href="" target="contentFrame" style="text-decoration: none;">教室統計</a>
             <a href="" target="contentFrame" style="text-decoration: none;">評分反饋</a>
->>>>>>> 6524e952a591b76af1211c535fa9a52391bbebce
             <a href="校內資源.php" target="contentFrame" style="text-decoration: none;">校內資源</a>
         </div>
-        <a href="" target="contentFrame"> <button type="button" class="btn btn-outline-success">帳號管理</button></a>
+        <a href="login.php" target="contentFrame"> <button type="button" class="btn btn-outline-success">帳號管理</button></a>
     </div>
 
     <!--iframe-->
     <div class="content">
         <iframe name="contentFrame" src="首頁.php" width="100%" height="1000" allowtransparency="true"></iframe>
     </div>
-    
 
 
 
