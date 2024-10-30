@@ -21,7 +21,7 @@
 
 <body>
         <div class="main">
-            <h1 style="margin-top: 20px;margin-left: 20px;">教室預約</h1>
+            <h1 style="margin-top: 20px;margin-left: 20px;">教室預借</h1>
             <h3 style="margin-top: 20px;margin-left: 20px;">Reservation Schedule</h3>
             <div class="wrapper2">
                 <div class="item">
