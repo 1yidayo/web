@@ -8,7 +8,7 @@
 
 <body>
     <div class="main" style="font-size: 18px; border: solid, 1px, black; padding: 10px" >
-        <h2 style="text-align: center;">教室預借使用規則與管理辦法</h2>
+        <h2 style="text-align: center;">教室預借使用規則與管理辦法</h2> 
         <div><br>
 
             <p>一、輔仁大學（以下簡稱本校）提供優質教學環境而設立，為有效管理及合理使用，特訂立「教室預借使用規則與管理辦法」。<br>
