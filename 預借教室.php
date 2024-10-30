@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>輔仁大學教室預借系統</title>
+    <title>預借教室</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -21,8 +21,13 @@
 
 <body>
         <div class="main">
+<<<<<<< HEAD
             <h1 style="margin-top: 20px;margin-left: 20px;">教室預借</h1>
             <h3 style="margin-top: 20px;margin-left: 20px;">Reservation Schedule</h3>
+=======
+            <h1 style="margin-top: 20px;margin-left: 20px; font-size: 30px">教室預借</h1>
+            <h4 style="margin-top: 20px;margin-left: 20px;">Reservation Schedule</h4>
+>>>>>>> 6524e952a591b76af1211c535fa9a52391bbebce
             <div class="wrapper2">
                 <div class="item">
                     <div class="card" style="margin: 20px;">
@@ -32,7 +37,7 @@
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預約</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
@@ -44,7 +49,7 @@
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預約</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
@@ -56,7 +61,7 @@
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預約</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
@@ -68,7 +73,7 @@
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預約</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
@@ -80,7 +85,7 @@
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預約</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
@@ -92,7 +97,7 @@
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預約</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
@@ -104,7 +109,7 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/FJU_SSMG01.jpg/345px-FJU_SSMG01.jpg" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預約</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
@@ -116,13 +121,12 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/FJU_SSMG01.jpg/345px-FJU_SSMG01.jpg" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預約</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>
