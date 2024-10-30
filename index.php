@@ -17,6 +17,35 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="123.css"> -->
     <link rel="stylesheet" href="index.css">
+    
+<style>
+   .back-to-top {
+   position: fixed;
+   bottom: 2rem;
+   right: 2rem;
+   display: none;
+   width: 50px;
+   height: 50px;
+   background-color: #69839e;
+   color: #ffffff;
+   text-align: center;
+   line-height: 50px;
+   border-radius: 50%;
+   transition: background-color 0.3s ease, opacity 0.3s ease;
+   opacity: 0.8;
+   z-index: 1000;
+}
+
+.back-to-top:hover {
+   background-color: #d7d7d7;
+   opacity: 1;
+}
+
+.back-to-top i {
+   font-size: 24px;
+}
+
+</style>
 </head>
 
 <body>
@@ -43,15 +72,12 @@
 
     <!--footer-->
     <div class="footer">
-    <div class="copy-right">2024 © 輔仁大學 研究資源整合發展中心
-            <br>建議使用 Chrome / Safari / Firefox瀏覽
-        </div>
+        
         <div class="copy-right">
             <i class="fa-solid fa-location-dot"></i> 地址：242062 新北市新莊區中正路 510 號 天主教輔仁大學
             <br><i class="fa-solid fa-phone"></i>電話：(02) 29052000
             <br><i class="fa-solid fa-envelope"></i>信箱：<a href="mailto:pubwww@mail.fju.edu.tw">pubwww@mail.fju.edu.tw</a>
         </div>
-        <a href="#top" id="gototop"><span>返回頂端</span></a>
     </div>
 
     <style>
@@ -113,6 +139,25 @@
     </script>
     
 
+    <a href="#" class="back-to-top" style="text-decoration: none; font-size: 30px">
+      <p class="ri-arrow-up-line"><b>↑</b></p>
+   </a>
+   <script>
+      // 當用戶滾動到一定高度時顯示按鈕
+      window.onscroll = function() {
+         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.querySelector('.back-to-top').style.display = 'block';
+         } else {
+            document.querySelector('.back-to-top').style.display = 'none';
+         }
+      };
+   
+      // 點擊按鈕滾動到頁面頂部
+      document.querySelector('.back-to-top').addEventListener('click', function(event) {
+         event.preventDefault();
+         window.scrollTo({top: 0, behavior: 'smooth'});
+      });
+   </script>
 </body>
 
 </html>
