@@ -19,104 +19,104 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
-<body>
+<body style="color: #00000099;">
         <div class="main">
             <h1 style="margin-top: 20px;margin-left: 20px; font-size: 30px">教室預借</h1>
             <h4 style="margin-top: 20px;margin-left: 20px;">Reservation Schedule</h4>
             <div class="wrapper2">
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div style="background-color:#92b8d0; text-align: center">
+                        <div style="background-color:#aec4d2; text-align: center">
                             <p class="card-title" style="color: black"><b>SL200-1</b></p>
                         </div>
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
-                        <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
+                        <div class="lower-text" style="background-color: #aec4d2;">
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div style="background-color:#92b8d0; text-align: center">
+                        <div style="background-color:#aec4d2; text-align: center">
                             <p class="card-title" style="color: black"><b>SL200-3</b></p>
                         </div>
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
-                        <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
+                        <div class="lower-text" style="background-color: #aec4d2;">
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div style="background-color:#92b8d0; text-align: center">
+                        <div style="background-color:#aec4d2; text-align: center">
                             <p class="card-title" style="color: black"><b>SL201</b></p>
                         </div>
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
-                        <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
+                        <div class="lower-text" style="background-color: #aec4d2;">
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div style="background-color:#92b8d0; text-align: center">
+                        <div style="background-color:#aec4d2; text-align: center">
                             <p class="card-title" style="color: black"><b>SL245</b></p>
                         </div>
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
-                        <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
+                        <div class="lower-text" style="background-color: #aec4d2;">
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div style="background-color:#92b8d0; text-align: center">
+                        <div style="background-color:#aec4d2; text-align: center">
                             <p class="card-title" style="color: black"><b>SL246</b></p>
                         </div>
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
-                        <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
+                        <div class="lower-text" style="background-color: #aec4d2;">
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div style="background-color:#92b8d0; text-align: center">
+                        <div style="background-color:#aec4d2; text-align: center">
                             <p class="card-title" style="color: black"><b>SL471</b></p>
                         </div>
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
-                        <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
+                        <div class="lower-text" style="background-color: #aec4d2;">
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div style="background-color:#92b8d0; text-align: center">
+                        <div style="background-color:#aec4d2; text-align: center">
                             <p class="card-title" style="color: black"><b>LM200</b></p>
                         </div>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/FJU_SSMG01.jpg/345px-FJU_SSMG01.jpg" class="card-img-top"
                             alt="...">
-                        <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
+                        <div class="lower-text" style="background-color: #aec4d2;">
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="card" style="margin: 20px;">
-                        <div style="background-color:#92b8d0; text-align: center">
+                        <div style="background-color:#aec4d2; text-align: center">
                             <p class="card-title" style="color: black"><b>LM202</b></p>
                         </div>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/FJU_SSMG01.jpg/345px-FJU_SSMG01.jpg" class="card-img-top"
                             alt="...">
-                        <div class="lower-text" style="background-color: #92b8d0;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; "><br><b>教室預借</b></a></h6>
+                        <div class="lower-text" style="background-color: #aec4d2;">
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>

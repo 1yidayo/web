@@ -42,6 +42,11 @@ body {
     background-size: cover;
 }
 
+.main {
+    background-color: transparent;   
+
+}
+
 .header {
     /* 固定在top
     position: fixed;
@@ -86,20 +91,6 @@ body {
 }
 
 /* 右侧固定广告栏样式 */
-.right {
-    position: fixed;
-    top: 100px;
-    right: 0;
-    width: 100px;
-    height: 200px;
-    background-color: rgba(165, 188, 181, 0.776);
-    padding: 10px;
-    box-sizing: border-box;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
 .section {
     flex: 1;

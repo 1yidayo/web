@@ -18,8 +18,8 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
-<body>
-    <div class="main" style="font-size: 18px; border: solid, 1px, black; padding: 10px" >
+<body style="color: #00000099;">
+    <div class="main" style="font-size: 18px; border: 1px solid #00000099; padding: 10px; border-radius: 10px; " >
         <h2 style="text-align: center;">教室預借使用規則與管理辦法</h2> 
         <div><br>
 
@@ -52,8 +52,8 @@
                 &nbsp; &nbsp; &nbsp; &nbsp; 3. 經核准使用本場地後，如遇管理學院有特殊需要時，得停止借用或改期使用。<br>
 
             <p style="text-align: left;">&nbsp;</p>
-            <p class="center paTxs20 maTxs20 top-dotline" style="text-align: center;"><a class="btn blue"
-                    href="教室預約使用.php" target="">點此預借教室</a></p>
+            <p class="center paTxs20 maTxs20 top-dotline" style="text-align: center; "><a class="btn"
+                    href="預借教室.php" target="" style="color: #00000099;">點此預借教室</a></p>
         </div>
     </div>
 </body>
