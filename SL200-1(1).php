@@ -33,7 +33,7 @@
 
 <body>
     <div class="main">
-        <h3 style="text-align: center; margin-top: 30px;">SL200-1</h3>
+        <h3 style="text-align: center; margin-top: 30px;">SL200-1</h3><br>
         <div class="alert1">
             <div>
                 <p style="text-align: center;">當您點擊日曆中"預借紀錄"可以檢視當日預約的詳細資訊</li>

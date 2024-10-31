@@ -123,11 +123,18 @@
                 margin-right: 5px;
                 /* 添加右邊距以增加間距 */
             }
+
+            .alert1 {
+                display: flex;
+                /* 使用 flexbox */
+                align-items: center;
+                /* 垂直居中對齊 */
+            }
         </style>
         <div class="main">
-            <h3 style="text-align: center;margin-top: 30px;">SL200-1</h3>
+            <h3 style="text-align: center;margin-top: 30px;">SL200-1</h3><br>
             <div class="alert1">
-                <div style="text-align: left; margin-left:30px">
+                <div style="text-align: left; margin-left:300px">
                     <h6>請詳細閱讀以下使用說明：</h6>
                     <ul>
                         <p>請正確填入姓名、電話、gmail</p>
@@ -397,7 +404,7 @@
 
                         // 僅在有更新時顯示提示
                         if (updatesMade) {
-                            alert('學期預約已成功更新！');
+                            alert('預約已成功更新！');
                         } else {
                             alert('沒有任何變更。');
                         }
@@ -440,7 +447,7 @@
 
                         alert('學期預約已成功取消！');
                         $('#editEventModal').modal('hide');
-                        
+
                     }
                 });
 
