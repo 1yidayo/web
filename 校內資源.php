@@ -17,9 +17,26 @@
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
+
+    <style>
+        body {
+            color: #00000099;
+        }
+
+        /* 連結顏色&禁用底線 */
+        a {
+            color: #125174;
+            text-decoration: none;
+        }
+
+        /* 禁用游標懸停時的底線 */
+        a:hover {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
-<body> 
+<body style="color: #00000099;"> 
     <div class="main">
         <h1 style="margin-top: 20px; margin-left: 20px; font-size: 30px">校內資源</h1>
         <div style="margin-left: 20px; margin-top: 40px; font-size: 18px;">

@@ -19,7 +19,7 @@
     <!-- <link rel="stylesheet" href="123.css"> -->
     <link rel="stylesheet" href="index.css">
     
-<style>
+<style> 
 
     .header h1 {
         margin-bottom: 20px; /* 調整此數值以增加或減少間距 */
@@ -32,7 +32,7 @@
    display: none;
    width: 50px;
    height: 50px;
-   background-color: #69839e;
+   background-color: #aec4d2;
    color: #ffffff;
    text-align: center;
    line-height: 50px;
@@ -43,7 +43,8 @@
 }
 
 .back-to-top:hover {
-   background-color: #d7d7d7;
+   background-color:  rgb(215, 225, 224);
+   color: white;
    opacity: 1;
 }
 
