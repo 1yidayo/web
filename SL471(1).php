@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>預借紀錄SL200-3</title>
+    <title>預借紀錄SL471</title>
     <link href='https://unpkg.com/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -33,7 +33,7 @@
 
 <body>
     <div class="main">
-        <h3 style="text-align: center; margin-top: 30px;">SL200-3</h3><br>
+        <h3 style="text-align: center; margin-top: 30px;">SL471</h3><br>
         <div class="alert1">
             <div>
                 <p style="text-align: center;">當您點擊日曆中"預借紀錄"可以檢視當日預約的詳細資訊</li>

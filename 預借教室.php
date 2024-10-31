@@ -44,7 +44,7 @@
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #aec4d2;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="SL200-3.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #aec4d2;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="SL201.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #aec4d2;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="SL245.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #aec4d2;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="SL246.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                         <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #aec4d2;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="SL471.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/FJU_SSMG01.jpg/345px-FJU_SSMG01.jpg" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #aec4d2;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="LM200.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/FJU_SSMG01.jpg/345px-FJU_SSMG01.jpg" class="card-img-top"
                             alt="...">
                         <div class="lower-text" style="background-color: #aec4d2;">
-                            <h6 class=" text-muted" text-align= "center"><a href="SL200-1.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
+                            <h6 class=" text-muted" text-align= "center"><a href="LM202.php" style="color: black; text-decoration: none;"><br><b>教室預借</b></a></h6>
                         </div>
                     </div>
                 </div>

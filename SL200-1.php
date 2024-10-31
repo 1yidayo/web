@@ -138,7 +138,6 @@
                     <h6>請詳細閱讀以下使用說明：</h6>
                     <ul>
                         <p>請正確填入姓名、電話、gmail</p>
-                        <p>當您點擊日曆中"空白區塊"可以檢視當日的預約時間</p>
                         <p>當您點擊日曆中"已預約的名字"可以修改或刪除您的預約</p>
                     </ul>
                 </div>
@@ -168,6 +167,7 @@
                                 <input type="radio" id="semester-no" name="semester-reservation" value="no" checked>
                                 <label for="semester-no">否</label>
                             </div>
+                            <p>(選擇當日日期即可)</p>
                         </div>
                         <div id="time-info">
                             <label for="start">預約開始日期:</label>
@@ -221,7 +221,6 @@
                     var calendarEl = document.getElementById('calendar-container');
                     var calendar = new FullCalendar.Calendar(calendarEl, {
                         initialView: 'dayGridMonth',
-                        events: loadEventsFromLocalStorage(),
                         eventContent: function(arg) {
                             return {
                                 html: `<div>${arg.event.extendedProps.name}</div>`
@@ -266,11 +265,7 @@
                                 }
                             });
 
-                            if (hasEvents) {
-                                alert('所選日期的預約有:\n' + message);
-                            } else {
-                                alert('所選日期沒有預約');
-                            }
+
                         },
                     });
 
@@ -439,14 +434,16 @@
                             });
                         }
 
+                        alert('預約已成功取消！');
+                        $('#editEventModal').modal('hide');
+
                         calendar.render(); // 可能需要在所有事件刪除後強制重新渲染
 
 
                         // 清空選定的事件，避免重複操作
                         window.selectedEvent = null;
 
-                        alert('學期預約已成功取消！');
-                        $('#editEventModal').modal('hide');
+
 
                     }
                 });
