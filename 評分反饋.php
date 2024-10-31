@@ -45,11 +45,11 @@
                         </div>
                         <div>
                             <label for=""><b style="color:#00000099">使用感受</b></label><br>
-                            <input type="radio" name="feeling" id=""><label for="">非常滿意</label>
-                            <input type="radio" name="feeling" id=""><label for="">滿意</label>
-                            <input type="radio" name="feeling" id=""><label for="">一般</label>
-                            <input type="radio" name="feeling" id=""><label for="">不滿意</label>
-                            <input type="radio" name="feeling" id=""><label for="">非常不滿意</label>
+                            <input type="radio" name="feeling" id=""><label for="" style="color:#00000099">非常滿意</label>
+                            <input type="radio" name="feeling" id=""><label for="" style="color:#00000099">滿意</label>
+                            <input type="radio" name="feeling" id=""><label for="" style="color:#00000099">一般</label>
+                            <input type="radio" name="feeling" id=""><label for="" style="color:#00000099">不滿意</label>
+                            <input type="radio" name="feeling" id=""><label for="" style="color:#00000099">非常不滿意</label>
                         </div>
                         <div>
                             <label for="message"><b style="color:#00000099">待改進之處</b></label><textarea class="form-control" id="message" style="width:300px" placeholder="Enter your message here..."
