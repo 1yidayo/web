@@ -16,33 +16,35 @@
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
+
+    
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" background="transparent">
         <div class="main">
             <div>
                 <div style="margin-left:0%;">
                     <form id="contactForm" style="width: 500px;">
                         <div>
-                            <label for="name"><b>姓名</b></label><input class="form-control" id="name" type="text" style="width:300px" placeholder="Enter your name..."
+                            <label for="name"><b style="color:#00000099">姓名</b></label><input class="form-control" id="name" type="text" style="width:300px" placeholder="Enter your name..."
                                 data-sb-validations="required" />
 
                             <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                         </div>
                         <div>
-                            <label for="email"><b>電子郵件</b></label><input class="form-control" id="email" type="email" style="width:300px" placeholder="Enter your email..."
+                            <label for="email"><b style="color:#00000099">電子郵件</b></label><input class="form-control" id="email" type="email" style="width:300px" placeholder="Enter your email..."
                                 data-sb-validations="required,email" />
                             <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                             <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                         </div>
                         <div>
-                            <label for="phone"><b>電話號碼</b></label><input class="form-control" id="phone" type="tel" style="width:300px" placeholder="Enter your phone number..."
+                            <label for="phone"><b style="color:#00000099">電話號碼</b></label><input class="form-control" id="phone" type="tel" style="width:300px" placeholder="Enter your phone number..."
                                 data-sb-validations="required" />
                             <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                         </div>
                         <div>
-                            <label for=""><b>使用感受</b></label><br>
+                            <label for=""><b style="color:#00000099">使用感受</b></label><br>
                             <input type="radio" name="feeling" id=""><label for="">非常滿意</label>
                             <input type="radio" name="feeling" id=""><label for="">滿意</label>
                             <input type="radio" name="feeling" id=""><label for="">一般</label>
@@ -50,7 +52,7 @@
                             <input type="radio" name="feeling" id=""><label for="">非常不滿意</label>
                         </div>
                         <div>
-                            <label for="message"><b>待改進之處</b></label><textarea class="form-control" id="message" style="width:300px" placeholder="Enter your message here..."
+                            <label for="message"><b style="color:#00000099">待改進之處</b></label><textarea class="form-control" id="message" style="width:300px" placeholder="Enter your message here..."
                                 style="height: 50rem" data-sb-validations="required"></textarea>
 
                             <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
@@ -74,7 +76,7 @@
                         </div>
                         <!-- Submit Button-->
                         <button class="btn btn-primary text-uppercase disabled" id="submitButton"
-                            type="submit">Send</button>
+                            type="submit" style="background-color: #00000099; color:white; border: none">Send</button>
                     </form>
                 </div>
             </div>

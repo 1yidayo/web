@@ -20,6 +20,12 @@
     <link rel="stylesheet" href="index.css">
     
 <style> 
+    body {
+    background: linear-gradient(315deg, #ffffff 0%, rgb(215, 225, 224) 74%);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    }
 
     .header h1 {
         margin-bottom: 20px; /* 調整此數值以增加或減少間距 */
