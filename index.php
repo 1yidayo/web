@@ -18,48 +18,52 @@
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/zh/thumb/d/da/Fu_Jen_Catholic_University_logo.svg/1200px-Fu_Jen_Catholic_University_logo.svg.png">
     <!-- <link rel="stylesheet" href="123.css"> -->
     <link rel="stylesheet" href="index.css">
-    
-<style> 
-    body {
-    background: linear-gradient(315deg, #ffffff 0%, rgb(215, 225, 224) 74%);
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    }
 
-    .header h1 {
-        margin-bottom: 20px; /* 調整此數值以增加或減少間距 */
-    }
+    <style>
+        body {
+            background: linear-gradient(315deg, #ffffff 0%, rgb(215, 225, 224) 74%);
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
 
-   .back-to-top {
-   position: fixed;
-   bottom: 2rem;
-   right: 2rem;
-   display: none;
-   width: 50px;
-   height: 50px;
-   background-color: #aec4d2;
-   color: #ffffff;
-   text-align: center;
-   line-height: 50px;
-   border-radius: 50%;
-   transition: background-color 0.3s ease, opacity 0.3s ease;
-   opacity: 0.8;
-   z-index: 1000;
-}
+        .header h1 {
+            margin-bottom: 20px;
+            /* 調整此數值以增加或減少間距 */
+        }
 
-.back-to-top:hover {
-   background-color:  rgb(215, 225, 224);
-   color: white;
-   opacity: 1;
-}
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            width: 50px;
+            height: 50px;
+            background-color: #aec4d2;
+            color: #ffffff;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+            opacity: 0.8;
+            z-index: 1000;
+        }
 
-.back-to-top i {
-   font-size: 24px;
-}
+        .back-to-top:hover {
+            background-color: rgb(215, 225, 224);
+            color: white;
+            opacity: 1;
+        }
 
-</style>
+        .back-to-top i {
+            font-size: 24px;
+        }
+    </style>
 </head>
+
+<?php
+session_start();
+?>
 
 <body>
     <!--導覽列-->
@@ -67,7 +71,6 @@
         <h1>輔仁大學教室預借系統</h1>
         <div class="nav">
             <a href="首頁.php" target="contentFrame" style="text-decoration: none;">首頁</a>
-            <a href="預借教室.php" target="contentFrame" style="text-decoration: none;">預借教室</a>
             <a href="預借紀錄.php" target="contentFrame" style="text-decoration: none;">教室預借紀錄</a>
             <a href="教室統計.php" target="contentFrame" style="text-decoration: none;">教室統計</a>
             <a href="評分反饋.php" target="contentFrame" style="text-decoration: none;">評分反饋</a>
@@ -85,7 +88,7 @@
 
     <!--footer-->
     <div class="footer">
-        
+
         <div class="copy-right">
             <i class="fa-solid fa-location-dot"></i> 地址：242062 新北市新莊區中正路 510 號 天主教輔仁大學
             <br><i class="fa-solid fa-phone"></i>電話：(02) 29052000
@@ -94,9 +97,11 @@
     </div>
 
     <style>
-    /* 響應式設計：當視窗寬度小於600像素時 */
+        /* 響應式設計：當視窗寬度小於600像素時 */
         @media (max-width: 600px) {
-            .info, .map {
+
+            .info,
+            .map {
                 flex: 1 1 100%;
                 margin: 10px;
             }
@@ -106,10 +111,10 @@
     <!--Javascript-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
     </script>
@@ -127,12 +132,12 @@
                 event.preventDefault(); // 阻止默认链接跳转行为
                 document.getElementById("feedback-modal").style.display = "block";
             });
-    
+
             // 关闭模态框的按钮点击事件
             document.getElementsByClassName("close")[0].addEventListener("click", function() {
                 document.getElementById("feedback-modal").style.display = "none";
             });
-    
+
             // 点击模态框外部关闭模态框
             window.onclick = function(event) {
                 var modal = document.getElementById("feedback-modal");
@@ -140,7 +145,7 @@
                     modal.style.display = "none";
                 }
             };
-    
+
             // 提交表单事件（这里可以添加你的提交逻辑）
             document.getElementById("feedback-form").addEventListener("submit", function(event) {
                 event.preventDefault(); // 阻止表单默认提交行为
@@ -150,27 +155,30 @@
             });
         });
     </script>
-    
+
 
     <a href="#" class="back-to-top" style="text-decoration: none; font-size: 30px">
-      <p class="ri-arrow-up-line"><b>↑</b></p>
-   </a>
-   <script>
-      // 當用戶滾動到一定高度時顯示按鈕
-      window.onscroll = function() {
-         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            document.querySelector('.back-to-top').style.display = 'block';
-         } else {
-            document.querySelector('.back-to-top').style.display = 'none';
-         }
-      };
-   
-      // 點擊按鈕滾動到頁面頂部
-      document.querySelector('.back-to-top').addEventListener('click', function(event) {
-         event.preventDefault();
-         window.scrollTo({top: 0, behavior: 'smooth'});
-      });
-   </script>
+        <p class="ri-arrow-up-line"><b>↑</b></p>
+    </a>
+    <script>
+        // 當用戶滾動到一定高度時顯示按鈕
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.querySelector('.back-to-top').style.display = 'block';
+            } else {
+                document.querySelector('.back-to-top').style.display = 'none';
+            }
+        };
+
+        // 點擊按鈕滾動到頁面頂部
+        document.querySelector('.back-to-top').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 
 </html>

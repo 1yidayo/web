@@ -52,8 +52,6 @@
                 &nbsp; &nbsp; &nbsp; &nbsp; 3. 經核准使用本場地後，如遇管理學院有特殊需要時，得停止借用或改期使用。<br>
 
             <p style="text-align: left;">&nbsp;</p>
-            <p class="center paTxs20 maTxs20 top-dotline" style="text-align: center; "><a class="btn"
-                    href="預借教室.php" target="" style="color: #00000099;">點此預借教室</a></p>
         </div>
     </div>
 </body>

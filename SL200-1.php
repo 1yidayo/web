@@ -36,6 +36,7 @@
                 padding: 0;
             }
 
+
             #calendar-container {
                 max-width: 800px;
                 margin: 0 auto;
@@ -134,6 +135,7 @@
                     <h6>請詳細閱讀以下使用說明：</h6>
                     <ul>
                         <p>請正確填入姓名、電話、gmail</p>
+                        <p>當您點擊日曆中"空白區塊"可以檢視當日的預約時間</p>
                         <p>當您點擊日曆中"已預約的名字"可以修改或刪除您的預約</p>
                     </ul>
                 </div>
@@ -148,7 +150,7 @@
             </p>
             <div class="collapse" id="collapseExample">
                 <div class="card card-body" style="background: transparent;">
-                    <form id="reservation-form" style="background: transparent;">
+                    <form id="reservation-form">
                         <div id="basic-info" style="margin-bottom: 90px;">
                             <label for="name">姓名:</label>
                             <input type="text" id="name" name="name" required>
@@ -164,20 +166,6 @@
                                 <label for="semester-no">否</label>
                             </div>
                             <p>(選擇當日日期即可)</p>
-                            <div id="classroom-selection">
-                                <label for="classroom">選擇要借的教室:</label>
-                                <select id="classroom" name="classroom" required>
-                                    <option value="" disabled selected>請選擇教室</option>
-                                    <option value="教室1">SL200-1</option>
-                                    <option value="教室2">SL200-3</option>
-                                    <option value="教室3">SL201</option>
-                                    <option value="教室4">SL245</option>
-                                    <option value="教室5">SL246</option>
-                                    <option value="教室6">SL471</option>
-                                    <option value="教室7">LM200</option>
-                                    <option value="教室8">LM202</option>
-                                </select>
-                            </div>
                         </div>
                         <div id="time-info">
                             <label for="start">預約開始日期:</label>
@@ -231,6 +219,7 @@
                     var calendarEl = document.getElementById('calendar-container');
                     var calendar = new FullCalendar.Calendar(calendarEl, {
                         initialView: 'dayGridMonth',
+                        events: loadEventsFromLocalStorage(),
                         eventContent: function(arg) {
                             return {
                                 html: `<div>${arg.event.extendedProps.name}</div>`
@@ -275,7 +264,11 @@
                                 }
                             });
 
-
+                            if (hasEvents) {
+                                alert('所選日期的預約有:\n' + message);
+                            } else {
+                                alert('所選日期沒有預約');
+                            }
                         },
                     });
 
