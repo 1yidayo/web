@@ -19,13 +19,13 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 
-<body style="color: #00000099;">
+<body>
         <div class="main">
             <h1 style="margin-top: 20px; margin-left: 20px; font-size: 30px">預借紀錄</h1>
             <h4 style="margin-top: 20px; margin-left: 20px;">Reservation Schedule</h4>
             <div class="wrapper2">
                 <div class="item">
-                    <div class="card" style="margin: 20px;">
+                    <div class="card" style="margin: 20px;color: #00000099;">
                         <div style="background-color:#aec4d2;; text-align: center">
                             <p class="card-title" style="color: black"><b>SL200-1</b></p>
                         </div>
