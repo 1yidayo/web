@@ -12,29 +12,25 @@
     <div class="wrapper">
         <div class="form-box login">
             <h2>登入</h2>
-            <form action="login_process.php" method="post">
+            <form action="login_process.php" method="POST">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-                    <input placeholder="帳號" class="form-control" type="text" name="account" require><br>
-                    <label>Account</label>
+                    <input placeholder="帳號" class="form-control" type="text" name="username" require><br>
+                    <label for="username">Account</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
                     <input placeholder="密碼" class="form-control" type="password" name="password" require><br>
-                    <label>Password</label>
+                    <label for="password">Password</label>
                 </div>
                 <div class="remember-forgot">
-    <label>
-        <input type="checkbox" name="remember_me">
-        記住我
-    </label>
-</div>
+                    <label>
+                        <input type="checkbox" name="remember_me">
+                        記住我
+                    </label>
+                </div>
 
                 <button type="submit" class="btn">Login</button>
-
-            
-
-
                 <div class="login-register">
                     <p>還沒有帳號?<a href="register.php" class="regist-link">
                             註冊

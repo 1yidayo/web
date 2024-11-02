@@ -1,20 +1,26 @@
 <?php
 session_start();
 
-// 獲取用戶輸入
-$account = $_POST['account'];
-$password = $_POST['password'];
+if (isset($_POST['username']) && isset($_POST['password'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-// 檢查帳號密碼是否正確
-if ($account == "root" && $password == "password") {
-    // 將帳號存入 session 變數
-    $_SESSION['is_login'] = true;
-    header("Location: 預借教室.php?page=one");
-    // 導向成功頁面
-    exit();
+    // 假設 admin 是管理員帳號，密碼為 admin_password
+    if ($username == "admin" && $password == "admin_password") {
+        $_SESSION['username'] = $username;
+        $_SESSION['is_admin'] = true; // 設置為管理員
+        header("Location: 首頁.php");
+        exit();
+    }
+    // 普通用戶登入
+    elseif ($username == "root" && $password == "password") {
+        $_SESSION['username'] = $username;
+        $_SESSION['is_admin'] = false; // 非管理員
+        header("Location: 首頁.php");
+        exit();
+    } else {
+        echo "登入失敗";
+    }
 } else {
-    $_SESSION['is_login'] = false;
-    // 如果不匹配，跳轉回 login.php 並傳遞 msg 變數
-    header("Location: login.php?msg=帳號或密碼錯誤");
-    exit();
+    echo "請填寫帳號和密碼";
 }
