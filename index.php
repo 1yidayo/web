@@ -85,9 +85,8 @@ $is_admin = isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
             <a href="首頁.php" target="contentFrame" style="text-decoration: none;">首頁</a>
             <a href="預借教室.php" target="contentFrame" style="text-decoration: none;" <?php if (!$is_logged_in)
                 echo 'onclick="window.open(\'login.php\', \'contentFrame\'); return false;"'; ?>>預借教室</a>
-
             <a href="預借紀錄.php" target="contentFrame" style="text-decoration: none;">教室預借紀錄</a>
-            <a href="教室統計.php" target="contentFrame" style="text-decoration: none;">教室統計</a>
+            <a href="統計.php" target="contentFrame" style="text-decoration: none;">教室統計</a>
             <a href="評分反饋.php" target="contentFrame" style="text-decoration: none;">評分反饋</a>
             <a href="校內資源.php" target="contentFrame" style="text-decoration: none;">校內資源</a>
 

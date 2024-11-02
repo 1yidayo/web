@@ -95,6 +95,7 @@
                     return JSON.parse(localStorage.getItem('events')) || [];
                 }
             });
+            
         </script>
     </div>
 </body>
