@@ -24,22 +24,15 @@
                     <label>Password</label>
                 </div>
                 <div class="remember-forgot">
-                    <label><input type="checkbox">
-                        記住我
-                    </label>
+    <label>
+        <input type="checkbox" name="remember_me">
+        記住我
+    </label>
+</div>
 
-                </div>
                 <button type="submit" class="btn">Login</button>
 
-                <?php
-                session_start();
-
-                // 顯示錯誤消息
-                if (isset($_SESSION["error_message"])) {
-                    echo '<script>alert("' . $_SESSION["error_message"] . '");</script>';
-                    unset($_SESSION["error_message"]); // 清除錯誤消息
-                }
-                ?>
+            
 
 
                 <div class="login-register">

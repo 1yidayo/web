@@ -61,9 +61,6 @@
     </style>
 </head>
 
-<?php
-session_start();
-?>
 
 <body>
     <!--導覽列-->

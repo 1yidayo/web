@@ -20,16 +20,7 @@
 </head>
 
 <body style="color: #00000099;">
-    <?php
-    //要使用session，在該頁就要加上
-    session_start();
 
-    //設定session的內容
-    //$_SESSION是一個關聯陣列，可以利用key去新增、取得、修改資料:
-    $_SESSION["name"] = "歡迎使用預借系統！";
-
-    echo '<div font-family: "PT Serif", serif;>' . $_SESSION["name"].'</div>';
-    ?>
     <div class="main">
         <h1 style="margin-top: 20px;margin-left: 20px; font-size: 30px">教室預借</h1>
         <h4 style="margin-top: 20px;margin-left: 20px;">Reservation Schedule</h4>
