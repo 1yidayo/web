@@ -94,7 +94,7 @@
                 calendar.render();
 
                 function loadEventsFromLocalStorage() {
-                    return JSON.parse(localStorage.getItem('events')) || [];
+                    return JSON.parse(localStorage.getItem('events-instrument3')) || [];
                 }
             });
         </script>

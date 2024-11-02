@@ -53,9 +53,7 @@
                         </div>
                         <div>
                             <label for="message"><b style="color:#00000099">待改進之處</b></label><textarea class="form-control" id="message" style="width:300px" placeholder="Enter your message here..."
-                                style="height: 50rem" data-sb-validations="required"></textarea>
-
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                                style="height: 50rem"></textarea>
                         </div>
                         <br />
                         <!-- Submit success message-->

@@ -92,7 +92,7 @@
                 calendar.render();
 
                 function loadEventsFromLocalStorage() {
-                    return JSON.parse(localStorage.getItem('events')) || [];
+                    return JSON.parse(localStorage.getItem('events-instrument7')) || [];
                 }
             });
         </script>

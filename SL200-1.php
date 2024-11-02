@@ -435,6 +435,9 @@
                             relatedEvents.forEach(event => {
                                 event.remove(); // 從日曆刪除
                             });
+                            
+                            alert('學期預約已成功取消！');
+                            $('#editEventModal').modal('hide');
                         }
 
                         alert('預約已成功取消！');

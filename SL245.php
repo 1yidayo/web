@@ -221,6 +221,7 @@
                     var calendarEl = document.getElementById('calendar-container');
                     var calendar = new FullCalendar.Calendar(calendarEl, {
                         initialView: 'dayGridMonth',
+                        events: loadEventsFromLocalStorage(),
                         eventContent: function(arg) {
                             return {
                                 html: `<div>${arg.event.extendedProps.name}</div>`
@@ -265,7 +266,11 @@
                                 }
                             });
 
-
+                            if (hasEvents) {
+                                alert('所選日期的預約有:\n' + message);
+                            } else {
+                                alert('所選日期沒有預約');
+                            }
                         },
                     });
 
@@ -454,13 +459,13 @@
 
 
                 function loadEventsFromLocalStorage() {
-                    return JSON.parse(localStorage.getItem('events')) || [];
+                    return JSON.parse(localStorage.getItem('events-instrument4')) || [];
                 }
 
                 function saveEventToLocalStorage(event) {
                     const events = loadEventsFromLocalStorage();
                     events.push(event);
-                    localStorage.setItem('events', JSON.stringify(events));
+                    localStorage.setItem('events-instrument4', JSON.stringify(events));
                 }
 
                 function updateEventInLocalStorage(event) {
@@ -468,14 +473,14 @@
                     const index = events.findIndex(e => e.id === event.id);
                     if (index !== -1) {
                         events[index] = event.toPlainObject();
-                        localStorage.setItem('events', JSON.stringify(events));
+                        localStorage.setItem('events-instrument4', JSON.stringify(events));
                     }
                 }
 
                 function removeEventFromLocalStorage(eventId) {
                     const events = loadEventsFromLocalStorage();
                     const filteredEvents = events.filter(event => event.id !== eventId);
-                    localStorage.setItem('events', JSON.stringify(filteredEvents));
+                    localStorage.setItem('events-instrument4', JSON.stringify(filteredEvents));
                 }
 
                 function isSameDay(date1, date2) {
