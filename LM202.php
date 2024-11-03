@@ -217,6 +217,34 @@
             </div>
 
             <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const today = new Date();
+                    const maxDate = new Date();
+                    maxDate.setDate(today.getDate() + 30);
+
+                    // 格式化日期（YYYY-MM-DD）以符合 input[type="date"] 的格式
+                    const formatDate = (date) => {
+                        const year = date.getFullYear();
+                        const month = String(date.getMonth() + 1).padStart(2, '0');
+                        const day = String(date.getDate()).padStart(2, '0');
+                        return `${year}-${month}-${day}`;
+                    };
+
+                    const startInput = document.getElementById("start");
+                    const endInput = document.getElementById("end");
+
+                    // 設定開始和結束日期的 min 和 max 值
+                    startInput.min = formatDate(today);
+                    startInput.max = formatDate(maxDate);
+                    endInput.min = formatDate(today);
+                    endInput.max = formatDate(maxDate);
+
+                    // 當開始日期改變時，自動更新結束日期的最小值
+                    startInput.addEventListener("change", function () {
+                        endInput.min = this.value;
+                    });
+                });
+                
                 document.addEventListener('DOMContentLoaded', function() {
                     var calendarEl = document.getElementById('calendar-container');
                     var calendar = new FullCalendar.Calendar(calendarEl, {

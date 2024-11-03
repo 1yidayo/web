@@ -8,4 +8,4 @@ echo '<script>
         parent.location.reload();
       </script>';
 exit();
-?>
+

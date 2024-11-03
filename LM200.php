@@ -217,17 +217,46 @@
             </div>
 
             <script>
-                document.addEventListener('DOMContentLoaded', function() {
+
+                document.addEventListener("DOMContentLoaded", function () {
+                    const today = new Date();
+                    const maxDate = new Date();
+                    maxDate.setDate(today.getDate() + 30);
+
+                    // 格式化日期（YYYY-MM-DD）以符合 input[type="date"] 的格式
+                    const formatDate = (date) => {
+                        const year = date.getFullYear();
+                        const month = String(date.getMonth() + 1).padStart(2, '0');
+                        const day = String(date.getDate()).padStart(2, '0');
+                        return `${year}-${month}-${day}`;
+                    };
+
+                    const startInput = document.getElementById("start");
+                    const endInput = document.getElementById("end");
+
+                    // 設定開始和結束日期的 min 和 max 值
+                    startInput.min = formatDate(today);
+                    startInput.max = formatDate(maxDate);
+                    endInput.min = formatDate(today);
+                    endInput.max = formatDate(maxDate);
+
+                    // 當開始日期改變時，自動更新結束日期的最小值
+                    startInput.addEventListener("change", function () {
+                        endInput.min = this.value;
+                    });
+                });
+
+                document.addEventListener('DOMContentLoaded', function () {
                     var calendarEl = document.getElementById('calendar-container');
                     var calendar = new FullCalendar.Calendar(calendarEl, {
                         initialView: 'dayGridMonth',
                         events: loadEventsFromLocalStorage(),
-                        eventContent: function(arg) {
+                        eventContent: function (arg) {
                             return {
                                 html: `<div>${arg.event.extendedProps.name}</div>`
                             };
                         },
-                        eventClick: function(info) {
+                        eventClick: function (info) {
                             $('#editEventModal').modal('show');
                             window.selectedEvent = info.event;
                             document.getElementById('edit-start').value = info.event.start.toISOString().split('T')[0];
@@ -235,13 +264,13 @@
                             document.getElementById('edit-end').value = info.event.end.toISOString().split('T')[0];
                             document.getElementById('edit-end-time').value = info.event.end.toISOString().split('T')[1].substring(0, 5);
                         },
-                        dateClick: function(info) {
+                        dateClick: function (info) {
                             var clickedDate = info.date;
                             var events = calendar.getEvents();
                             var message = '';
                             var hasEvents = false;
 
-                            events.forEach(function(event) {
+                            events.forEach(function (event) {
                                 var eventStartDate = event.start;
                                 var eventEndDate = event.end;
 
@@ -276,7 +305,7 @@
 
                     calendar.render();
 
-                    document.getElementById('reservation-form').addEventListener('submit', function(event) {
+                    document.getElementById('reservation-form').addEventListener('submit', function (event) {
                         event.preventDefault();
 
                         const name = document.getElementById('name').value;
@@ -355,7 +384,7 @@
                     });
 
 
-                    document.getElementById('save-changes').addEventListener('click', function() {
+                    document.getElementById('save-changes').addEventListener('click', function () {
                         const newStartDate = document.getElementById('edit-start').value;
                         const newStartTime = document.getElementById('edit-start-time').value;
                         const newEndDate = document.getElementById('edit-end').value;
@@ -394,7 +423,7 @@
                                 // 更新事件
                                 event.setStart(updatedStart);
                                 event.setEnd(updatedEnd);
-                                event.setProp('title', `學期預約: ${updatedStart.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})} - ${updatedEnd.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`);
+                                event.setProp('title', `學期預約: ${updatedStart.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} - ${updatedEnd.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`);
                                 updatesMade = true; // 標記為已更新
 
                                 // 更新 local storage
@@ -417,7 +446,7 @@
 
 
 
-                document.getElementById('cancel-reservation').addEventListener('click', function() {
+                document.getElementById('cancel-reservation').addEventListener('click', function () {
                     if (confirm('確定要取消此預約嗎？')) {
                         var eventId = window.selectedEvent.id;
                         var semesterId = window.selectedEvent.extendedProps.semesterId;
