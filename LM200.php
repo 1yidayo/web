@@ -430,7 +430,7 @@
                         if (semesterId) {
                             const events = loadEventsFromLocalStorage();
                             const filteredEvents = events.filter(event => event.extendedProps.semesterId !== semesterId);
-                            localStorage.setItem('events', JSON.stringify(filteredEvents));
+                            localStorage.setItem('events-instrument7', JSON.stringify(filteredEvents));
 
                             // 從日曆中刪除所有相關事件
                             const relatedEvents = calendar.getEvents().filter(event => event.extendedProps.semesterId === semesterId);
@@ -447,9 +447,6 @@
 
                         // 清空選定的事件，避免重複操作
                         window.selectedEvent = null;
-
-
-
                     }
                 });
 
