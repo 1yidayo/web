@@ -9,14 +9,20 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     if ($username == "admin" && $password == "admin_password") {
         $_SESSION['username'] = $username;
         $_SESSION['is_admin'] = true; // 設置為管理員
-        header("Location: 首頁.php");
+        // 登入成功，刷新父頁面並關閉當前 iframe 頁面
+        echo '<script>
+                parent.location.reload();
+              </script>';
         exit();
     }
     // 普通用戶登入
     elseif ($username == "root" && $password == "password") {
         $_SESSION['username'] = $username;
         $_SESSION['is_admin'] = false; // 非管理員
-        header("Location: 首頁.php");
+        // 登入成功，刷新父頁面並關閉當前 iframe 頁面
+        echo '<script>
+                parent.location.reload();
+              </script>';
         exit();
     } else {
         echo "登入失敗";
