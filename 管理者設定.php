@@ -49,7 +49,7 @@
         <div>
             <label for="startDate">開始日期：</label>
             <input type="date" id="startDate" class="form-control" required>
-            
+
             <label for="endDate">結束日期：</label>
             <input type="date" id="endDate" class="form-control" required>
         </div>
@@ -58,6 +58,28 @@
         <h1 style="margin-top: 20px; font-size: 30px">刪除帳號</h1>
         <button type="button" class="btn btn-outline-danger">確定刪除</button>
     </div>
+    <br>
+    <div>
+        <table class="List" width="500" border="solid 1px black" style="margin: left 300px;">
+            <caption class="ListCap">帳號管理</caption>
+            <tr align="center">
+                <td>使用者名稱</td>
+                <td>使用者Email</td>
+            </tr>
+            <?php
+            //step1
+            $link = mysqli_connect('localhost', 'root', '12345678', 'users');
+            //step3
+            $sql = "select * from account";
+            $result = mysqli_query($link, $sql);
+            //step4
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr><td>", $row['username'], "</td><td>", $row['email'], "</td></tr>";
+            }
+            ?>
+        </table>
+    </div>
+
 
     <script>
         function setDateRange() {
