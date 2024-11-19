@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>校內資源</title>
 
@@ -36,15 +36,27 @@
     </style>
 </head>
 
-<body style="color: #00000099;"> 
-    <div class="main">
-        <h1 style="margin-top: 20px;  font-size: 30px">刪除帳號</h1>
-        <button type="button" class="btn btn-outline-danger">確定刪除</button>
-        <!-- <div style="margin-left: 20px; margin-top: 40px; font-size: 18px;">
-            <ul><a href="https://www.fju.edu.tw/">輔仁大學全球資訊網</a></ul>
-            <ul><a href="https://portal.fju.edu.tw/student/">輔仁大學學生資訊網</a></ul>
-            <ul><a href="http://www.rdo.fju.edu.tw/">輔仁大學研究發展處</a></ul>
-        </div> -->
+<body style="color: #00000099;">
+    <div align="center">
+        <table class="List" width="500" border="solid 1px black">
+            <tr align="center">
+                <td>使用者名稱</td>
+                <td>使用者Email</td>
+                <td>功能</td>
+            </tr>
+            <?php
+            //step1
+            $link = mysqli_connect('localhost', 'root', '12345678', 'users');
+            //step3
+            $sql = "select * from account";
+            $result = mysqli_query($link, $sql);
+            //step4
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<tr><td>", $row['username'], "</td><td>", $row['email'],"</td><td align='center'><a href=update.php?username="
+                ,$row['username'],">[修改]</a>&nbsp;<a href=dblink.php?method=delete&username=",$row['username'],">[刪除]</a></td></tr>";
+            }
+            ?>
+        </table>
     </div>
 </body>
 

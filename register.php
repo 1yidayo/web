@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>使用者註冊</title>
-    <link rel="stylesheet" href="logIn.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
@@ -28,14 +28,10 @@
                     <input type="password" name='password' required>
                     <label>Password</label>
                 </div>
-                <!-- <div class="remember-forgot">
-                    <label><input type="checkbox">
-                        我同意<a href="">使用條款和條件</a>
-                    </label>
-                </div> -->
                 <button type="submit" class="btn">Register</button>
+
                 <div class="login-register">
-                    <p>已經擁有帳號?<a href="logIn.php" class="regist-link">
+                    <p>已經擁有帳號?<a href="login.php" class="regist-link">
                         登入
                     </a></p>
                 </div>
