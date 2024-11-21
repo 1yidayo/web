@@ -12,7 +12,7 @@
     <div class="wrapper">
         <div class="form-box register">
             <h2>註冊</h2>
-            <form action="insert.php" method="post">
+            <form action="insert.php" method="POST">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
                     <input type="text" name='username' required>

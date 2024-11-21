@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <meta http-equiv="refresh" content="1;url=管理者設定.php">
+    <meta http-equiv="refresh" content="1;url=使用者設定.php">
 </head>
 
 <body>
     <?php
-    $method = $_GET['method'];
+    $method = $_GET['method'] ?? null;
     if (empty($method)) {
         $username = $_POST['username'];
-        $email = $row['email'];
-        $password = $row['password'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
         //step1
         $link = mysqli_connect('localhost', 'root', '12345678', 'users');
         $sql = "update account set email='$email',password='$password' where username='$username'";
@@ -23,9 +23,7 @@
         } else {
             echo "修改失敗", "<br>";
         }
-    }
-    elseif($method=="delete")
-    {
+    } elseif ($method == "delete") {
         $username = $_GET['username'];
         $link = mysqli_connect('localhost', 'root', '12345678', 'users');
         $sql = "delete from account where username='$username'";

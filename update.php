@@ -25,7 +25,7 @@
         <table class="RedList" width="500" align="center">
             <tr align="center">
                 <td>使用者名稱</td>
-                <td><input type="text" name="username" value="<?php echo $username ?>" readonly></td>
+                <td><input type="text" name="username" value="<?php echo $username ?>"required></td>
             </tr>
             <tr align="center">
                 <td>使用者Email</td>
