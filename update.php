@@ -13,7 +13,7 @@
     //step1
     $link = mysqli_connect('localhost', 'root', '12345678', 'users');
     //step3
-    $sql = "select distinct * from account where username='$username'";
+    $sql = "select distinct * from accounts where username='$username'";
     $result = mysqli_query($link, $sql);
     //step4
     if ($row = mysqli_fetch_assoc($result)) {

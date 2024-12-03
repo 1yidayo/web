@@ -54,9 +54,7 @@
             <input type="date" id="endDate" class="form-control" required>
         </div>
         <button class="btn btn-outline-dark" onclick="setDateRange()" style="margin-top: 10px;">設定</button>
-
-        <!--<h1 style="margin-top: 20px; font-size: 30px">刪除帳號</h1>
-        <button type="button" class="btn btn-outline-danger">確定刪除</button>-->
+        
     </div>
     <br>
     <div align="center">
@@ -71,7 +69,7 @@
             //step1
             $link = mysqli_connect('localhost', 'root', '12345678', 'users');
             //step3
-            $sql = "select * from account";
+            $sql = "select * from accounts where level='user'";
             $result = mysqli_query($link, $sql);
             //step4
             while ($row = mysqli_fetch_assoc($result)) {

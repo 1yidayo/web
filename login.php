@@ -12,7 +12,7 @@
     <div class="wrapper">
         <div class="form-box login">
             <h2>登入</h2>
-            <form action="login_process.php" method="POST">
+            <form action="logincheck.php" method="POST">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
                     <input placeholder="使用者名稱" class="form-control" type="text" name="username" require><br>

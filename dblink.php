@@ -17,7 +17,7 @@
         $password = $_POST['password'];
         //step1
         $link = mysqli_connect('localhost', 'root', '12345678', 'users');
-        $sql = "update account set email='$email',password='$password' where username='$username'";
+        $sql = "update accounts set email='$email',password='$password' where username='$username'";
         if (mysqli_query($link, $sql)) {
             echo "修改成功", "<br>";
         } else {
@@ -26,7 +26,7 @@
     } elseif ($method == "delete") {
         $username = $_GET['username'];
         $link = mysqli_connect('localhost', 'root', '12345678', 'users');
-        $sql = "delete from account where username='$username'";
+        $sql = "delete from accounts where username='$username'";
         if (mysqli_query($link, $sql)) {
             echo "刪除成功", "<br>";
         } else {

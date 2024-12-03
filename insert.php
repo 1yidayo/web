@@ -17,7 +17,7 @@
         //step1
         $link = mysqli_connect('localhost', 'root', '12345678', 'users');
         //step3
-        $sql = "insert into account(username,email,password) values('$username','$email','$password')";
+        $sql = "insert into accounts(username,email,password,level) values('$username','$email','$password','user')";
         if(mysqli_query($link,$sql)){
             echo "新增成功" ,"<br>";
         }

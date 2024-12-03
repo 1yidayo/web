@@ -45,19 +45,45 @@
                 <td>功能</td>
             </tr>
             <?php
-            //step1
-            $link = mysqli_connect('localhost', 'root', '12345678', 'users');
-            //step3
-            $sql = "select * from account";
-            $result = mysqli_query($link, $sql);
-            //step4
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo "<tr><td>", $row['username'], "</td><td>", $row['email'],"</td><td align='center'><a href=update.php?username="
-                ,$row['username'],">[修改]</a>&nbsp;<a href=dblink.php?method=delete&username=",$row['username'],">[刪除]</a></td></tr>";
+            session_start(); // 啟動 session，確認當前使用者的資料
+            if (isset($_SESSION['username'])) {
+                $current_username = $_SESSION['username']; // 取得當前使用者的 username
+                //step1
+                $link = mysqli_connect('localhost', 'root', '12345678', 'users');
+                //step3
+                $sql = "SELECT * FROM accounts WHERE username = '$current_username'"; // 查詢當前使用者
+                $result = mysqli_query($link, $sql);
+                //step4
+                if ($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr><td>", $row['username'], "</td><td>", $row['email'], "</td><td align='center'><a href=update.php?username=",
+                    $row['username'], ">[修改]</a>&nbsp;<a href=dblink.php?method=delete&username=", $row['username'], ">[刪除]</a></td></tr>";
+                }
+            } else {
+                echo "<tr><td colspan='3' align='center'>未登入，請先登入</td></tr>";
             }
             ?>
+            
         </table>
     </div>
 </body>
 
 </html>
+
+<?php
+/*
+            //step1
+            $link = mysqli_connect('localhost', 'root', '12345678', 'users');
+            //step3
+            $sql = "select * from account username=$username and password=$password";
+            $result = mysqli_query($link, $sql);
+            //step4
+            while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>
+                <td>", $row['username'], "</td>
+                <td>", $row['email'],"</td>
+                <td align='center'><a href=update.php?username="
+                ,$row['username'],">[修改]</a>&nbsp;<a href=dblink.php?method=delete&username=",$row['username'],">[刪除]</a></td>
+            </tr>";
+            }
+            */
+?>
