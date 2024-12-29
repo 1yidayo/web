@@ -5,7 +5,7 @@ $password = $_POST["password"];
 $link = mysqli_connect("localhost", "root", "12345678", "users");
 $sql = "select * from accounts where username='$username' and password ='$password'";
 $result = mysqli_query($link, $sql);
-
+ 
 if ($username == "admin") {
     $_SESSION['username'] = $username;
     $_SESSION['is_admin'] = true; // 設置為管理員
