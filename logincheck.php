@@ -1,7 +1,7 @@
 <?php
 session_start();
 $username = $_POST["username"];
-$password = $_POST["password"];
+$password = $_POST["password"]; 
 $link = mysqli_connect("localhost", "root", "12345678", "users");
 $sql = "select * from accounts where username='$username' and password ='$password'";
 $result = mysqli_query($link, $sql);
@@ -21,7 +21,7 @@ if ($record = mysqli_fetch_assoc($result)) {
     $_SESSION['is_admin'] = false; // 非管理員
     echo '<script>
                 parent.location.reload();
-              </script>';
+        </script>';
     exit();
 } else {
     echo "登入失敗";

@@ -36,3 +36,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 } else {
     echo "請填寫帳號和密碼";
 }
+
+
+//暫時用不到
