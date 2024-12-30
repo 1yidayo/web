@@ -18,25 +18,31 @@
         }
 
         body {
-            background-color:transparent;
+            background-color: transparent;
         }
-        
+
         th,
         td {
             border: 1px solid black;
             padding: 8px;
             text-align: center;
         }
+
+        /* 調整月份欄寬度 */
+        th.month-column,
+        td.month-column {
+            width: 120px;
+        }
     </style>
 </head>
 
 <body>
     <canvas id="borrowChart" width="300" height="150"></canvas>
-    <div style="margin-left: 100px;margin-top: 20px;">
+    <div style="margin-left: 100px; margin-top: 20px;">
         <p>每月預約次數：</p>
         <table id="statsTable">
             <tr>
-                <th></th>
+                <th class="month-column">月份</th>
                 <th>SL200-1</th>
                 <th>SL200-3</th>
                 <th>SL201</th>
@@ -51,7 +57,7 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             renderChart();
         });
 
@@ -89,12 +95,12 @@
                     options: {
                         plugins: {
                             datalabels: {
-                                color: '#000', // 設置標籤顏色
-                                anchor: 'end', // 設置標籤位置
-                                align: 'top', // 設置標籤顯示在條形圖的上方
+                                color: '#000',
+                                anchor: 'end',
+                                align: 'top',
                                 font: {
-                                    weight: 'bold', // 設置標籤字體粗細
-                                    size: 14 // 設置標籤字體大小
+                                    weight: 'bold',
+                                    size: 14
                                 }
                             }
                         },
@@ -103,26 +109,85 @@
                                 beginAtZero: true,
                                 title: {
                                     display: true,
-                                    text: '預約次數' // 顯示縱軸標題
+                                    text: '預約次數'
                                 }
                             },
                             x: {
                                 title: {
                                     display: true,
-                                    text: '月份' // 顯示橫軸標題
+                                    text: '月份'
                                 }
                             }
                         }
                     },
-                    plugins: [ChartDataLabels] // 激活數據標籤插件
+                    plugins: [ChartDataLabels]
                 });
+
+                // 假設已經有一些手動填寫的數據（如SL200-3、SL201等）
+                const manualData = {
+                    "2024-09": {
+                        "SL200-3": 0,
+                        "SL201": 0,
+                        "SL245": 2,
+                        "SL246": 1,
+                        "SL471": 2,
+                        "LM200": 5,
+                        "LM202": 3
+                    },
+                    "2024-10": {
+                        "SL200-3": 2,
+                        "SL201": 4,
+                        "SL245": 3,
+                        "SL246": 6,
+                        "SL471": 0,
+                        "LM200": 1,
+                        "LM202": 4
+                    },
+                    "2024-11": {
+                        "SL200-3": 0,
+                        "SL201": 3,
+                        "SL245": 2,
+                        "SL246": 0,
+                        "SL471": 1,
+                        "LM200": 4,
+                        "LM202": 2
+                    },
+                    "2024-12": {
+                        "SL200-3": 1,
+                        "SL201": 3,
+                        "SL245": 2,
+                        "SL246": 0,
+                        "SL471": 0,
+                        "LM200": 0,
+                        "LM202": 3
+                    },
+                    "2025-01": {
+                        "SL200-3": 5,
+                        "SL201": 3,
+                        "SL245": 2,
+                        "SL246": 2,
+                        "SL471": 0,
+                        "LM200": 0,
+                        "LM202": 1
+                    },
+                };
 
                 // 渲染表格
                 let tableHtml = '';
                 labels.forEach(month => {
-                    tableHtml += `<tr><td>${month}</td><td>${stats[month]}</td></tr>`;
+                    // SL200-1 來自資料庫，其他設備來自手動填寫數據
+                    tableHtml += `<tr><td class="month-column">${month}</td>
+        <td>${stats[month]['SL200-1']}</td>
+        <td>${manualData[month]?.['SL200-3'] !== undefined ? manualData[month]['SL200-3'] : 'N/A'}</td>
+        <td>${manualData[month]?.['SL201'] !== undefined ? manualData[month]['SL201'] : 'N/A'}</td>
+        <td>${manualData[month]?.['SL245'] !== undefined ? manualData[month]['SL245'] : 'N/A'}</td>
+        <td>${manualData[month]?.['SL246'] !== undefined ? manualData[month]['SL246'] : 'N/A'}</td>
+        <td>${manualData[month]?.['SL471'] !== undefined ? manualData[month]['SL471'] : 'N/A'}</td>
+        <td>${manualData[month]?.['LM200'] !== undefined ? manualData[month]['LM200'] : 'N/A'}</td>
+        <td>${manualData[month]?.['LM202'] !== undefined ? manualData[month]['LM202'] : 'N/A'}</td></tr>`;
                 });
                 document.getElementById('statsTable').innerHTML += tableHtml;
+
             });
         }
     </script>
