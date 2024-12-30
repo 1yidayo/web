@@ -55,61 +55,64 @@
         </div>
         <button class="btn btn-outline-dark" onclick="setDateRange()" style="margin-top: 10px;">設定</button>
         
-    </div>
-    <br>
-    <div align="center">
-        <h3>帳號管理</h3>
-        <table class="List" width="500" border="solid 1px black">
-            <tr align="center">
-                <td>使用者名稱</td>
-                <td>使用者Email</td>
-                <td>功能</td>
-            </tr>
-            <?php
-            //step1
-            $link = mysqli_connect('localhost', 'root', '12345678', 'users');
-            //step3
-            $sql = "select * from accounts where level='user'";
-            $result = mysqli_query($link, $sql);
-            //step4
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo "<tr><td>", $row['username'], "</td><td>", $row['email'], "</td><td align='center'><a href=dblink.php?method=delete&username=", $row['username'], ">[刪除]</a></td></tr>";
-                //echo "<tr><td>", $row['username'], "</td><td>", $row['email'],"</td><td align='center'><a href=update.php?username="
-                //,$row['username'],">[修改]</a>&nbsp;<a href=dblink.php?method=delete&username=",$row['username'],">[刪除]</a></td></tr>";
-            }
-            ?>
-        </table>
-        <br>
-        <h3>回饋反映</h3>
-        <table class="List" border="solid 1px black">
-            <tr align="center">
-                <td>姓名</td>
-                <td>電子郵件</td>
-                <td>電話號碼</td>
-                <td>使用感受</td>
-                <td>待改進之處</td>
-            </tr>
-            <?php
-            //step1
-            $link = mysqli_connect('localhost', 'root', '12345678', 'feedback');
-            //step3
-            $sql = "select * from content";
-            $result = mysqli_query($link, $sql);
-            //step4
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo "<tr>
+        <div><br>
+            <h3>帳號管理</h3>
+            <table class="List" width="500" border="solid 1px black">
+                <tr align="center">
+                    <td>使用者名稱</td>
+                    <td>使用者Email</td>
+                    <td>功能</td>
+                </tr>
+                <?php
+                //step1
+                $link = mysqli_connect('localhost', 'root', '12345678', 'users');
+                //step3
+                $sql = "select * from accounts where level='user'";
+                $result = mysqli_query($link, $sql);
+                //step4
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr><td>", $row['username'], "</td><td>", $row['email'], "</td><td align='center'><a href=dblink.php?method=delete&username=", $row['username'], ">[刪除]</a></td></tr>";
+                    //echo "<tr><td>", $row['username'], "</td><td>", $row['email'],"</td><td align='center'><a href=update.php?username="
+                    //,$row['username'],">[修改]</a>&nbsp;<a href=dblink.php?method=delete&username=",$row['username'],">[刪除]</a></td></tr>";
+                }
+                ?>
+            </table>
+            <br>
+            <h3>評分反饋</h3>
+            <table class="List" width="800" border="solid 1px black">
+                <tr align="center">
+                    <td>姓名</td>
+                    <td>電子郵件</td>
+                    <td>電話號碼</td>
+                    <td>借用教室</td>
+                    <td>借用日期</td>
+                    <td>使用感受</td>
+                    <td>待改進之處</td>
+                </tr>
+                <?php
+                //step1
+                $link = mysqli_connect('localhost', 'root', '12345678', 'feedback');
+                //step3
+                $sql = "select * from content";
+                $result = mysqli_query($link, $sql);
+                //step4
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<tr>
                 <td>", $row['name'], "</td>
                 <td>", $row['email'], "</td>
                 <td>", $row['phone'], "</td>
+                <td>", $row['classroom'], "</td>
+                <td>", $row['date'], "</td>
                 <td>", $row['feeling'], "</td>
                 <td>", $row['message'], "</td>
                 </tr>";
-            }
-            ?>
-        </table>
-
-
+                }
+                ?>
+            </table>
+        </div>
     </div>
+    <br>
+
 
 
     <script>
