@@ -114,13 +114,15 @@
             }
 
             #editModal {
+                color: rgba(0, 0, 0, 0.6);
                 display: none;
                 position: fixed;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                background-color: white;
-                border: 2px solid #ccc;
+                background: linear-gradient(315deg, #ffffff 0%, rgb(215, 225, 224) 74%);
+                border-radius: 10px;
+                border: 1px solid #ccc;
                 padding: 20px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                 z-index: 1000;
@@ -201,6 +203,7 @@
     <div id="editModal">
         <h3>修改預約時間</h3>
         <form id="editForm" action='update_delete_reservation.php'>
+            <div  style="margin: 10px">
             <label for="editStartDate">開始日期：</label>
             <input type="date" id="editStartDate" name="start_date" required><br>
 
@@ -214,9 +217,10 @@
             <input type="time" id="editEndTime" name="end_time" required><br>
 
             <input type="hidden" id="editId" name="id">
-            <button type="submit">更新預約時間</button>
-            <button type="button" id="deleteBtn">刪除預約</button>
-            <button type="button" id="cancelBtn">取消</button>
+            </div>
+            <button class="btn btn-primary text-uppercase disabled" style="background-color: #00000099; color:white; border: none" type="submit">更新預約時間</button>
+            <button class="btn btn-primary text-uppercase disabled" style="background-color: #00000099; color:white; border: none" type="button" id="deleteBtn">刪除預約</button>
+            <button class="btn btn-primary text-uppercase disabled" style="background-color: #00000099; color:white; border: none" type="button" id="cancelBtn">取消</button>
         </form>
     </div>
 

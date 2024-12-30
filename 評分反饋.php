@@ -29,83 +29,92 @@
 </head>
 
 <body>
+    <style>
+        .main {
+            display: grid;
+            grid-template-columns: 45% 55%;
+        }
+    </style>
+
     <div class="wrapper" background="transparent">
         <div class="main">
-            <div>
-                <div style="margin-left:0%;">
-                    <form id="contactForm" style="width: 500px;" action="insert2.php" method="post">
-                        <div>
-                            <label for="name"><b style="color:#00000099">姓名</b></label><input class="form-control"
-                                id="name" name="name" type="text" style="width:300px" placeholder="Enter your name..."
-                                data-sb-validations="required" />
+            <div style="margin-left:0%;">
+                <form id="contactForm" style="width: 500px;" action="insert2.php" method="post">
+                    <div>
+                        <label for="name"><b style="color:#00000099">姓名</b></label><input class="form-control" id="name"
+                            name="name" type="text" style="width:300px" placeholder="Enter your name..."
+                            data-sb-validations="required" />
 
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                        </div><br>
-                        <div>
-                            <label for="email"><b style="color:#00000099">電子郵件</b></label><input class="form-control"
-                                id="email" name="email" type="email" style="width:300px"
-                                placeholder="Enter your email..." data-sb-validations="required,email" />
-                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                        </div><br>
-                        <div>
-                            <label for="phone"><b style="color:#00000099">電話號碼</b></label><input class="form-control"
-                                id="phone" name="phone" type="tel" style="width:300px"
-                                placeholder="Enter your phone number..." data-sb-validations="required" />
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
-                            </div>
-                        </div><br>
-                        <div>
+                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                    </div><br>
+                    <div>
+                        <label for="email"><b style="color:#00000099">電子郵件</b></label><input class="form-control"
+                            id="email" name="email" type="email" style="width:300px" placeholder="Enter your email..."
+                            data-sb-validations="required,email" />
+                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                    </div><br>
+                    <div>
+                        <label for="phone"><b style="color:#00000099">電話號碼</b></label><input class="form-control"
+                            id="phone" name="phone" type="tel" style="width:300px"
+                            placeholder="Enter your phone number..." data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
+                        </div>
+                    </div><br>
+                    <div>
+                        <form id="contactForm" style="width: 500px;" action="insert2.php" method="post">
                             <label for="classroom"><b style="color:#00000099">借用教室</b></label><input
                                 class="form-control" id="classroom" name="classroom" type="text" style="width:300px"
                                 placeholder="Enter your classroom..." data-sb-validations="required" />
-                            <div class="invalid-feedback" data-sb-feedback="classroom:required">Classroom is required.</div>
-                        </div><br>
-                        <div>
-                            <label for="date"><b style="color:#00000099">借用日期</b></label><input class="form-control"
-                                id="date" name="date" type="date" style="width:300px"
-                                placeholder="Enter your date number..." data-sb-validations="required">
-                            <div class="invalid-feedback" data-sb-feedback="date:required">Date is required.</div>
-                        </div><br>
-                        <div>
-                            <label for="feeling"><b style="color:#00000099">使用感受</b></label><br>
-                            <input type="radio" id="very_satisfied" name="feeling" value="非常滿意"><label
-                                for="very_satisfied">非常滿意</label>
-                            <input type="radio" id="satisfied" name="feeling" value="滿意"><label
-                                for="satisfied">滿意</label>
-                            <input type="radio" id="neutral" name="feeling" value="一般"><label for="neutral">一般</label>
-                            <input type="radio" id="dissatisfied" name="feeling" value="不滿意"><label
-                                for="dissatisfied">不滿意</label>
-                            <input type="radio" id="very_dissatisfied" name="feeling" value="非常不滿意"><label
-                                for="very_dissatisfied">非常不滿意</label><br><br>
-                        </div>
-                        <div>
-                            <label for="message"><b style="color:#00000099">待改進之處</b></label><textarea
-                                class="form-control" id="message" name="message" style="width:300px"
-                                placeholder="Enter your message here..." style="height: 50rem"></textarea>
-                        </div>
-                        <br />
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
+                            <div class="invalid-feedback" data-sb-feedback="classroom:required">Classroom is required.
                             </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                        </div>
-                        <!-- Submit Button-->
-                        <button class="btn btn-primary text-uppercase disabled" id="submitButton" type="submit"
-                            style="background-color: #00000099; color:white; border: none">Send</button>
-                    </form>
+                    </div><br>
+                </form>
+            </div>
+            <div>
+                <div>
+                    <label for="date"><b style="color:#00000099">借用日期</b></label><input class="form-control" id="date"
+                        name="date" type="date" style="width:300px" placeholder="Enter your date number..."
+                        data-sb-validations="required">
+                    <div class="invalid-feedback" data-sb-feedback="date:required">Date is required.</div>
+                </div><br>
+                <div>
+                    <label for="feeling"><b style="color:#00000099">使用感受</b></label><br>
+                    <input type="radio" id="very_satisfied" name="feeling" value="非常滿意"><label
+                        for="very_satisfied">非常滿意</label>
+                    <input type="radio" id="satisfied" name="feeling" value="滿意"><label for="satisfied">滿意</label>
+                    <input type="radio" id="neutral" name="feeling" value="一般"><label for="neutral">一般</label>
+                    <input type="radio" id="dissatisfied" name="feeling" value="不滿意"><label
+                        for="dissatisfied">不滿意</label>
+                    <input type="radio" id="very_dissatisfied" name="feeling" value="非常不滿意"><label
+                        for="very_dissatisfied">非常不滿意</label><br><br>
                 </div>
+                <div>
+                    <label for="message"><b style="color:#00000099">待改進之處</b></label><textarea class="form-control"
+                        id="message" name="message" style="width:300px" placeholder="Enter your message here..."
+                        style="height: 50rem"></textarea>
+                </div>
+                <br />
+                <!-- Submit success message-->
+                <!---->
+                <!-- This is what your users will see when the form-->
+                <!-- has successfully submitted-->
+                <div class="d-none" id="submitSuccessMessage">
+                    <div class="text-center mb-3">
+                        <div class="fw-bolder">Form submission successful!</div>
+                    </div>
+                </div>
+                <!-- Submit error message-->
+                <!---->
+                <!-- This is what your users will see when there is-->
+                <!-- an error submitting the form-->
+                <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Error sending message!</div>
+                </div>
+                <!-- Submit Button-->
+                <button class="btn btn-primary text-uppercase disabled" id="submitButton" type="submit"
+                    style="background-color: #00000099; color:white; border: none">Send</button>
+                </form>
             </div>
         </div>
     </div>
