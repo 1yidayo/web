@@ -17,6 +17,10 @@
             height: 400px;
         }
 
+        body {
+            background-color:transparent;
+        }
+        
         th,
         td {
             border: 1px solid black;
