@@ -7,9 +7,6 @@ $dbname = "users";
 
 $link = mysqli_connect($host, $username, $password, $dbname);
 
-if (!$link) {
-    die("資料庫連接失敗: " . mysqli_connect_error());
-}
 
 $sql = "SELECT * FROM reservation";
 $result = mysqli_query($link, $sql);

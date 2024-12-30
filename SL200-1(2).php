@@ -8,17 +8,12 @@
     <link href='https://unpkg.com/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src='https://unpkg.com/fullcalendar@5.11.3/main.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
     <link rel="icon"
         href="https://upload.wikimedia.org/wikipedia/zh/thumb/d/da/Fu_Jen_Catholic_University_logo.svg/1200px-Fu_Jen_Catholic_University_logo.svg.png">
@@ -26,7 +21,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap">
 </head>
-
 
 <body>
     <div class="main">
@@ -36,7 +30,6 @@
                 padding: 0;
             }
 
-
             #calendar-container {
                 max-width: 800px;
                 margin: 0 auto;
@@ -45,11 +38,8 @@
 
             #reservation-form {
                 display: grid;
-                /* 使用 grid */
                 grid-template-columns: 1fr 1fr;
-                /* 定義兩列 */
                 gap: 20px;
-                /* 添加間距 */
                 max-width: 800px;
                 margin: 20px auto;
                 padding: 20px;
@@ -111,24 +101,18 @@
 
             .radio-group {
                 display: flex;
-                /* 使用 flexbox */
                 align-items: center;
-                /* 垂直居中對齊 */
             }
 
             .radio-group input {
                 margin-right: 5px;
-                /* 添加右邊距以增加間距 */
             }
 
             .alert1 {
                 display: flex;
-                /* 使用 flexbox */
                 align-items: center;
-                /* 垂直居中對齊 */
             }
 
-            /* 彈跳視窗的樣式 */
             #editModal {
                 display: none;
                 position: fixed;
@@ -142,7 +126,6 @@
                 z-index: 1000;
             }
 
-            /* 背景遮罩 */
             #overlay {
                 display: none;
                 position: fixed;
@@ -155,6 +138,7 @@
             }
         </style>
     </div>
+
     <div class="main">
         <h3 style="text-align: center;margin-top: 30px;">SL200-1</h3><br>
         <div class="alert1">
@@ -211,136 +195,59 @@
             </div>
         </div>
         <div id="calendar" style="width: 800px; margin-left: 200px;"></div>
-
-        <!-- 顯示行事曆的 div -->
-        <div id="calendar"></div>
-
-        <!-- 背景遮罩 -->
         <div id="overlay"></div>
+    </div>
+    <!-- 彈跳視窗修改預約表單 -->
+    <div id="editModal">
+        <h3>修改預約時間</h3>
+        <form id="editForm" action='update_delete_reservation.php'>
+            <label for="editStartDate">開始日期：</label>
+            <input type="date" id="editStartDate" name="start_date" required><br>
 
-        <!-- 彈跳視窗修改預約表單 -->
-        <div id="editModal">
-            <h3>修改預約時間</h3>
-            <form id="editForm" action='update_delete_reservation.php'>
-                <label for="editStartDate">開始日期：</label>
-                <input type="date" id="editStartDate" name="start_date" required><br>
+            <label for="editStartTime">開始時間：</label>
+            <input type="time" id="editStartTime" name="start_time" required><br>
 
-                <label for="editStartTime">開始時間：</label>
-                <input type="time" id="editStartTime" name="start_time" required><br>
+            <label for="editEndDate">結束日期：</label>
+            <input type="date" id="editEndDate" name="end_date" required><br>
 
-                <label for="editEndDate">結束日期：</label>
-                <input type="date" id="editEndDate" name="end_date" required><br>
+            <label for="editEndTime">結束時間：</label>
+            <input type="time" id="editEndTime" name="end_time" required><br>
 
-                <label for="editEndTime">結束時間：</label>
-                <input type="time" id="editEndTime" name="end_time" required><br>
+            <input type="hidden" id="editId" name="id">
+            <button type="submit">更新預約時間</button>
+            <button type="button" id="deleteBtn">刪除預約</button>
+            <button type="button" id="cancelBtn">取消</button>
+        </form>
+    </div>
 
-                <input type="hidden" id="editId" name="id">
-                <button type="submit" action='update'>更新預約時間</button>
-                <button type="button" id="deleteBtn" action='delete'>刪除預約</button>
-                <button type="button" id="cancelBtn">取消</button>
-            </form>
-        </div>
+    <script>
+        $(document).ready(function() {
+            const today = new Date().toISOString().split('T')[0];
+            $('#start').attr('min', today);
+            $('#end').attr('min', today);
 
-        <div id="calendar" style="width: 800px; margin-left: 200px;"></div>
+            const currentTime = new Date().toTimeString().split(' ')[0].substring(0, 5);
+            $('#start-time').attr('min', currentTime);
+            $('#end-time').attr('min', currentTime);
 
-        <!-- 顯示行事曆的 div -->
-        <div id="calendar"></div>
-
-        <!-- 背景遮罩 -->
-        <div id="overlay"></div>
-
-        <!-- 彈跳視窗修改預約表單 -->
-        <div id="editModal">
-            <h3>修改預約時間</h3>
-            <form id="editForm" action='update_delete_reservation.php'>
-                <label for="editStartDate">開始日期：</label>
-                <input type="date" id="editStartDate" name="start_date" required><br>
-
-                <label for="editStartTime">開始時間：</label>
-                <input type="time" id="editStartTime" name="start_time" required><br>
-
-                <label for="editEndDate">結束日期：</label>
-                <input type="date" id="editEndDate" name="end_date" required><br>
-
-                <label for="editEndTime">結束時間：</label>
-                <input type="time" id="editEndTime" name="end_time" required><br>
-
-                <input type="hidden" id="editId" name="id">
-                <button type="submit" action='update'>更新預約時間</button>
-                <button type="button" id="deleteBtn" action='delete'>刪除預約</button>
-                <button type="button" id="cancelBtn">取消</button>
-            </form>
-        </div>
-
-        <div id="calendar" style="width: 800px; margin-left: 200px;"></div>
-
-        <!-- 顯示行事曆的 div -->
-        <div id="calendar"></div>
-
-        <!-- 背景遮罩 -->
-        <div id="overlay"></div>
-
-        <!-- 彈跳視窗修改預約表單 -->
-        <div id="editModal">
-            <h3>修改預約時間</h3>
-            <form id="editForm" action='update_delete_reservation.php'>
-                <label for="editStartDate">開始日期：</label>
-                <input type="date" id="editStartDate" name="start_date" required><br>
-
-                <label for="editStartTime">開始時間：</label>
-                <input type="time" id="editStartTime" name="start_time" required><br>
-
-                <label for="editEndDate">結束日期：</label>
-                <input type="date" id="editEndDate" name="end_date" required><br>
-
-                <label for="editEndTime">結束時間：</label>
-                <input type="time" id="editEndTime" name="end_time" required><br>
-
-                <input type="hidden" id="editId" name="id">
-                <button type="submit" action='update'>更新預約時間</button>
-                <button type="button" id="deleteBtn" action='delete'>刪除預約</button>
-                <button type="button" id="cancelBtn">取消</button>
-            </form>
-        </div>
-
-        <script>
-            // 顯示彈跳視窗
             function showEditForm(event) {
                 // 填充表單數據
-                $('#editId').val(event.id);
-                $('#editStartDate').val(event.start.toISOString().split('T')[0]);
-                $('#editStartTime').val(event.start.toTimeString().split(' ')[0].slice(0, 5));
+                $('#editId').val(event.id); // 從事件中提取 ID
+                $('#editStartDate').val(event.start.toISOString().split('T')[0]); // 日期格式處理
+                $('#editStartTime').val(event.start.toTimeString().slice(0, 5)); // 時間格式處理
                 $('#editEndDate').val(event.end.toISOString().split('T')[0]);
-                $('#editEndTime').val(event.end.toTimeString().split(' ')[0].slice(0, 5));
+                $('#editEndTime').val(event.end.toTimeString().slice(0, 5));
 
-                // 顯示表單和遮罩
+                // 顯示彈跳視窗
                 $('#editModal').show();
                 $('#overlay').show();
-
-                // 設定日期選擇器的最小日期為今天
-                let today = new Date();
-                today.setMinutes(today.getMinutes() - today.getTimezoneOffset()); // 處理時區
-                let todayDate = today.toISOString().split('T')[0];
-
-                // 設定日期的最小值
-                $('#editStartDate').attr('min', todayDate);
-                $('#editEndDate').attr('min', todayDate);
-
-                // 設定時間的最小值為當前時間
-                let currentTime = today.toTimeString().split(' ')[0].slice(0, 5); // 時間格式為 HH:MM
-
-                // 如果時間在午夜之前，則時間需要比當前時間大
-                $('#editStartTime').attr('min', currentTime);
-                $('#editEndTime').attr('min', currentTime);
             }
 
-            // 隱藏彈跳視窗
             $('#cancelBtn').click(function() {
                 $('#editModal').hide();
                 $('#overlay').hide();
             });
 
-            // 提交修改預約
             $('#editForm').submit(function(e) {
                 e.preventDefault();
 
@@ -349,22 +256,23 @@
                     start_date: $('#editStartDate').val(),
                     start_time: $('#editStartTime').val(),
                     end_date: $('#editEndDate').val(),
-                    end_time: $('#editEndTime').val()
+                    end_time: $('#editEndTime').val(),
+                    action: 'update' // 確保這裡的 action 設置為 update
                 };
 
-                $.post('update_reservation.php', formData, function(response) {
+                $.post('update_delete_reservation.php', formData, function(response) {
                     alert(response);
                     location.reload(); // 刷新頁面
                 });
             });
 
-            // 刪除預約
             $('#deleteBtn').click(function() {
                 var id = $('#editId').val();
 
                 if (confirm("您確定要刪除這個預約嗎？")) {
-                    $.post('delete_reservation.php', {
-                        id: id
+                    $.post('update_delete_reservation.php', {
+                        id: id,
+                        action: 'delete' // 設置為刪除操作
                     }, function(response) {
                         alert(response);
                         location.reload(); // 刷新頁面
@@ -379,16 +287,13 @@
                     const calendarEl = document.getElementById('calendar');
 
                     const calendar = new FullCalendar.Calendar(calendarEl, {
-                        initialView: 'dayGridMonth', // 初始顯示月視圖
-                        events: data, // 從後端傳遞的資料作為 events 顯示在行事曆上
-                        eventColor: '#378006', // 事件顏色設定
-                        eventTextColor: 'white', // 事件文字顏色設定
-
-                        // 事件點擊時處理顯示修改表單
+                        initialView: 'dayGridMonth',
+                        events: data,
+                        eventColor: '#378006',
+                        eventTextColor: 'white',
                         eventClick: function(info) {
-                            showEditForm(info.event);
+                            showEditForm(info.event); // 顯示修改表單
                         },
-
                         headerToolbar: {
                             left: 'prev,next today',
                             center: 'title',
@@ -396,18 +301,13 @@
                         }
                     });
 
-                    // 渲染行事曆
                     calendar.render();
                 })
                 .catch(error => {
                     console.error('錯誤:', error);
                 });
-        </script>
-
-
-    </div>
-
-
+        });
+    </script>
 
 </body>
 
