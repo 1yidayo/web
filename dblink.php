@@ -11,29 +11,48 @@
 <body>
     <?php
     $method = $_GET['method'] ?? null;
-    if (empty($method)) {
-        $username = $_POST['username'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        //step1
+
+    // 處理學期日期範圍的設定
+    if ($method == 'setSemester') {
+        // 取得表單傳來的開始日期和結束日期
+        $start_date = $_POST['start_date'];
+        $end_date = $_POST['end_date'];
+
+        // 連接資料庫
         $link = mysqli_connect('localhost', 'root', '12345678', 'users');
-        $sql = "update accounts set email='$email',password='$password' where username='$username'";
-        if (mysqli_query($link, $sql)) {
-            echo "修改成功", "<br>";
-        } else {
-            echo "修改失敗", "<br>";
+        
+        if (!$link) {
+            die("Connection failed: " . mysqli_connect_error());
         }
-    } elseif ($method == "delete") {
+
+        // 插入學期設定
+        $sql = "INSERT INTO semester (start_date, end_date) VALUES ('$start_date', '$end_date')";
+
+        if (mysqli_query($link, $sql)) {
+            echo "學期區間設定成功！", "<br>";
+        } else {
+            echo "學期區間設定失敗：", mysqli_error($link), "<br>";
+        }
+
+        // 關閉資料庫連接
+        mysqli_close($link);
+    }
+
+    // 原來的帳號修改和刪除處理
+    elseif ($method == 'delete') {
         $username = $_GET['username'];
         $link = mysqli_connect('localhost', 'root', '12345678', 'users');
-        $sql = "delete from accounts where username='$username'";
+        $sql = "DELETE FROM accounts WHERE username='$username'";
+
         if (mysqli_query($link, $sql)) {
             echo "刪除成功", "<br>";
         } else {
             echo "刪除失敗", "<br>";
         }
-    }
 
+        // 關閉資料庫連接
+        mysqli_close($link);
+    }
     ?>
 </body>
 

@@ -28,7 +28,7 @@
 
     // 插入單次預約的 SQL 語句
     $sql = "INSERT INTO reservation (name, email, phone, semester_reservation, start_date, start_time, end_date, end_time) 
-            VALUES ('$name', '$email', '$phone', '$semester_reservation', '$start_date', '$start_time', '$end_date', '$end_time')";
+        VALUES ('$name', '$email', '$phone', '$semester_reservation', '$start_date', '$start_time', '$end_date', '$end_time')";
 
     // 執行插入操作
     if (mysqli_query($link, $sql)) {
@@ -37,13 +37,20 @@
         echo "預約失敗", "<br>";
     }
 
-    // 如果選擇了學期預借，則重複添加每週的預約
+    // 如果選擇了學期預借，則動態讀取學期範圍
     if ($semester_reservation == 1) {
-        // 學期預借的固定時間範圍
-        $semester_start_date = '2024-09-02'; // 學期開始日期
-        $semester_end_date = '2025-01-04';   // 學期結束日期
+        // 從資料庫獲取學期的開始和結束日期
+        $semester_sql = "SELECT start_date, end_date FROM semester ORDER BY id DESC LIMIT 1";
+        $semester_result = mysqli_query($link, $semester_sql);
+        if ($semester_row = mysqli_fetch_assoc($semester_result)) {
+            $semester_start_date = $semester_row['start_date'];
+            $semester_end_date = $semester_row['end_date'];
+        } else {
+            echo "無法讀取學期範圍", "<br>";
+            exit;
+        }
 
-        // 設定預約開始日期和結束日期的時間區間
+        // 將學期開始日期和結束日期轉換為時間戳
         $start_date_time = strtotime($semester_start_date);
         $end_date_time = strtotime($semester_end_date);
 
@@ -71,6 +78,7 @@
     // 關閉資料庫連接
     mysqli_close($link);
     ?>
+
 </body>
 
 </html>

@@ -44,60 +44,82 @@
 </head>
 
 <body style="color: #00000099;">
-    <div class="main container">
-        <h1 style="margin-top: 20px; font-size: 30px">設定學期區間</h1>
-        <div>
-            <label for="startDate">開始日期：</label>
-            <input type="date" id="startDate" class="form-control" required>
+    <form action="dblink.php?method=setSemester" method="POST">
+        <p style="margin-top: 20px; ">
+            <span style="font-size: 32px">設定學期區間</span>
+            <?php
+            // 連接資料庫
+            $link = mysqli_connect('localhost', 'root', '12345678', 'users');
+            if (!$link) {
+                die("資料庫連線失敗：" . mysqli_connect_error());
+            }
 
-            <label for="endDate">結束日期：</label>
-            <input type="date" id="endDate" class="form-control" required>
+            // 查詢目前的學期區間
+            $sql = "SELECT start_date, end_date FROM semester ORDER BY id DESC LIMIT 1";
+            $result = mysqli_query($link, $sql);
+            $current_semester = mysqli_fetch_assoc($result);
+
+            if ($current_semester) {
+                echo "<span style='font-size: 20px;'>【目前學期區間為：</span><span style='color: #125174; font-size: 20px;'>" . $current_semester['start_date'] . " ~ " . $current_semester['end_date'] . "</span><span style='font-size: 20px;'>】</span>";
+            } else {
+                echo "<span style='font-size: 20px;'>【目前學期區間未設定】</span>";
+            }
+
+
+            mysqli_close($link);
+            ?>
+        </p>
+        <div>
+            <label for="start_date">開始日期：</label>
+            <input type="date" id="start_date" name="start_date" class="form-control" style="width: 300px;" required>
+
+            <label for="end_date">結束日期：</label>
+            <input type="date" id="end_date" name="end_date" class="form-control" style="width: 300px;" required>
         </div>
-        <button class="btn btn-outline-dark" onclick="setDateRange()" style="margin-top: 10px;">設定</button>
-        
-        <div><br>
-            <h3>帳號管理</h3>
-            <table class="List" width="500" border="solid 1px black">
-                <tr align="center">
-                    <td>使用者名稱</td>
-                    <td>使用者Email</td>
-                    <td>功能</td>
-                </tr>
-                <?php
-                //step1
-                $link = mysqli_connect('localhost', 'root', '12345678', 'users');
-                //step3
-                $sql = "select * from accounts where level='user'";
-                $result = mysqli_query($link, $sql);
-                //step4
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<tr><td>", $row['username'], "</td><td>", $row['email'], "</td><td align='center'><a href=dblink.php?method=delete&username=", $row['username'], ">[刪除]</a></td></tr>";
-                    //echo "<tr><td>", $row['username'], "</td><td>", $row['email'],"</td><td align='center'><a href=update.php?username="
-                    //,$row['username'],">[修改]</a>&nbsp;<a href=dblink.php?method=delete&username=",$row['username'],">[刪除]</a></td></tr>";
-                }
-                ?>
-            </table>
-            <br>
-            <h3>評分反饋</h3>
-            <table class="List" width="800" border="solid 1px black">
-                <tr align="center">
-                    <td>姓名</td>
-                    <td>電子郵件</td>
-                    <td>電話號碼</td>
-                    <td>借用教室</td>
-                    <td>借用日期</td>
-                    <td>使用感受</td>
-                    <td>待改進之處</td>
-                </tr>
-                <?php
-                //step1
-                $link = mysqli_connect('localhost', 'root', '12345678', 'feedback');
-                //step3
-                $sql = "select * from content";
-                $result = mysqli_query($link, $sql);
-                //step4
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<tr>
+        <button type="submit" class="btn btn-outline-dark" style="margin-top: 10px;">設定</button>
+    </form>
+    <br>
+    <h3>帳號管理</h3>
+    <table class="List" width="500" border="solid 1px black">
+        <tr align="center">
+            <td>使用者名稱</td>
+            <td>使用者Email</td>
+            <td>功能</td>
+        </tr>
+        <?php
+        //step1
+        $link = mysqli_connect('localhost', 'root', '12345678', 'users');
+        //step3
+        $sql = "select * from accounts where level='user'";
+        $result = mysqli_query($link, $sql);
+        //step4
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr><td>", $row['username'], "</td><td>", $row['email'], "</td><td align='center'><a href=dblink.php?method=delete&username=", $row['username'], ">[刪除]</a></td></tr>";
+            //echo "<tr><td>", $row['username'], "</td><td>", $row['email'],"</td><td align='center'><a href=update.php?username=",$row['username'],">[修改]</a>&nbsp;<a href=dblink.php?method=delete&username=",$row['username'],">[刪除]</a></td></tr>";
+        }
+        ?>
+    </table>
+    <br>
+    <h3>評分反饋</h3>
+    <table class="List" width="800" border="solid 1px black">
+        <tr align="center">
+            <td>姓名</td>
+            <td>電子郵件</td>
+            <td>電話號碼</td>
+            <td>借用教室</td>
+            <td>借用日期</td>
+            <td>使用感受</td>
+            <td>待改進之處</td>
+        </tr>
+        <?php
+        //step1
+        $link = mysqli_connect('localhost', 'root', '12345678', 'feedback');
+        //step3
+        $sql = "select * from content";
+        $result = mysqli_query($link, $sql);
+        //step4
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>
                 <td>", $row['name'], "</td>
                 <td>", $row['email'], "</td>
                 <td>", $row['phone'], "</td>
@@ -106,19 +128,17 @@
                 <td>", $row['feeling'], "</td>
                 <td>", $row['message'], "</td>
                 </tr>";
-                }
-                ?>
-            </table>
-        </div>
+        }
+        ?>
+    </table>
+    </div>
     </div>
     <br>
 
-
-
     <script>
         function setDateRange() {
-            const startDate = document.getElementById('startDate').value;
-            const endDate = document.getElementById('endDate').value;
+            const startDate = document.getElementById('start_date').value;
+            const endDate = document.getElementById('end_date').value;
 
             if (!startDate || !endDate) {
                 alert("請選擇開始和結束日期。");
