@@ -196,7 +196,7 @@
                 </form>
             </div>
         </div>
-        <div id="calendar" style="width: 800px; margin-left: 200px;"></div>
+        <div id="calendar" style="width: 800px; margin-left: 150px;"></div>
         <div id="overlay"></div>
     </div>
     <!-- 彈跳視窗修改預約表單 -->
