@@ -32,7 +32,7 @@
         <p>每月預約次數：</p>
         <table id="statsTable">
             <tr>
-                <th>月份</th>
+                <th></th>
                 <th>SL200-1</th>
                 <th>SL200-3</th>
                 <th>SL201</th>

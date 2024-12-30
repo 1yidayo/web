@@ -33,7 +33,7 @@
                     <img src="https://th.bing.com/th/id/OIP.F-Gl_CPFXZPh2YQzAZ4ahwHaEL?w=275&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" class="card-img-top"
                         alt="...">
                     <div class="lower-text" style="background-color: #aec4d2;;">
-                        <h6 class=" text-muted" text-align="center"><a href="test.php" style="color: black; text-decoration: none;"><br><b>查看預借紀錄</b></a></h6>
+                        <h6 class=" text-muted" text-align="center"><a href="SL200-1(1).php" style="color: black; text-decoration: none;"><br><b>查看預借紀錄</b></a></h6>
                     </div>
                 </div>
             </div>
