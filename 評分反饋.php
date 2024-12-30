@@ -69,7 +69,6 @@
                             <div class="invalid-feedback" data-sb-feedback="classroom:required">Classroom is required.
                             </div>
                     </div><br>
-                </form>
             </div>
             <div>
                 <div>
