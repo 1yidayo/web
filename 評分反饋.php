@@ -62,13 +62,14 @@
                         </div>
                     </div><br>
                     <div>
-                        <form id="contactForm" style="width: 500px;" action="insert2.php" method="post">
-                            <label for="classroom"><b style="color:#00000099">借用教室</b></label><input
-                                class="form-control" id="classroom" name="classroom" type="text" style="width:300px"
-                                placeholder="Enter your classroom..." data-sb-validations="required" />
-                            <div class="invalid-feedback" data-sb-feedback="classroom:required">Classroom is required.
-                            </div>
+
+                        <label for="classroom"><b style="color:#00000099">借用教室</b></label><input
+                            class="form-control" id="classroom" name="classroom" type="text" style="width:300px"
+                            placeholder="Enter your classroom..." data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="classroom:required">Classroom is required.
+                        </div>
                     </div><br>
+
             </div>
             <div>
                 <div>
@@ -111,7 +112,7 @@
                     <div class="text-center text-danger mb-3">Error sending message!</div>
                 </div>
                 <!-- Submit Button-->
-                <button class="btn btn-primary text-uppercase disabled" id="submitButton" type="submit"
+                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit"
                     style="background-color: #00000099; color:white; border: none">Send</button>
                 </form>
             </div>

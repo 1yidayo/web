@@ -2,15 +2,118 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>教室使用統計圖表</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="icon"
+        href="https://upload.wikimedia.org/wikipedia/zh/thumb/d/da/Fu_Jen_Catholic_University_logo.svg/1200px-Fu_Jen_Catholic_University_logo.svg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@550&display=swap">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            /* 讓邊框合併，避免雙邊框 */
+            width: 800px;
+            height: 400px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            /* 為單元格添加邊框 */
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+
 </head>
 
 <body>
-    <canvas id="borrowChart" width="600" height="300"></canvas>
-    <div id="classroomStats" style="margin-top: 20px;"></div>
+    <canvas id="borrowChart" width="300" height="150"></canvas>
+    <!--<div id="classroomStats" style="margin-top: 20px;"></div>-->
+    <div style="margin-left: 100px;margin-top: 20px;">
+        <p>教室借用次數：</p>
+        <table>
+            <tr>
+                <th>教室</th>
+                <th>2024-09</th>
+                <th>2024-10</th>
+                <th>2024-11</th>
+                <th>2024-12</th>
+                <th>2024-01</th>
+            </tr>
+            <tr>
+                <td>SL200-1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>SL200-3</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>SL201</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>SL245</td>
+                <td>1</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>SL246</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>SL471</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>LM200</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>LM202</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -120,8 +223,6 @@
             statsHtml += '</ul>';
             document.getElementById('classroomStats').innerHTML = statsHtml;
         }
-
-        
     </script>
 </body>
 
