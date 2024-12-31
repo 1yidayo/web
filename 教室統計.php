@@ -33,6 +33,12 @@
         td.month-column {
             width: 120px;
         }
+
+        /* 設定教室欄等寬 */
+        th,
+        td {
+            width: calc(100% / 9); /* 根據表格欄位數量調整 */
+        }
     </style>
 </head>
 
@@ -42,7 +48,7 @@
         <p>每月預約次數：</p>
         <table id="statsTable">
             <tr>
-                <th class="month-column">月份</th>
+                <th class="month-column"></th>
                 <th>SL200-1</th>
                 <th>SL200-3</th>
                 <th>SL201</th>
@@ -56,7 +62,7 @@
                 <td class="month-column">2024-09</td>
                 <td contenteditable="true">6</td>
                 <td contenteditable="true">0</td>
-                <td contenteditable="true">0</td>
+                <td contenteditable="true">4</td>
                 <td contenteditable="true">2</td>
                 <td contenteditable="true">1</td>
                 <td contenteditable="true">2</td>
@@ -92,7 +98,7 @@
                 <td contenteditable="true">3</td>
                 <td contenteditable="true">2</td>
                 <td contenteditable="true">0</td>
-                <td contenteditable="true">0</td>
+                <td contenteditable="true">4</td>
                 <td contenteditable="true">0</td>
                 <td contenteditable="true">3</td>
             </tr>
@@ -104,39 +110,34 @@
                 <td contenteditable="true">2</td>
                 <td contenteditable="true">2</td>
                 <td contenteditable="true">0</td>
-                <td contenteditable="true">0</td>
                 <td contenteditable="true">1</td>
+                <td contenteditable="true">6</td>
             </tr>
         </table>
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // 初始渲染圖表
             renderChart();
 
-            // 監聽表格內數據變動
             const cells = document.querySelectorAll('#statsTable td[contenteditable="true"]');
             cells.forEach(cell => {
-                cell.addEventListener('input', renderChart); // 每次數據變更後更新圖表
+                cell.addEventListener('input', renderChart);
             });
         });
 
-        // 定義自訂顏色的數組
         const customColors = [
-            '#FF5733', // SL200-1
-            '#33FF57', // SL200-3
-            '#3357FF', // SL201
-            '#FF33A1', // SL245
-            '#A1FF33', // SL246
-            '#33A1FF', // SL471
-            '#A133FF', // LM200
-            '#FF33D9' // LM202
+            'rgba(214, 163, 162, 0.6)',
+            'rgba(190, 81, 77, 0.6)',
+            'rgba(235, 149, 71, 0.6)',
+            'rgba(245, 225, 130, 0.6)',
+            'rgba(123, 164, 147, 0.6)',
+            'rgba(141, 181, 193, 0.6)',
+            'rgba(71, 107, 151, 0.6)',
+            'rgba(127, 109, 163, 0.6)'
         ];
 
-        // 更新圖表的函數
         function updateChart() {
-            // 讀取表格中的數據
             const labels = [];
             const borrowCounts = {
                 "SL200-1": [],
@@ -149,20 +150,16 @@
                 "LM202": []
             };
 
-            // 解析表格中的數據
             const rows = document.querySelectorAll('#statsTable tr');
             rows.forEach((row, index) => {
-                if (index === 0) return; // 跳過標題行
+                if (index === 0) return;
                 const cells = row.querySelectorAll('td');
-                labels.push(cells[0].textContent); // 取得月份
-
-                // 取得每個教室的數據
+                labels.push(cells[0].textContent);
                 for (let i = 1; i < cells.length; i++) {
                     borrowCounts[Object.keys(borrowCounts)[i - 1]].push(parseInt(cells[i].textContent) || 0);
                 }
             });
 
-            // 渲染圖表
             const ctx = document.getElementById('borrowChart').getContext('2d');
             new Chart(ctx, {
                 type: 'bar',
@@ -172,9 +169,9 @@
                         return {
                             label: classroom,
                             data: borrowCounts[classroom],
-                            backgroundColor: customColors[index], // 使用自訂顏色
-                            borderColor: 'rgba(0, 0, 0, 0.1)',
-                            borderWidth: 1
+                            backgroundColor: customColors[index],
+                            borderColor: customColors[index].replace(/0.6\)/, '1)'),
+                            borderWidth: 2
                         };
                     })
                 },
@@ -211,7 +208,6 @@
             });
         }
 
-        // 初始渲染圖表
         function renderChart() {
             updateChart();
         }
