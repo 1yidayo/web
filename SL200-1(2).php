@@ -149,6 +149,7 @@
                 <ul>
                     <p>請正確填入姓名、電話、gmail</p>
                     <p>當您點擊日曆中"已預約的名字"可以修改或刪除您的預約</p>
+                    <p>若要進行"學期預借"的修改，建議直接刪除後在預約一次</p>
                 </ul>
             </div>
             <div><img src="pic.png" alt="驚嘆號" style="width: 130px;height: 130px;vertical-align: middle;"></div>
@@ -229,7 +230,7 @@
     </div>
 
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             const today = new Date().toISOString().split('T')[0];
             $('#start').attr('min', today);
             $('#end').attr('min', today);
@@ -251,12 +252,12 @@
                 $('#overlay').show();
             }
 
-            $('#cancelBtn').click(function () {
+            $('#cancelBtn').click(function() {
                 $('#editModal').hide();
                 $('#overlay').hide();
             });
 
-            $('#editForm').submit(function (e) {
+            $('#editForm').submit(function(e) {
                 e.preventDefault();
 
                 var formData = {
@@ -268,20 +269,20 @@
                     action: 'update' // 確保這裡的 action 設置為 update
                 };
 
-                $.post('update_delete_reservation.php', formData, function (response) {
+                $.post('update_delete_reservation.php', formData, function(response) {
                     alert(response);
                     location.reload(); // 刷新頁面
                 });
             });
 
-            $('#deleteBtn').click(function () {
+            $('#deleteBtn').click(function() {
                 var id = $('#editId').val();
 
                 if (confirm("您確定要刪除這個預約嗎？")) {
                     $.post('update_delete_reservation.php', {
                         id: id,
                         action: 'delete' // 設置為刪除操作
-                    }, function (response) {
+                    }, function(response) {
                         alert(response);
                         location.reload(); // 刷新頁面
                     });
@@ -299,7 +300,7 @@
                         events: data,
                         eventColor: '#378006',
                         eventTextColor: 'white',
-                        eventClick: function (info) {
+                        eventClick: function(info) {
                             showEditForm(info.event); // 顯示修改表單
                         },
                         headerToolbar: {

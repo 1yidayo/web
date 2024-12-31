@@ -139,6 +139,7 @@
                     <ul>
                         <p>請正確填入姓名、電話、gmail</p>
                         <p>當您點擊日曆中"已預約的名字"可以修改或刪除您的預約</p>
+                        <p>若要進行"學期預借"的修改，建議直接刪除後在預約一次</p>
                     </ul>
                 </div>
                 <div><img src="pic.png" alt="驚嘆號" style="width: 130px;height: 130px;vertical-align: middle;"></div>
@@ -217,7 +218,7 @@
             </div>
 
             <script>
-                document.addEventListener("DOMContentLoaded", function () {
+                document.addEventListener("DOMContentLoaded", function() {
                     const today = new Date();
                     const maxDate = new Date();
                     maxDate.setDate(today.getDate() + 30);
@@ -240,11 +241,11 @@
                     endInput.max = formatDate(maxDate);
 
                     // 當開始日期改變時，自動更新結束日期的最小值
-                    startInput.addEventListener("change", function () {
+                    startInput.addEventListener("change", function() {
                         endInput.min = this.value;
                     });
                 });
-                
+
                 document.addEventListener('DOMContentLoaded', function() {
                     var calendarEl = document.getElementById('calendar-container');
                     var calendar = new FullCalendar.Calendar(calendarEl, {

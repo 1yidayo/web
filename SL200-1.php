@@ -149,6 +149,7 @@
                 <ul>
                     <p>請正確填入姓名、電話、gmail</p>
                     <p>當您點擊日曆中"已預約的名字"可以修改或刪除您的預約</p>
+                    <p>若要進行"學期預借"的修改，建議直接刪除後在預約一次</p>
                 </ul>
             </div>
             <div><img src="pic.png" alt="驚嘆號" style="width: 130px;height: 130px;vertical-align: middle;"></div>

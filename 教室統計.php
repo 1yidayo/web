@@ -69,7 +69,7 @@
                 <td contenteditable="true">2</td>
                 <td contenteditable="true">4</td>
                 <td contenteditable="true">3</td>
-                <td contenteditable="true">6</td>
+                <td contenteditable="true">5</td>
                 <td contenteditable="true">0</td>
                 <td contenteditable="true">1</td>
                 <td contenteditable="true">4</td>
