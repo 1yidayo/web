@@ -76,7 +76,7 @@
     <div class="main">
         <h3 style="text-align: center;margin-top: 30px;">SL200-1</h3><br>
 
-        <div id="calendar" style="width: 800px; margin-left: 200px;"></div>
+        <div id="calendar" style="width: 800px; margin-left: 150px;"></div>
         <div id="overlay"></div>
     </div>
 
@@ -85,12 +85,6 @@
         <h3>預約詳情</h3>
         <div class="reservation-detail">
             <strong>姓名:</strong> <span id="reservationName"></span>
-        </div>
-        <div class="reservation-detail">
-            <strong>G-mail:</strong> <span id="reservationEmail"></span>
-        </div>
-        <div class="reservation-detail">
-            <strong>電話:</strong> <span id="reservationPhone"></span>
         </div>
         <div class="reservation-detail">
             <strong>預約日期:</strong> <span id="reservationDate"></span>
@@ -115,8 +109,6 @@
             function showReservationDetails(event) {
                 // 顯示預約的詳細資訊
                 $('#reservationName').text(event.title); // 預約者姓名
-                $('#reservationEmail').text(event.extendedProps.email); // 預約者G-mail
-                $('#reservationPhone').text(event.extendedProps.phone); // 預約者電話
                 $('#reservationDate').text(event.start.toISOString().split('T')[0]); // 預約日期
                 $('#reservationTime').text(event.start.toTimeString().slice(0, 5) + ' - ' + event.end.toTimeString().slice(0, 5)); // 預約時間範圍
 

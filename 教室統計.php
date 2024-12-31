@@ -52,143 +52,168 @@
                 <th>LM200</th>
                 <th>LM202</th>
             </tr>
-            <!-- 預約次數表格將由 JavaScript 動態填充 -->
+            <tr>
+                <td class="month-column">2024-09</td>
+                <td contenteditable="true">6</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">2</td>
+                <td contenteditable="true">1</td>
+                <td contenteditable="true">2</td>
+                <td contenteditable="true">5</td>
+                <td contenteditable="true">3</td>
+            </tr>
+            <tr>
+                <td class="month-column">2024-10</td>
+                <td contenteditable="true">4</td>
+                <td contenteditable="true">2</td>
+                <td contenteditable="true">4</td>
+                <td contenteditable="true">3</td>
+                <td contenteditable="true">6</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">1</td>
+                <td contenteditable="true">4</td>
+            </tr>
+            <tr>
+                <td class="month-column">2024-11</td>
+                <td contenteditable="true">4</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">3</td>
+                <td contenteditable="true">2</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">1</td>
+                <td contenteditable="true">4</td>
+                <td contenteditable="true">2</td>
+            </tr>
+            <tr>
+                <td class="month-column">2024-12</td>
+                <td contenteditable="true">5</td>
+                <td contenteditable="true">1</td>
+                <td contenteditable="true">3</td>
+                <td contenteditable="true">2</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">3</td>
+            </tr>
+            <tr>
+                <td class="month-column">2025-01</td>
+                <td contenteditable="true">1</td>
+                <td contenteditable="true">5</td>
+                <td contenteditable="true">3</td>
+                <td contenteditable="true">2</td>
+                <td contenteditable="true">2</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">0</td>
+                <td contenteditable="true">1</td>
+            </tr>
         </table>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始渲染圖表
             renderChart();
+
+            // 監聽表格內數據變動
+            const cells = document.querySelectorAll('#statsTable td[contenteditable="true"]');
+            cells.forEach(cell => {
+                cell.addEventListener('input', renderChart); // 每次數據變更後更新圖表
+            });
         });
 
-        // 從伺服器載入每月預約次數統計資料
-        function loadStatsFromServer() {
-            return fetch('get_stats.php') // PHP 服務端腳本的 URL
-                .then(response => response.json()) // 假設服務端返回的是 JSON 格式
-                .then(data => data) // 這裡 data 就是從資料庫拿到的預約資料
-                .catch(error => {
-                    console.error('Error loading stats from server:', error);
-                    return {}; // 如果發生錯誤，返回空物件
-                });
-        }
+        // 定義自訂顏色的數組
+        const customColors = [
+            '#FF5733', // SL200-1
+            '#33FF57', // SL200-3
+            '#3357FF', // SL201
+            '#FF33A1', // SL245
+            '#A1FF33', // SL246
+            '#33A1FF', // SL471
+            '#A133FF', // LM200
+            '#FF33D9' // LM202
+        ];
 
-        // 渲染圖表和表格
-        function renderChart() {
-            loadStatsFromServer().then(stats => {
-                const labels = Object.keys(stats); // 取得月份
-                const borrowCounts = Object.values(stats); // 取得每月借用次數
+        // 更新圖表的函數
+        function updateChart() {
+            // 讀取表格中的數據
+            const labels = [];
+            const borrowCounts = {
+                "SL200-1": [],
+                "SL200-3": [],
+                "SL201": [],
+                "SL245": [],
+                "SL246": [],
+                "SL471": [],
+                "LM200": [],
+                "LM202": []
+            };
 
-                // 渲染圖表
-                const ctx = document.getElementById('borrowChart').getContext('2d');
-                new Chart(ctx, {
-                    type: 'bar',
-                    data: {
-                        labels: labels,
-                        datasets: [{
-                            label: '每月預約次數',
-                            data: borrowCounts,
-                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                            borderColor: 'rgba(75, 192, 192, 1)',
+            // 解析表格中的數據
+            const rows = document.querySelectorAll('#statsTable tr');
+            rows.forEach((row, index) => {
+                if (index === 0) return; // 跳過標題行
+                const cells = row.querySelectorAll('td');
+                labels.push(cells[0].textContent); // 取得月份
+
+                // 取得每個教室的數據
+                for (let i = 1; i < cells.length; i++) {
+                    borrowCounts[Object.keys(borrowCounts)[i - 1]].push(parseInt(cells[i].textContent) || 0);
+                }
+            });
+
+            // 渲染圖表
+            const ctx = document.getElementById('borrowChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: Object.keys(borrowCounts).map((classroom, index) => {
+                        return {
+                            label: classroom,
+                            data: borrowCounts[classroom],
+                            backgroundColor: customColors[index], // 使用自訂顏色
+                            borderColor: 'rgba(0, 0, 0, 0.1)',
                             borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        plugins: {
-                            datalabels: {
-                                color: '#000',
-                                anchor: 'end',
-                                align: 'top',
-                                font: {
-                                    weight: 'bold',
-                                    size: 14
-                                }
-                            }
-                        },
-                        scales: {
-                            y: {
-                                beginAtZero: true,
-                                title: {
-                                    display: true,
-                                    text: '預約次數'
-                                }
-                            },
-                            x: {
-                                title: {
-                                    display: true,
-                                    text: '月份'
-                                }
+                        };
+                    })
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        datalabels: {
+                            color: '#000',
+                            anchor: 'end',
+                            align: 'top',
+                            font: {
+                                weight: 'bold',
+                                size: 14
                             }
                         }
                     },
-                    plugins: [ChartDataLabels]
-                });
-
-                // 假設已經有一些手動填寫的數據（如SL200-3、SL201等）
-                const manualData = {
-                    "2024-09": {
-                        "SL200-3": 0,
-                        "SL201": 0,
-                        "SL245": 2,
-                        "SL246": 1,
-                        "SL471": 2,
-                        "LM200": 5,
-                        "LM202": 3
-                    },
-                    "2024-10": {
-                        "SL200-3": 2,
-                        "SL201": 4,
-                        "SL245": 3,
-                        "SL246": 6,
-                        "SL471": 0,
-                        "LM200": 1,
-                        "LM202": 4
-                    },
-                    "2024-11": {
-                        "SL200-3": 0,
-                        "SL201": 3,
-                        "SL245": 2,
-                        "SL246": 0,
-                        "SL471": 1,
-                        "LM200": 4,
-                        "LM202": 2
-                    },
-                    "2024-12": {
-                        "SL200-3": 1,
-                        "SL201": 3,
-                        "SL245": 2,
-                        "SL246": 0,
-                        "SL471": 0,
-                        "LM200": 0,
-                        "LM202": 3
-                    },
-                    "2025-01": {
-                        "SL200-3": 5,
-                        "SL201": 3,
-                        "SL245": 2,
-                        "SL246": 2,
-                        "SL471": 0,
-                        "LM200": 0,
-                        "LM202": 1
-                    },
-                };
-
-                // 渲染表格
-                let tableHtml = '';
-                labels.forEach(month => {
-                    // SL200-1 來自資料庫，其他設備來自手動填寫數據
-                    tableHtml += `<tr><td class="month-column">${month}</td>
-        <td>${stats[month]['SL200-1']}</td>
-        <td>${manualData[month]?.['SL200-3'] !== undefined ? manualData[month]['SL200-3'] : 'N/A'}</td>
-        <td>${manualData[month]?.['SL201'] !== undefined ? manualData[month]['SL201'] : 'N/A'}</td>
-        <td>${manualData[month]?.['SL245'] !== undefined ? manualData[month]['SL245'] : 'N/A'}</td>
-        <td>${manualData[month]?.['SL246'] !== undefined ? manualData[month]['SL246'] : 'N/A'}</td>
-        <td>${manualData[month]?.['SL471'] !== undefined ? manualData[month]['SL471'] : 'N/A'}</td>
-        <td>${manualData[month]?.['LM200'] !== undefined ? manualData[month]['LM200'] : 'N/A'}</td>
-        <td>${manualData[month]?.['LM202'] !== undefined ? manualData[month]['LM202'] : 'N/A'}</td></tr>`;
-                });
-                document.getElementById('statsTable').innerHTML += tableHtml;
-
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: '月份'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: '預約次數'
+                            }
+                        }
+                    }
+                },
+                plugins: [ChartDataLabels]
             });
+        }
+
+        // 初始渲染圖表
+        function renderChart() {
+            updateChart();
         }
     </script>
 </body>
