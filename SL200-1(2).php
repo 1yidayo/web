@@ -155,8 +155,8 @@
         </div>
 
         <p style="text-align: center; margin-top: 40px;">
-            <a class="reserve-button" data-toggle="collapse" href="#collapseExample" role="button"
-                aria-expanded="false" aria-controls="collapseExample">
+            <a class="reserve-button" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
                 點此預約
             </a>
         </p>
@@ -203,29 +203,33 @@
     <div id="editModal">
         <h3>修改預約時間</h3>
         <form id="editForm" action='update_delete_reservation.php'>
-            <div  style="margin: 10px">
-            <label for="editStartDate">開始日期：</label>
-            <input type="date" id="editStartDate" name="start_date" required><br>
+            <div style="margin: 10px">
+                <label for="editStartDate">開始日期：</label>
+                <input type="date" id="editStartDate" name="start_date" required><br>
 
-            <label for="editStartTime">開始時間：</label>
-            <input type="time" id="editStartTime" name="start_time" required><br>
+                <label for="editStartTime">開始時間：</label>
+                <input type="time" id="editStartTime" name="start_time" required><br>
 
-            <label for="editEndDate">結束日期：</label>
-            <input type="date" id="editEndDate" name="end_date" required><br>
+                <label for="editEndDate">結束日期：</label>
+                <input type="date" id="editEndDate" name="end_date" required><br>
 
-            <label for="editEndTime">結束時間：</label>
-            <input type="time" id="editEndTime" name="end_time" required><br>
+                <label for="editEndTime">結束時間：</label>
+                <input type="time" id="editEndTime" name="end_time" required><br>
 
-            <input type="hidden" id="editId" name="id">
+                <input type="hidden" id="editId" name="id">
             </div>
-            <button class="btn btn-primary text-uppercase disabled" style="background-color: #00000099; color:white; border: none" type="submit">更新預約時間</button>
-            <button class="btn btn-primary text-uppercase disabled" style="background-color: #00000099; color:white; border: none" type="button" id="deleteBtn">刪除預約</button>
-            <button class="btn btn-primary text-uppercase disabled" style="background-color: #00000099; color:white; border: none" type="button" id="cancelBtn">取消</button>
+            <button class="btn btn-primary text-uppercase disabled"
+                style="background-color: #00000099; color:white; border: none" type="submit">更新預約時間</button>
+            <button class="btn btn-primary text-uppercase disabled"
+                style="background-color: #00000099; color:white; border: none" type="button"
+                id="deleteBtn">刪除預約</button>
+            <button class="btn btn-primary text-uppercase disabled"
+                style="background-color: #00000099; color:white; border: none" type="button" id="cancelBtn">取消</button>
         </form>
     </div>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             const today = new Date().toISOString().split('T')[0];
             $('#start').attr('min', today);
             $('#end').attr('min', today);
@@ -247,12 +251,12 @@
                 $('#overlay').show();
             }
 
-            $('#cancelBtn').click(function() {
+            $('#cancelBtn').click(function () {
                 $('#editModal').hide();
                 $('#overlay').hide();
             });
 
-            $('#editForm').submit(function(e) {
+            $('#editForm').submit(function (e) {
                 e.preventDefault();
 
                 var formData = {
@@ -264,20 +268,20 @@
                     action: 'update' // 確保這裡的 action 設置為 update
                 };
 
-                $.post('update_delete_reservation.php', formData, function(response) {
+                $.post('update_delete_reservation.php', formData, function (response) {
                     alert(response);
                     location.reload(); // 刷新頁面
                 });
             });
 
-            $('#deleteBtn').click(function() {
+            $('#deleteBtn').click(function () {
                 var id = $('#editId').val();
 
                 if (confirm("您確定要刪除這個預約嗎？")) {
                     $.post('update_delete_reservation.php', {
                         id: id,
                         action: 'delete' // 設置為刪除操作
-                    }, function(response) {
+                    }, function (response) {
                         alert(response);
                         location.reload(); // 刷新頁面
                     });
@@ -295,7 +299,7 @@
                         events: data,
                         eventColor: '#378006',
                         eventTextColor: 'white',
-                        eventClick: function(info) {
+                        eventClick: function (info) {
                             showEditForm(info.event); // 顯示修改表單
                         },
                         headerToolbar: {
